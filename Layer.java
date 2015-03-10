@@ -4,12 +4,12 @@ public class Layer {
 	public Edge cubie4Corner; public Center cubie5Center; public Edge cubie6Edge;
 	public Corner cubie7Corner; public Edge cubie8Edge; public Corner cubie9Corner;
 
-	public cubie1Edge;
-	public cubie3Edge;
-	public cubie4Edge;
-	public cubie5Edge;
-	public cubie6Edge;
-	public cubie7Edge;
+	public Edge cubie1Edge;
+	public Edge cubie3Edge;
+	public Edge cubie4Edge;
+	public Edge cubie5Edge;
+	public Edge cubie6Edge;
+	public Edge cubie7Edge;
 
 
 	/*
