@@ -1,4 +1,5 @@
-public class Corner{
+public class Corner {
+
 
 private String[] colors; 
 
@@ -18,4 +19,5 @@ public static void main(String[] args){
 }
 */	
 }
+
 
