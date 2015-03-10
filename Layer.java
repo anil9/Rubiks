@@ -4,10 +4,17 @@ public class Layer {
 	public Edge cubie4Corner; public Center cubie5Center; public Edge cubie6Edge;
 	public Corner cubie7Corner; public Edge cubie8Edge; public Corner cubie9Corner;
 
+	public cubie1Edge;
+	public cubie3Edge;
+	public cubie4Edge;
+	public cubie5Edge;
+	public cubie6Edge;
+	public cubie7Edge;
+
 
 	/*
 		structure is:
-		
+
 		1 2 3
 		4 5 6
 		7 8 9
@@ -24,6 +31,32 @@ public class Layer {
 		this.cubie8Edge = cubie8Edge;
 		this.cubie9Corner = cubie9Corner;
 
+	}
+
+	/*
+		Structure is:
+
+		1 2 3
+		4   5
+		6 7 8
+		
+	*/
+	public Layer(Edge cubie1Edge, Edge cubie2Edge, Edge cubie3Edge, Edge cubie4Edge, Edge cubie5Edge, Edge cubie6Edge, Edge cubie7Edge, Edge cubie8Edge ){
+
+		this.cubie1Edge = cubie1Edge;
+		this.cubie2Edge = cubie2Edge;
+		this.cubie3Edge = cubie3Edge;
+		this.cubie4Edge = cubie4Edge;
+		this.cubie5Edge = cubie5Edge;
+		this.cubie6Edge = cubie6Edge;
+		this.cubie7Edge = cubie7Edge;
+		this.cubie8Edge = cubie8Edge;
+
+
+	}
+
+	public boolean isMiddleLayer(){
+		return cubie5Center == null;
 	}
 
 
