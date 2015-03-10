@@ -17,7 +17,8 @@ public class Cube {
 
 	}
 
-	//Notations 
+	//Operations on the cube
+	 
 	// Twisting front face 90 degrees clockwise
 	public void F(){
 
@@ -68,7 +69,7 @@ public class Cube {
 	}
 
 
-	// implement operations on the cube
+	
 
 
 	public static void main(String [] args) {
