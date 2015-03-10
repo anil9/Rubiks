@@ -7,7 +7,7 @@ public class Edge {
 
 	}
 
-	public String[] getColor(){
+	public String[] getColors(){
 		return colors;
 	}
 
