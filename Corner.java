@@ -3,21 +3,17 @@ public class Corner {
 
 private String[] colors; 
 
-public Corner(String front, String top, String side){
+public Corner(String color1, String color2, String color3){
 	colors = new String[3];
-	colors[0] = front;
-	colors[1] = top;
-	colors[2] = side; 
+	colors[0] = color1;
+	colors[1] = color2;
+	colors[2] = color3; 
 }
 
 public String[] getColors(){
 	return colors;
 }
-/*
-public static void main(String[] args){
-	Corner c = new Corner("blue", "black", "green");
-}
-*/	
+
 }
 
 
