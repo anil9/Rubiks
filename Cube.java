@@ -14,6 +14,7 @@ public class Cube {
 		Center center = new Center("white");
 		Edge edge = new Edge("white", "red");
 		Corner corner = new Corner("white", "red", "blue");
+		Layer layer = new Layer(null, null, null, null, null, null, null, null, null);
 
 	}
 

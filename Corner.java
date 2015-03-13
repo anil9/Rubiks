@@ -15,7 +15,7 @@ public String[] getColors(){
 }
 
 public String getColor(int i){
-	return color[i];
+	return colors[i];
 }
 
 }
