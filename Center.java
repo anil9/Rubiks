@@ -6,8 +6,19 @@ public class Center implements Cubie{
 		this.color = color;
 	}
 
+	public void showingColor(int i){
+		//do nothing
+	}
+
+	public int getShowingColor(){
+		return 0;
+	}
+
 	public String getColor(){
 		return color;
+	}
+	public String toString(){
+		return getColor();
 	}
 
 

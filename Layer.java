@@ -13,7 +13,7 @@ public class Layer {
 	//public Edge cubie6Edge;
 	public Center cubie7Center;
 	//public Edge cubis8Edge;
-	public Center cubie9Center; 
+	public Center cubie9Center;
 
 	/*
 		structure is:
@@ -36,15 +36,28 @@ public class Layer {
 
 	}
 
+	public Layer(Cubie cubie1Corner, Cubie cubie2Edge, Cubie cubie3Corner, Cubie cubie4Edge, Cubie cubie5Center, Cubie cubie6Edge, Cubie cubie7Corner, Cubie cubie8Edge, Cubie cubie9Corner) {
+		this.cubie1Corner = (Corner)cubie1Corner;
+		this.cubie2Edge = (Edge)cubie2Edge;
+		this.cubie3Corner = (Corner)cubie3Corner;
+		this.cubie4Edge = (Edge)cubie4Edge;
+		this.cubie5Center = (Center)cubie5Center;
+		this.cubie6Edge = (Edge)cubie6Edge;
+		this.cubie7Corner = (Corner)cubie7Corner;
+		this.cubie8Edge = (Edge)cubie8Edge;
+		this.cubie9Corner = (Corner)cubie9Corner;
+
+	}
+
 	/*
 		Structure is:
 
 		1 2 3
 		4   6
 		7 8 9
-		
+
 	*/
-	public Layer(Edge cubie1Edge, Center cubie2Center, Edge cubie3Edge, Center cubie4Center, Edge cubie6Edge, Center cubie7Center, Edge cubie8Edge, Center cubie9Center ){
+	public Layer(Edge cubie1Edge, Center cubie2Center, Edge cubie3Edge, Center cubie4Center, Edge cubie6Edge, Center cubie7Center, Edge cubie8Edge, Center cubie9Center ) {
 
 		this.cubie1Edge = cubie1Edge;
 		this.cubie2Center = cubie2Center;
@@ -58,41 +71,41 @@ public class Layer {
 
 	}
 
-	public boolean isMiddleLayer(){
+	public boolean isMiddleLayer() {
 		return cubie5Center == null;
 	}
 
 	// return interface cubie
-	public Cubie getCubie(int i){
+	public Cubie getCubie(int i) {
 		// Wants cubie 5 for middle layer
-		if(isMiddleLayer() && i == 5){
+		if (isMiddleLayer() && i == 5) {
 			return null;
-		
-		}else if(isMiddleLayer() && i != 5){
 
-			switch(i){
-				case 1: return cubie1Edge; 
-				case 2: return cubie2Center;
-				case 3: return cubie3Edge;
-				case 4: return cubie4Center;
-				case 6: return cubie6Edge;
-				case 7: return cubie7Center;
-				case 8: return cubie8Edge;
-				case 9:	return cubie9Center;
+		} else if (isMiddleLayer() && i != 5) {
+
+			switch (i) {
+			case 1: return cubie1Edge;
+			case 2: return cubie2Center;
+			case 3: return cubie3Edge;
+			case 4: return cubie4Center;
+			case 6: return cubie6Edge;
+			case 7: return cubie7Center;
+			case 8: return cubie8Edge;
+			case 9:	return cubie9Center;
 			}
-		} else if(!isMiddleLayer()){
-			switch(i){
-				case 1: return cubie1Corner;
-				case 2: return cubie2Edge;
-				case 3: return cubie3Corner;
-				case 4:	return cubie4Edge;
-				case 5:	return cubie5Center;
-				case 6: return cubie6Edge;
-				case 7:	return cubie7Corner;
-				case 8: return cubie8Edge;
-				case 9: return cubie9Corner;
-			} 
-		} 
+		} else if (!isMiddleLayer()) {
+			switch (i) {
+			case 1: return cubie1Corner;
+			case 2: return cubie2Edge;
+			case 3: return cubie3Corner;
+			case 4:	return cubie4Edge;
+			case 5:	return cubie5Center;
+			case 6: return cubie6Edge;
+			case 7:	return cubie7Corner;
+			case 8: return cubie8Edge;
+			case 9: return cubie9Corner;
+			}
+		}
 		return null;
 	}
 
