@@ -108,17 +108,17 @@ public class Layer {
 		}
 		return null;
 	}
-/*
-	public void setCubie(int i, Cubie cubie){
-		if(isMiddleLayer() && i == 5){
-			return;
-		}else if(isMiddleLayer() && i != 5){
-			switch(i){
-				case 1: 
+	/*
+		public void setCubie(int i, Cubie cubie){
+			if(isMiddleLayer() && i == 5){
+				return;
+			}else if(isMiddleLayer() && i != 5){
+				switch(i){
+					case 1:
+				}
 			}
-		}
-*/
-	}
-
-
+	*/
 }
+
+
+
