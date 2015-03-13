@@ -14,6 +14,10 @@ public String[] getColors(){
 	return colors;
 }
 
+public String getColor(int i){
+	return color[i];
+}
+
 }
 
 

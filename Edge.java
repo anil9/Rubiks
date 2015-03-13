@@ -11,5 +11,7 @@ public class Edge {
 		return colors;
 	}
 
-
+	public String getColor(int i){
+		return colors[i];
+	}
 }
