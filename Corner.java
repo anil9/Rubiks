@@ -1,4 +1,4 @@
-public class Corner {
+public class Corner implements Cubie{
 
 
 private String[] colors; 

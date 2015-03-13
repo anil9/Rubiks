@@ -1,4 +1,4 @@
-public class Edge {
+public class Edge implements Cubie{
 	private String[] colors = new String[2];
 
 	public Edge(String color1, String color2){

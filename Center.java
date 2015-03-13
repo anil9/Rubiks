@@ -1,4 +1,4 @@
-public class Center {
+public class Center implements Cubie{
 
 	private String color;
 
