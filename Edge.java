@@ -23,6 +23,9 @@ public class Edge implements Cubie{
 	}
 
 	public String getColor(int i){
+		if(i > 1) {
+			System.err.println("Error i = " + i + " This is an Edge with colors: colors[0] = " + colors[0] + " colors[1] = " + colors[1]);
+		}
 		return colors[i];
 	}
 

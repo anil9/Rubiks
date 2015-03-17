@@ -14,11 +14,11 @@ public class Center implements Cubie{
 		return 0;
 	}
 
-	public String getColor(){
+	public String getColor(int i){
 		return color;
 	}
 	public String toString(){
-		return getColor();
+		return getColor(-1);
 	}
 
 

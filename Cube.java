@@ -12,6 +12,13 @@ public class Cube {
 	private Layer middle;
 	private Layer layer3;
 
+	private Side face;
+	private Side top;
+	private Side bot;
+	private Side left;
+	private Side right;
+	private Side back;
+
 	public Cube() {
 		// 8 corners, 12(?) edges, 6 centers
 		//initCubies();
@@ -19,10 +26,16 @@ public class Cube {
 		System.out.println(showFace());
 		U();
 		System.out.println(showFace());
-		/*
 		U();
 		System.out.println(showFace());
-		*/
+		U();
+		System.out.println(showFace());
+		U();
+		System.out.println(showFace());
+		U();
+		System.out.println(showFace());
+		U();
+		System.out.println(showFace());
 	}
 	/*
 	private void initCubies(){
@@ -54,6 +67,38 @@ public class Cube {
 			new Corner(GREEN, YELLOW, ORANGE, 0), new Edge(YELLOW, ORANGE, 0), new Corner(YELLOW, BLUE, ORANGE, 0));
 
 
+		/*
+		 * Sides are initiated.
+		*/
+
+		// getcolor -1 is a center position. Doesn't matter which int as param.
+		// red
+		face = new Side(new String[]{layer1.getCubie(7).getColor(2), layer1.getCubie(8).getColor(1), layer1.getCubie(9).getColor(2),
+						middle.getCubie(1).getColor(1), middle.getCubie(2).getColor(-1), middle.getCubie(3).getColor(0),
+						layer3.getCubie(1).getColor(2), layer3.getCubie(2).getColor(1), layer3.getCubie(3).getColor(2)});
+
+		// white
+		top = new Side(new String[]{layer1.getCubie(1).getColor(1), layer1.getCubie(2).getColor(0), layer1.getCubie(3).getColor(0),
+						layer1.getCubie(4).getColor(1), layer1.getCubie(5).getColor(-1), layer1.getCubie(6).getColor(0),
+						layer1.getCubie(7).getColor(1), layer1.getCubie(8).getColor(0), layer1.getCubie(9).getColor(0)});
+		// yellow
+		bot = new Side(new String[]{layer3.getCubie(1).getColor(1), layer3.getCubie(2).getColor(0), layer3.getCubie(3).getColor(0),
+						layer3.getCubie(4).getColor(1), layer3.getCubie(5).getColor(-1), layer3.getCubie(6).getColor(0),
+						layer3.getCubie(7).getColor(1), layer3.getCubie(8).getColor(0), layer3.getCubie(9).getColor(0)});
+
+		// orange
+		
+		back = new Side(new String[]{layer3.getCubie(7).getColor(2), layer3.getCubie(8).getColor(1), layer3.getCubie(9).getColor(2),
+						middle.getCubie(7).getColor(0), middle.getCubie(6).getColor(-1), middle.getCubie(5).getColor(1),
+						layer1.getCubie(1).getColor(2), layer1.getCubie(2).getColor(1), layer1.getCubie(3).getColor(2)});
+		// blue
+		right = new Side(new String[]{layer1.getCubie(9).getColor(1), layer1.getCubie(6).getColor(1), layer1.getCubie(3).getColor(1),
+						middle.getCubie(3).getColor(1), middle.getCubie(4).getColor(-1), middle.getCubie(5).getColor(0),
+						layer3.getCubie(3).getColor(1), layer3.getCubie(6).getColor(1), layer3.getCubie(9).getColor(1)});
+		// green
+		left = new Side(new String[]{layer1.getCubie(1).getColor(0), layer1.getCubie(4).getColor(0), layer1.getCubie(7).getColor(0),
+						middle.getCubie(7).getColor(1), middle.getCubie(8).getColor(-1), middle.getCubie(1).getColor(0),
+						layer3.getCubie(1).getColor(0), layer3.getCubie(4).getColor(0), layer3.getCubie(7).getColor(0)});
 
 	}
 
@@ -93,7 +138,7 @@ public class Cube {
 	}
 	// Twisting upper face 90 degrees clockwise
 	public void U(){
-
+		/*
 		Layer tempLayer = new Layer(layer1.getCubie(7), layer1.getCubie(4), layer1.getCubie(1),
 		 layer1.getCubie(8), layer1.getCubie(5), layer1.getCubie(2),
 		  layer1.getCubie(9), layer1.getCubie(6), layer1.getCubie(3));
@@ -103,6 +148,25 @@ public class Cube {
 		layer1.getCubie(7).showingColor(layer1.getCubie(7).getShowingColor()-1);
 		layer1.getCubie(8).showingColor(1);
 		layer1.getCubie(9).showingColor(1);
+
+		*/
+
+		Side temp = new Side(face);
+		face.c1 = right.c1;
+		face.c2 = right.c2;
+		face.c3 = right.c3;
+
+		right.c1 = back.c9;
+		right.c2 = back.c8;
+		right.c3 = back.c7;
+
+		back.c9 = left.c1;
+		back.c8 = left.c2;
+		back.c7 = left.c3;
+
+		left.c1 = temp.c1;
+		left.c2 = temp.c2;
+		left.c3 = temp.c3;
 
 
 
@@ -123,6 +187,7 @@ public class Cube {
 
 	public String showFace(){
 
+		/*
 		String face = "";
 
 		face += layer1.getCubie(7).toString() + " ";
@@ -136,6 +201,8 @@ public class Cube {
 		face += layer3.getCubie(3).toString();
 
 		return face;
+		*/
+		return face.toString();
 
 
 	}
