@@ -12,7 +12,7 @@ public class Cube {
 	private Layer middle;
 	private Layer layer3;
 
-	private Side face;
+	private Side front;
 	private Side top;
 	private Side bot;
 	private Side left;
@@ -23,11 +23,35 @@ public class Cube {
 		// 8 corners, 12(?) edges, 6 centers
 		//initCubies();
 		createFinishedCube();
-		System.out.println(showFace());
-		U();
-		System.out.println(showFace());
-		Ui();
-		System.out.println(showFace());
+		//printWholeCube();
+		
+		Fi();
+		System.out.println(top);
+		Fi();
+		System.out.println(top);
+		Fi();
+		System.out.println(top);
+		Fi();
+		System.out.println(top);
+
+		printWholeCube();
+	}
+
+	private void printWholeCube(){
+		System.out.println("This is the whole cube:");
+		System.out.println("Front:");
+		System.out.println(front);
+		System.out.println("Top:");
+		System.out.println(top);
+		System.out.println("Bot:");
+		System.out.println(bot);
+		System.out.println("Left:");
+		System.out.println(left);
+		System.out.println("Right:");
+		System.out.println(right);
+		System.out.println("Back:");
+		System.out.println(back);
+		System.out.println("End of whole cube.");
 	}
 	/*
 	private void initCubies(){
@@ -40,7 +64,7 @@ public class Cube {
 	}
 	*/
 
-	// implementerad som: Vit är top. Röd är face. Gul bot.
+	// implementerad som: Vit är top. Röd är Front. Gul bot.
 	// Ordningen för färgernas positioner är: vänstraste -> höger -> upp/ned
 	// för layer1 räknas cubies (i vit face-vy) från top-left.
 	// för layer3 räknas cubies (i gul face-vy) från top-left. 
@@ -65,7 +89,7 @@ public class Cube {
 
 		// getcolor -1 is a center position. Doesn't matter which int as param.
 		// red
-		face = new Side(new String[]{layer1.getCubie(7).getColor(2), layer1.getCubie(8).getColor(1), layer1.getCubie(9).getColor(2),
+		front = new Side(new String[]{layer1.getCubie(7).getColor(2), layer1.getCubie(8).getColor(1), layer1.getCubie(9).getColor(2),
 						middle.getCubie(1).getColor(1), middle.getCubie(2).getColor(-1), middle.getCubie(3).getColor(0),
 						layer3.getCubie(1).getColor(2), layer3.getCubie(2).getColor(1), layer3.getCubie(3).getColor(2)});
 
@@ -100,21 +124,21 @@ public class Cube {
 	public void F(){
 		Side temp = new Side(top);
 		Side temp_front = new Side(front);
-		top.c7 = left.c7;
-		top.c8 = left.c8;
-		top.c9 = left.c9; 
+		top.c7 = left.c9;
+		top.c8 = left.c6;
+		top.c9 = left.c3; 
 
-		left.c7 = bot.c7;
-		left.c8 = bot.c8;
-		left.c9 = bot.c9; 
+		left.c3 = bot.c1;
+		left.c6 = bot.c2;
+		left.c9 = bot.c3; 
 
-		bot.c7 = right.c7;
-		bot.c8 = right.c8;
-		bot.c9 = right.c9; 
+		bot.c1 = right.c7;
+		bot.c2 = right.c4;
+		bot.c3 = right.c1; 
 
-		right.c7 = temp.c7;
-		right.c8 = temp.c8;
-		right.c9 = temp.c9; 
+		right.c1 = temp.c7;
+		right.c4 = temp.c8;
+		right.c7 = temp.c9; 
 
 		front.c1 = temp_front.c7;
 		front.c2 = temp_front.c4;
@@ -130,21 +154,21 @@ public class Cube {
 	public void Fi(){
 		Side temp = new Side(top);
 		Side temp_front = new Side(front);
-		top.c7 = right.c7;
-		top.c8 = right.c8;
-		top.c9 = right.c9; 
+		top.c7 = right.c1;
+		top.c8 = right.c4;
+		top.c9 = right.c7; 
 
-		right.c7 = bot.c7;
-		right.c8 = bot.c8;
-		right.c9 = bot.c9; 
+		right.c1 = bot.c3;
+		right.c4 = bot.c2;
+		right.c7 = bot.c1; 
 
-		bot.c7 = left.c7;
-		bot.c8 = left.c8;
-		bot.c9 = left.c9; 
+		bot.c1 = left.c3;
+		bot.c2 = left.c6;
+		bot.c3 = left.c9; 
 
-		left.c7 = temp.c7;
-		left.c8 = temp.c8;
-		left.c9 = temp.c9; 
+		left.c3 = temp.c9;
+		left.c6 = temp.c8;
+		left.c9 = temp.c7; 
 
 		front.c1 = temp_front.c3;
 		front.c2 = temp_front.c6;
@@ -194,11 +218,11 @@ public class Cube {
 
 		*/
 
-		Side temp = new Side(face);
+		Side temp = new Side(front);
 		Side temp_top = new Side(top);
-		face.c1 = right.c1;
-		face.c2 = right.c2;
-		face.c3 = right.c3;
+		front.c1 = right.c1;
+		front.c2 = right.c2;
+		front.c3 = right.c3;
 
 		right.c1 = back.c9;
 		right.c2 = back.c8;
@@ -228,11 +252,11 @@ public class Cube {
 	// Twisting upper face 90 degrees anti-clockwise
 	public void Ui(){
 
-		Side temp = new Side(face);
+		Side temp = new Side(front);
 		Side temp_top = new Side(top);
-		face.c1 = left.c1;
-		face.c2 = left.c2;
-		face.c3 = left.c3;
+		front.c1 = left.c1;
+		front.c2 = left.c2;
+		front.c3 = left.c3;
 
 		left.c1 = back.c9;
 		left.c2 = back.c8;
@@ -265,7 +289,7 @@ public class Cube {
 
 	}
 
-	public String showFace(){
+	public String showFront(){
 
 		/*
 		String face = "";
@@ -282,7 +306,7 @@ public class Cube {
 
 		return face;
 		*/
-		return face.toString();
+		return front.toString();
 
 
 	}
