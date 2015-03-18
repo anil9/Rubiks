@@ -24,20 +24,12 @@ public class Cube {
 		//initCubies();
 		createFinishedCube();
 		//printWholeCube();
-		
-		Fi();
-		System.out.println(top);
-		Fi();
-		System.out.println(top);
-		Fi();
-		System.out.println(top);
-		Fi();
-		System.out.println(top);
 
+		Ri();
 		printWholeCube();
 	}
 
-	private void printWholeCube(){
+	private void printWholeCube() {
 		System.out.println("This is the whole cube:");
 		System.out.println("Front:");
 		System.out.println(front);
@@ -67,20 +59,20 @@ public class Cube {
 	// implementerad som: Vit är top. Röd är Front. Gul bot.
 	// Ordningen för färgernas positioner är: vänstraste -> höger -> upp/ned
 	// för layer1 räknas cubies (i vit face-vy) från top-left.
-	// för layer3 räknas cubies (i gul face-vy) från top-left. 
+	// för layer3 räknas cubies (i gul face-vy) från top-left.
 
-	private void createFinishedCube(){
+	private void createFinishedCube() {
 
 		layer1 = new Layer(new Corner(GREEN, WHITE, ORANGE, 0), new Edge(WHITE, ORANGE, 0), new Corner(WHITE, BLUE, ORANGE, 0),
-		 new Edge(GREEN, WHITE, 0), new Center(WHITE), new Edge(WHITE, BLUE, 0),
-		 new Corner(GREEN, WHITE, RED, 2), new Edge(WHITE, RED, 1), new Corner(WHITE, BLUE, RED, 2));
+		                   new Edge(GREEN, WHITE, 0), new Center(WHITE), new Edge(WHITE, BLUE, 0),
+		                   new Corner(GREEN, WHITE, RED, 2), new Edge(WHITE, RED, 1), new Corner(WHITE, BLUE, RED, 2));
 
 		middle = new Layer(new Edge(GREEN, RED, 1), new Center(RED), new Edge(RED, BLUE, 0),
-			new Center(BLUE), new Edge(BLUE, ORANGE, 0), new Center(ORANGE), new Edge(ORANGE, GREEN, 0), new Center(GREEN));
+		                   new Center(BLUE), new Edge(BLUE, ORANGE, 0), new Center(ORANGE), new Edge(ORANGE, GREEN, 0), new Center(GREEN));
 
 		layer3 = new Layer(new Corner(GREEN, YELLOW, RED, 2), new Edge(YELLOW, RED, 1), new Corner(YELLOW, BLUE, RED, 2),
-			new Edge(GREEN, YELLOW, 0), new Center(YELLOW), new Edge(YELLOW, BLUE, 0),
-			new Corner(GREEN, YELLOW, ORANGE, 0), new Edge(YELLOW, ORANGE, 0), new Corner(YELLOW, BLUE, ORANGE, 0));
+		                   new Edge(GREEN, YELLOW, 0), new Center(YELLOW), new Edge(YELLOW, BLUE, 0),
+		                   new Corner(GREEN, YELLOW, ORANGE, 0), new Edge(YELLOW, ORANGE, 0), new Corner(YELLOW, BLUE, ORANGE, 0));
 
 
 		/*
@@ -89,56 +81,62 @@ public class Cube {
 
 		// getcolor -1 is a center position. Doesn't matter which int as param.
 		// red
-		front = new Side(new String[]{layer1.getCubie(7).getColor(2), layer1.getCubie(8).getColor(1), layer1.getCubie(9).getColor(2),
-						middle.getCubie(1).getColor(1), middle.getCubie(2).getColor(-1), middle.getCubie(3).getColor(0),
-						layer3.getCubie(1).getColor(2), layer3.getCubie(2).getColor(1), layer3.getCubie(3).getColor(2)});
+		front = new Side(new String[] {layer1.getCubie(7).getColor(2), layer1.getCubie(8).getColor(1), layer1.getCubie(9).getColor(2),
+		                               middle.getCubie(1).getColor(1), middle.getCubie(2).getColor(-1), middle.getCubie(3).getColor(0),
+		                               layer3.getCubie(1).getColor(2), layer3.getCubie(2).getColor(1), layer3.getCubie(3).getColor(2)
+		                              });
 
 		// white
-		top = new Side(new String[]{layer1.getCubie(1).getColor(1), layer1.getCubie(2).getColor(0), layer1.getCubie(3).getColor(0),
-						layer1.getCubie(4).getColor(1), layer1.getCubie(5).getColor(-1), layer1.getCubie(6).getColor(0),
-						layer1.getCubie(7).getColor(1), layer1.getCubie(8).getColor(0), layer1.getCubie(9).getColor(0)});
+		top = new Side(new String[] {layer1.getCubie(1).getColor(1), layer1.getCubie(2).getColor(0), layer1.getCubie(3).getColor(0),
+		                             layer1.getCubie(4).getColor(1), layer1.getCubie(5).getColor(-1), layer1.getCubie(6).getColor(0),
+		                             layer1.getCubie(7).getColor(1), layer1.getCubie(8).getColor(0), layer1.getCubie(9).getColor(0)
+		                            });
 		// yellow
-		bot = new Side(new String[]{layer3.getCubie(1).getColor(1), layer3.getCubie(2).getColor(0), layer3.getCubie(3).getColor(0),
-						layer3.getCubie(4).getColor(1), layer3.getCubie(5).getColor(-1), layer3.getCubie(6).getColor(0),
-						layer3.getCubie(7).getColor(1), layer3.getCubie(8).getColor(0), layer3.getCubie(9).getColor(0)});
+		bot = new Side(new String[] {layer3.getCubie(1).getColor(1), layer3.getCubie(2).getColor(0), layer3.getCubie(3).getColor(0),
+		                             layer3.getCubie(4).getColor(1), layer3.getCubie(5).getColor(-1), layer3.getCubie(6).getColor(0),
+		                             layer3.getCubie(7).getColor(1), layer3.getCubie(8).getColor(0), layer3.getCubie(9).getColor(0)
+		                            });
 
 		// orange
-		
-		back = new Side(new String[]{layer3.getCubie(7).getColor(2), layer3.getCubie(8).getColor(1), layer3.getCubie(9).getColor(2),
-						middle.getCubie(7).getColor(0), middle.getCubie(6).getColor(-1), middle.getCubie(5).getColor(1),
-						layer1.getCubie(1).getColor(2), layer1.getCubie(2).getColor(1), layer1.getCubie(3).getColor(2)});
+
+		back = new Side(new String[] {layer3.getCubie(7).getColor(2), layer3.getCubie(8).getColor(1), layer3.getCubie(9).getColor(2),
+		                              middle.getCubie(7).getColor(0), middle.getCubie(6).getColor(-1), middle.getCubie(5).getColor(1),
+		                              layer1.getCubie(1).getColor(2), layer1.getCubie(2).getColor(1), layer1.getCubie(3).getColor(2)
+		                             });
 		// blue
-		right = new Side(new String[]{layer1.getCubie(9).getColor(1), layer1.getCubie(6).getColor(1), layer1.getCubie(3).getColor(1),
-						middle.getCubie(3).getColor(1), middle.getCubie(4).getColor(-1), middle.getCubie(5).getColor(0),
-						layer3.getCubie(3).getColor(1), layer3.getCubie(6).getColor(1), layer3.getCubie(9).getColor(1)});
+		right = new Side(new String[] {layer1.getCubie(9).getColor(1), layer1.getCubie(6).getColor(1), layer1.getCubie(3).getColor(1),
+		                               middle.getCubie(3).getColor(1), middle.getCubie(4).getColor(-1), middle.getCubie(5).getColor(0),
+		                               layer3.getCubie(3).getColor(1), layer3.getCubie(6).getColor(1), layer3.getCubie(9).getColor(1)
+		                              });
 		// green
-		left = new Side(new String[]{layer1.getCubie(1).getColor(0), layer1.getCubie(4).getColor(0), layer1.getCubie(7).getColor(0),
-						middle.getCubie(7).getColor(1), middle.getCubie(8).getColor(-1), middle.getCubie(1).getColor(0),
-						layer3.getCubie(1).getColor(0), layer3.getCubie(4).getColor(0), layer3.getCubie(7).getColor(0)});
+		left = new Side(new String[] {layer1.getCubie(1).getColor(0), layer1.getCubie(4).getColor(0), layer1.getCubie(7).getColor(0),
+		                              middle.getCubie(7).getColor(1), middle.getCubie(8).getColor(-1), middle.getCubie(1).getColor(0),
+		                              layer3.getCubie(1).getColor(0), layer3.getCubie(4).getColor(0), layer3.getCubie(7).getColor(0)
+		                             });
 
 	}
 
 	//Operations on the cube
-	 
+
 	// Twisting front face 90 degrees clockwise
-	public void F(){
+	public void F() {
 		Side tempTop = new Side(top);
 		Side tempFront = new Side(front);
 		top.c7 = left.c9;
 		top.c8 = left.c6;
-		top.c9 = left.c3; 
+		top.c9 = left.c3;
 
 		left.c3 = bot.c1;
 		left.c6 = bot.c2;
-		left.c9 = bot.c3; 
+		left.c9 = bot.c3;
 
 		bot.c1 = right.c7;
 		bot.c2 = right.c4;
-		bot.c3 = right.c1; 
+		bot.c3 = right.c1;
 
 		right.c1 = tempTop.c7;
 		right.c4 = tempTop.c8;
-		right.c7 = tempTop.c9; 
+		right.c7 = tempTop.c9;
 
 		front.c1 = tempFront.c7;
 		front.c2 = tempFront.c4;
@@ -146,29 +144,29 @@ public class Cube {
 		front.c4 = tempFront.c8;
 		front.c6 = tempFront.c2;
 		front.c7 = tempFront.c9;
-		front.c8 = tempFront.c6; 
-		front.c9 = tempFront.c3; 
+		front.c8 = tempFront.c6;
+		front.c9 = tempFront.c3;
 
 	}
 	// Twisting front face 90 degrees anti-clockwise
-	public void Fi(){
+	public void Fi() {
 		Side tempTop = new Side(top);
 		Side tempFront = new Side(front);
 		top.c7 = right.c1;
 		top.c8 = right.c4;
-		top.c9 = right.c7; 
+		top.c9 = right.c7;
 
 		right.c1 = bot.c3;
 		right.c4 = bot.c2;
-		right.c7 = bot.c1; 
+		right.c7 = bot.c1;
 
 		bot.c1 = left.c3;
 		bot.c2 = left.c6;
-		bot.c3 = left.c9; 
+		bot.c3 = left.c9;
 
 		left.c3 = tempTop.c9;
 		left.c6 = tempTop.c8;
-		left.c9 = tempTop.c7; 
+		left.c9 = tempTop.c7;
 
 		front.c1 = tempFront.c3;
 		front.c2 = tempFront.c6;
@@ -176,35 +174,91 @@ public class Cube {
 		front.c4 = tempFront.c2;
 		front.c6 = tempFront.c8;
 		front.c7 = tempFront.c1;
-		front.c8 = tempFront.c4; 
-		front.c9 = tempFront.c7; 
+		front.c8 = tempFront.c4;
+		front.c9 = tempFront.c7;
 	}
 	// Twisting Back face 90 degrees clockwise
-	public void B(){
+	public void B() {
 
 	}
 	// Twisting back face 90 degrees anti-clockwise
-	public void Bi(){
+	public void Bi() {
 
 	}
 	// Twisting right face 90 degrees clockwise
-	public void R(){
+	public void R() {
+		Side tempTop = new Side(top);
+		Side tempRight = new Side(right);
+
+		top.c3 = front.c3;
+		top.c6 = front.c6;
+		top.c9 = front.c9;
+
+		front.c3 = bot.c3;
+		front.c6 = bot.c6;
+		front.c9 = bot.c9;
+
+		bot.c3 = back.c3;
+		bot.c6 = back.c6;
+		bot.c9 = back.c9;
+
+		back.c3 = tempTop.c3;
+		back.c6 = tempTop.c6;
+		back.c9 = tempTop.c9;
+
+		right.c1 = tempRight.c7;
+		right.c2 = tempRight.c4;
+		right.c3 = tempRight.c1;
+		right.c4 = tempRight.c8;
+		right.c6 = tempRight.c2;
+		right.c7 = tempRight.c9;
+		right.c8 = tempRight.c6;
+		right.c9 = tempRight.c3;
+
+
 
 	}
 	// Twisting right face 90 degrees anti-clockwise
-	public void Ri(){
+	public void Ri() {
+		Side tempTop = new Side(top);
+		Side tempRight = new Side(right);
+
+		top.c3 = back.c3;
+		top.c6 = back.c6;
+		top.c9 = back.c9;
+
+		back.c3 = bot.c3;
+		back.c6 = bot.c6;
+		back.c9 = bot.c9;
+
+		bot.c3 = front.c3;
+		bot.c6 = front.c6;
+		bot.c9 = front.c9;
+
+		front.c3 = tempTop.c3;
+		front.c6 = tempTop.c6;
+		front.c9 = tempTop.c9;
+
+		right.c1 = tempRight.c3;
+		right.c2 = tempRight.c6;
+		right.c3 = tempRight.c9;
+		right.c4 = tempRight.c2;
+		right.c6 = tempRight.c8;
+		right.c7 = tempRight.c1;
+		right.c8 = tempRight.c4;
+		right.c9 = tempRight.c7;
 
 	}
 	// Twisting left face 90 degrees clockwise
-	public void L(){
+	public void L() {
 
 	}
 	// Twisting left face 90 degrees anti-clockwise
-	public void Li(){
+	public void Li() {
 
 	}
 	// Twisting upper face 90 degrees clockwise
-	public void U(){
+	public void U() {
 		/*
 		Layer tempLayer = new Layer(layer1.getCubie(7), layer1.getCubie(4), layer1.getCubie(1),
 		 layer1.getCubie(8), layer1.getCubie(5), layer1.getCubie(2),
@@ -242,15 +296,15 @@ public class Cube {
 		top.c4 = temp_top.c8;
 		top.c6 = temp_top.c2;
 		top.c7 = temp_top.c9;
-		top.c8 = temp_top.c6; 
-		top.c9 = temp_top.c3; 
+		top.c8 = temp_top.c6;
+		top.c9 = temp_top.c3;
 
 
 
 
 	}
 	// Twisting upper face 90 degrees anti-clockwise
-	public void Ui(){
+	public void Ui() {
 
 		Side temp = new Side(front);
 		Side temp_top = new Side(top);
@@ -276,20 +330,20 @@ public class Cube {
 		top.c4 = temp_top.c2;
 		top.c6 = temp_top.c8;
 		top.c7 = temp_top.c1;
-		top.c8 = temp_top.c4; 
-		top.c9 = temp_top.c7; 
+		top.c8 = temp_top.c4;
+		top.c9 = temp_top.c7;
 
 	}
 	// Twisting bottom face 90 degrees clockwise
-	public void D(){
+	public void D() {
 
 	}
 	// Twisting bottom face 90 degrees anti-clockwise
-	public void Di(){
+	public void Di() {
 
 	}
 
-	public String showFront(){
+	public String showFront() {
 
 		/*
 		String face = "";
@@ -311,7 +365,7 @@ public class Cube {
 
 	}
 
-	
+
 
 
 	public static void main(String [] args) {
