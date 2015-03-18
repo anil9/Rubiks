@@ -25,7 +25,8 @@ public class Cube {
 		createFinishedCube();
 		//printWholeCube();
 
-		Ri();
+		L();
+		//System.out.println(front);
 		printWholeCube();
 	}
 
@@ -251,6 +252,34 @@ public class Cube {
 	}
 	// Twisting left face 90 degrees clockwise
 	public void L() {
+		Side tempTop = new Side(top);
+		Side tempLeft = new Side(left);
+
+		top.c1 = back.c1;
+		top.c4 = back.c4;
+		top.c7 = back.c7;
+
+		back.c1 = bot.c1;
+		back.c4 = bot.c4;
+		back.c7 = bot.c7;
+
+		bot.c1 = front.c1;
+		bot.c4 = front.c4;
+		bot.c7 = front.c7;
+
+		front.c1 = tempTop.c1;
+		front.c4 = tempTop.c4;
+		front.c7 = tempTop.c7;
+
+		left.c1 = tempLeft.c7;
+		left.c2 = tempLeft.c4;
+		left.c3 = tempLeft.c1;
+		left.c4 = tempLeft.c8;
+		left.c6 = tempLeft.c2;
+		left.c7 = tempLeft.c9;
+		left.c8 = tempLeft.c6;
+		left.c9 = tempLeft.c3;
+
 
 	}
 	// Twisting left face 90 degrees anti-clockwise
