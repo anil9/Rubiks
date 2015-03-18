@@ -152,6 +152,7 @@ public class Cube {
 		*/
 
 		Side temp = new Side(face);
+		Side temp_top = new Side(top);
 		face.c1 = right.c1;
 		face.c2 = right.c2;
 		face.c3 = right.c3;
@@ -167,6 +168,15 @@ public class Cube {
 		left.c1 = temp.c1;
 		left.c2 = temp.c2;
 		left.c3 = temp.c3;
+
+		top.c1 = temp_top.c7;
+		top.c2 = temp_top.c4;
+		top.c3 = temp_top.c1;
+		top.c4 = temp_top.c8;
+		top.c6 = temp_top.c2;
+		top.c7 = temp_top.c9;
+		top.c8 = temp_top.c6; 
+		top.c9 = temp_top.c3; 
 
 
 
