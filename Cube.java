@@ -98,6 +98,32 @@ public class Cube {
 	 
 	// Twisting front face 90 degrees clockwise
 	public void F(){
+		Side temp = new Side(top);
+		Side temp_front = new Side(front);
+		top.c7 = left.c7;
+		top.c8 = left.c8;
+		top.c9 = left.c9; 
+
+		left.c7 = bot.c7;
+		left.c8 = bot.c8;
+		left.c9 = bot.c9; 
+
+		bot.c7 = right.c7;
+		bot.c8 = right.c8;
+		bot.c9 = right.c9; 
+
+		right.c7 = temp.c7;
+		right.c8 = temp.c8;
+		right.c9 = temp.c9; 
+
+		front.c1 = temp_front.c7;
+		front.c2 = temp_front.c4;
+		front.c3 = temp_front.c1;
+		front.c4 = temp_front.c8;
+		front.c6 = temp_front.c2;
+		front.c7 = temp_front.c9;
+		front.c8 = temp_front.c6; 
+		front.c9 = temp_front.c3; 
 
 	}
 	// Twisting front face 90 degrees anti-clockwise
@@ -178,6 +204,7 @@ public class Cube {
 	public void Ui(){
 
 		Side temp = new Side(face);
+		Side temp_top = new Side(top);
 		face.c1 = left.c1;
 		face.c2 = left.c2;
 		face.c3 = left.c3;
@@ -193,6 +220,15 @@ public class Cube {
 		right.c1 = temp.c1;
 		right.c2 = temp.c2;
 		right.c3 = temp.c3;
+
+		top.c1 = temp_top.c3;
+		top.c2 = temp_top.c6;
+		top.c3 = temp_top.c9;
+		top.c4 = temp_top.c2;
+		top.c6 = temp_top.c8;
+		top.c7 = temp_top.c1;
+		top.c8 = temp_top.c4; 
+		top.c9 = temp_top.c7; 
 
 	}
 	// Twisting bottom face 90 degrees clockwise
