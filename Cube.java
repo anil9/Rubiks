@@ -1,4 +1,6 @@
 
+import java.util.Arrays;
+
 
 public class Cube {
 	private final String WHITE = "white";
@@ -22,7 +24,7 @@ public class Cube {
 	public Cube() {
 		// 8 corners, 12(?) edges, 6 centers
 		//initCubies();
-		createFinishedCube();
+		fillSides();
 		//printWholeCube();
 
 		Li();
@@ -62,7 +64,33 @@ public class Cube {
 	// för layer1 räknas cubies (i vit face-vy) från top-left.
 	// för layer3 räknas cubies (i gul face-vy) från top-left.
 
+	private void fillSides() {
+		String[] red = new String[9];
+		String[] white = new String[9];
+		String[] yellow = new String[9];
+		String[] green = new String[9];
+		String[] blue = new String[9];
+		String[] orange = new String[9];
+
+		Arrays.fill(red, RED);
+		Arrays.fill(white, WHITE);
+		Arrays.fill(yellow, YELLOW);
+		Arrays.fill(green, GREEN);
+		Arrays.fill(blue, BLUE);
+		Arrays.fill(orange, ORANGE);
+
+		front = new Side(red);
+		top = new Side(white);
+		bot = new Side(yellow);
+		left = new Side(green);
+		right = new Side(blue);
+		back = new Side(orange);
+	}
+
+
+	// This method is never used.
 	private void createFinishedCube() {
+
 
 		layer1 = new Layer(new Corner(GREEN, WHITE, ORANGE, 0), new Edge(WHITE, ORANGE, 0), new Corner(WHITE, BLUE, ORANGE, 0),
 		                   new Edge(GREEN, WHITE, 0), new Center(WHITE), new Edge(WHITE, BLUE, 0),
@@ -311,7 +339,7 @@ public class Cube {
 		left.c6 = tempLeft.c8;
 		left.c7 = tempLeft.c1;
 		left.c8 = tempLeft.c4;
-		left.c9 = tempLeft.c7;		
+		left.c9 = tempLeft.c7;
 
 
 	}
@@ -388,31 +416,6 @@ public class Cube {
 	public void Di() {
 
 	}
-
-	public String showFront() {
-
-		/*
-		String face = "";
-
-		face += layer1.getCubie(7).toString() + " ";
-		face += layer1.getCubie(8).toString() + " ";
-		face += layer1.getCubie(9).toString() + "\n";
-		face += middle.getCubie(1).toString() + " ";
-		face += middle.getCubie(2).toString() + " ";
-		face += middle.getCubie(3).toString() + "\n";
-		face += layer3.getCubie(1).toString() + " ";
-		face += layer3.getCubie(2).toString() + " ";
-		face += layer3.getCubie(3).toString();
-
-		return face;
-		*/
-		return front.toString();
-
-
-	}
-
-
-
 
 	public static void main(String [] args) {
 		Cube cube = new Cube();
