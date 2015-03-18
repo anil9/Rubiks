@@ -26,15 +26,7 @@ public class Cube {
 		System.out.println(showFace());
 		U();
 		System.out.println(showFace());
-		U();
-		System.out.println(showFace());
-		U();
-		System.out.println(showFace());
-		U();
-		System.out.println(showFace());
-		U();
-		System.out.println(showFace());
-		U();
+		Ui();
 		System.out.println(showFace());
 	}
 	/*
@@ -174,6 +166,23 @@ public class Cube {
 	}
 	// Twisting upper face 90 degrees anti-clockwise
 	public void Ui(){
+
+		Side temp = new Side(face);
+		face.c1 = left.c1;
+		face.c2 = left.c2;
+		face.c3 = left.c3;
+
+		left.c1 = back.c9;
+		left.c2 = back.c8;
+		left.c3 = back.c7;
+
+		back.c9 = right.c1;
+		back.c8 = right.c2;
+		back.c7 = right.c3;
+
+		right.c1 = temp.c1;
+		right.c2 = temp.c2;
+		right.c3 = temp.c3;
 
 	}
 	// Twisting bottom face 90 degrees clockwise
