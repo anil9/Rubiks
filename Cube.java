@@ -25,7 +25,7 @@ public class Cube {
 		createFinishedCube();
 		//printWholeCube();
 
-		L();
+		Li();
 		//System.out.println(front);
 		printWholeCube();
 	}
@@ -285,21 +285,38 @@ public class Cube {
 	// Twisting left face 90 degrees anti-clockwise
 	public void Li() {
 
+		Side tempTop = new Side(top);
+		Side tempLeft = new Side(left);
+
+		top.c1 = front.c1;
+		top.c4 = front.c4;
+		top.c7 = front.c7;
+
+		front.c1 = bot.c1;
+		front.c4 = bot.c4;
+		front.c7 = bot.c7;
+
+		bot.c1 = back.c1;
+		bot.c4 = back.c4;
+		bot.c7 = back.c7;
+
+		back.c1 = tempTop.c1;
+		back.c4 = tempTop.c4;
+		back.c7 = tempTop.c7;
+
+		left.c1 = tempLeft.c3;
+		left.c2 = tempLeft.c6;
+		left.c3 = tempLeft.c9;
+		left.c4 = tempLeft.c2;
+		left.c6 = tempLeft.c8;
+		left.c7 = tempLeft.c1;
+		left.c8 = tempLeft.c4;
+		left.c9 = tempLeft.c7;		
+
+
 	}
 	// Twisting upper face 90 degrees clockwise
 	public void U() {
-		/*
-		Layer tempLayer = new Layer(layer1.getCubie(7), layer1.getCubie(4), layer1.getCubie(1),
-		 layer1.getCubie(8), layer1.getCubie(5), layer1.getCubie(2),
-		  layer1.getCubie(9), layer1.getCubie(6), layer1.getCubie(3));
-		layer1 = tempLayer;
-
-		// wierd hårdkodning tillsvidare.
-		layer1.getCubie(7).showingColor(layer1.getCubie(7).getShowingColor()-1);
-		layer1.getCubie(8).showingColor(1);
-		layer1.getCubie(9).showingColor(1);
-
-		*/
 
 		Side temp = new Side(front);
 		Side temp_top = new Side(top);
