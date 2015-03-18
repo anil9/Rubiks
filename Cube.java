@@ -122,8 +122,8 @@ public class Cube {
 	 
 	// Twisting front face 90 degrees clockwise
 	public void F(){
-		Side temp = new Side(top);
-		Side temp_front = new Side(front);
+		Side tempTop = new Side(top);
+		Side tempFront = new Side(front);
 		top.c7 = left.c9;
 		top.c8 = left.c6;
 		top.c9 = left.c3; 
@@ -136,24 +136,24 @@ public class Cube {
 		bot.c2 = right.c4;
 		bot.c3 = right.c1; 
 
-		right.c1 = temp.c7;
-		right.c4 = temp.c8;
-		right.c7 = temp.c9; 
+		right.c1 = tempTop.c7;
+		right.c4 = tempTop.c8;
+		right.c7 = tempTop.c9; 
 
-		front.c1 = temp_front.c7;
-		front.c2 = temp_front.c4;
-		front.c3 = temp_front.c1;
-		front.c4 = temp_front.c8;
-		front.c6 = temp_front.c2;
-		front.c7 = temp_front.c9;
-		front.c8 = temp_front.c6; 
-		front.c9 = temp_front.c3; 
+		front.c1 = tempFront.c7;
+		front.c2 = tempFront.c4;
+		front.c3 = tempFront.c1;
+		front.c4 = tempFront.c8;
+		front.c6 = tempFront.c2;
+		front.c7 = tempFront.c9;
+		front.c8 = tempFront.c6; 
+		front.c9 = tempFront.c3; 
 
 	}
 	// Twisting front face 90 degrees anti-clockwise
 	public void Fi(){
-		Side temp = new Side(top);
-		Side temp_front = new Side(front);
+		Side tempTop = new Side(top);
+		Side tempFront = new Side(front);
 		top.c7 = right.c1;
 		top.c8 = right.c4;
 		top.c9 = right.c7; 
@@ -166,18 +166,18 @@ public class Cube {
 		bot.c2 = left.c6;
 		bot.c3 = left.c9; 
 
-		left.c3 = temp.c9;
-		left.c6 = temp.c8;
-		left.c9 = temp.c7; 
+		left.c3 = tempTop.c9;
+		left.c6 = tempTop.c8;
+		left.c9 = tempTop.c7; 
 
-		front.c1 = temp_front.c3;
-		front.c2 = temp_front.c6;
-		front.c3 = temp_front.c9;
-		front.c4 = temp_front.c2;
-		front.c6 = temp_front.c8;
-		front.c7 = temp_front.c1;
-		front.c8 = temp_front.c4; 
-		front.c9 = temp_front.c7; 
+		front.c1 = tempFront.c3;
+		front.c2 = tempFront.c6;
+		front.c3 = tempFront.c9;
+		front.c4 = tempFront.c2;
+		front.c6 = tempFront.c8;
+		front.c7 = tempFront.c1;
+		front.c8 = tempFront.c4; 
+		front.c9 = tempFront.c7; 
 	}
 	// Twisting Back face 90 degrees clockwise
 	public void B(){
