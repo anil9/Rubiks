@@ -208,10 +208,64 @@ public class Cube {
 	}
 	// Twisting Back face 90 degrees clockwise
 	public void B() {
+		Side tempTop = new Side(top);
+		Side tempBack = new Side(back);
+
+		top.c1 = right.c3;
+		top.c2 = right.c6;
+		top.c3 = right.c9;
+
+		right.c3 = bot.c9;
+		right.c6 = bot.c8;
+		right.c7 = bot.c7;
+
+		bot.c9 = left.c7;
+		bot.c8 = left.c4;
+		bot.c7 = left.c1;
+
+		left.c1 = tempTop.c3;
+		left.c4 = tempTop.c2;
+		left.c7 = tempTop.c1;
+
+		back.c9 = tempBack.c3;
+		back.c8 = tempBack.c6;
+		back.c7 = tempBack.c9;
+		back.c6 = tempBack.c2;
+		back.c4 = tempBack.c8;
+		back.c3 = tempBack.c1;
+		back.c2 = tempBack.c4;
+		back.c1 = tempBack.c7;
 
 	}
 	// Twisting back face 90 degrees anti-clockwise
 	public void Bi() {
+		Side tempTop = new Side(top);
+		Side tempBack = new Side(back);
+
+		top.c1 = left.c7;
+		top.c2 = left.c4;
+		top.c3 = left.c1;
+
+		left.c7 = bot.c9;
+		left.c4 = bot.c8;
+		left.c1 = bot.c7;
+
+		bot.c9 = right.c3;
+		bot.c8 = right.c6;
+		bot.c7 = right.c9;
+
+		right.c3 = tempTop.c1;
+		right.c6 = tempTop.c2;
+		right.c9 = tempTop.c3;
+
+		back.c9 = tempBack.c7;
+		back.c8 = tempBack.c5;
+		back.c7 = tempBack.c1;
+		back.c6 = tempBack.c8;
+		back.c4 = tempBack.c2;
+		back.c3 = tempBack.c9;
+		back.c2 = tempBack.c6;
+		back.c1 = tempBack.c3;
 
 	}
 	// Twisting right face 90 degrees clockwise
@@ -410,11 +464,64 @@ public class Cube {
 	}
 	// Twisting bottom face 90 degrees clockwise
 	public void D() {
+		Side tempFront = new Side(front);
+		Side tempBot = new Side(bot);
+
+		front.c7 = left.c7;
+		front.c8 = left.c8;
+		front.c9 = left.c9;
+
+		left.c7 = back.c3;
+		left.c8 = back.c2;
+		left.c9 = back.c1;
+
+		back.c1 = right.c9;
+		back.c2 = right.c8;
+		back.c3 = right.c7;
+
+		right.c7 = tempFront.c7;
+		right.c8 = tempFront.c8;
+		right.c9 = tempFront.c9;
+
+		bot.c1 = tempBot.c7;
+		bot.c2 = tempBot.c4;
+		bot.c3 = tempBot.c1;
+		bot.c4 = tempBot.c8;
+		bot.c6 = tempBot.c2;
+		bot.c7 = tempBot.c9;
+		bot.c8 = tempBot.c6;
+		bot.c9 = tempBot.c3;
 
 	}
 	// Twisting bottom face 90 degrees anti-clockwise
 	public void Di() {
+		Side tempFront = new Side(front);
+		Side tempBot = new Side(bot);
 
+		front.c7 = right.c7;
+		front.c8 = right.c8;
+		front.c9 = right.c9;
+
+		right.c7 = back.c3;
+		right.c8 = back.c2;
+		right.c9 = back.c1;
+
+		back.c1 = left.c9;
+		back.c2 = left.c8;
+		back.c3 = left.c7;
+
+		left.c7 = tempFront.c7;
+		left.c8 = tempFront.c8;
+		left.c9 = tempFront.c9;
+
+		bot.c1 = tempBot.c3;
+		bot.c2 = tempBot.c6;
+		bot.c3 = tempBot.c9;
+		bot.c4 = tempBot.c2;
+		bot.c6 = tempBot.c8;
+		bot.c7 = tempBot.c1;
+		bot.c8 = tempBot.c4;
+		bot.c9 = tempBot.c7;
 	}
 
 	public static void main(String [] args) {
