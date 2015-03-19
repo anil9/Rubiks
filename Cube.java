@@ -1,5 +1,6 @@
 
 import java.util.Arrays;
+import java.util.Random;
 
 
 public class Cube {
@@ -26,8 +27,6 @@ public class Cube {
 		//initCubies();
 		fillSides();
 		//printWholeCube();
-
-		Li();
 		//System.out.println(front);
 		printWholeCube();
 	}
@@ -146,6 +145,68 @@ public class Cube {
 	}
 
 	//Operations on the cube
+
+	/*
+	 * Scramble the cube by executing @param operations number of operations on the cube.
+	 * @param operations The number of operations used to scramble the cube.
+	*/
+
+	public void scramble(int operations) {
+		int numberOfOperations = 12;
+		Random random = new Random();
+
+		for (int i = 0; i < operations; i++) {
+			int op = random.nextInt(numberOfOperations);		// generates 0 <= random int < numberOfOperations
+
+			switch (op) {
+			case 0:
+				F();
+				break;
+			case 1:
+				Fi();
+				break;
+			case 2:
+				B();
+				break;
+			case 3:
+				Bi();
+				break;
+			case 4:
+				R();
+				break;
+			case 5:
+				Ri();
+				break;
+			case 6:
+				L();
+				break;
+			case 7:
+				Li();
+				break;
+			case 8:
+				U();
+				break;
+			case 9:
+				Ui();
+				break;
+			case 10:
+				D();
+				break;
+			case 11:
+				Di();
+				break;
+			default:
+				System.err.println("Error in scramble. Wierd operation number:" + op);
+				break;
+
+
+			}
+
+
+
+		}
+
+	}
 
 	// Twisting front face 90 degrees clockwise
 	public void F() {
