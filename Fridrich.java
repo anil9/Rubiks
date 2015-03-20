@@ -1,20 +1,16 @@
 
 
-public class Fridrich {
+public class Fridrich implements Algorithm {
 
 	public Fridrich() {
 
 	}
 
-	public long runAlg(Cube cube){
-		long startTime = System.currentTimeMillis();
-
-		// run alg here
+	public void runAlg(Cube cube){
 		
 
+		cube.scramble(100000);	// just scrambling for time test.
 
-		long stopTime = System.currentTimeMillis(); - startTime;
-		return stopTime;
 	}
 
 

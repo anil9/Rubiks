@@ -1,3 +1,3 @@
-cube:
-	javac Cube.java
-	java Cube
+all:
+	javac Main.java
+	java Main

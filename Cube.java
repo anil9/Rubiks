@@ -495,9 +495,10 @@ public class Cube {
 		bot.c9 = tempBot.c7;
 	}
 
-	public static void main(String [] args) {
+	/*public static void main(String [] args) {
 		Cube cube = new Cube();
 
 	}
+	*/
 }
 
