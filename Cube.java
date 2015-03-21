@@ -21,33 +21,9 @@ public class Cube {
 	public Cube() {
 		fillSides();
 		//System.out.println(front);
+//		System.out.println("Hel");
 		printWholeCube();
 
-		F();
-		printWholeCube();
-		Fi();
-		printWholeCube();
-		B();
-		printWholeCube();
-		Bi();
-		printWholeCube();
-		R();
-		printWholeCube();
-		Ri();
-		printWholeCube();
-		L();
-		printWholeCube();
-		Li();
-		printWholeCube();
-		U();
-		printWholeCube();
-		Ui();
-		printWholeCube();
-		D();
-		printWholeCube();
-		Di();
-		printWholeCube();
-			
 	}
 
 	public void printWholeCube() {
@@ -245,7 +221,7 @@ public class Cube {
 
 		right.c3 = bot.c9;
 		right.c6 = bot.c8;
-		right.c7 = bot.c7;
+		right.c9 = bot.c7;
 
 		bot.c9 = left.c7;
 		bot.c8 = left.c4;

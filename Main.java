@@ -9,9 +9,9 @@ public class Main {
 	public Main() {
 		cube = new Cube();
 		//fridrich = new Fridrich();
-		//petrus = new Petrus();
+		petrus = new Petrus();
 
-		//petrus.runAlg(cube);
+		petrus.runAlg(cube);
 
 		//measure(fridrich);
 		//measure(petrus);
