@@ -8,10 +8,12 @@ public class Main {
 
 	public Main() {
 		cube = new Cube();
-		fridrich = new Fridrich();
+		//fridrich = new Fridrich();
 		//petrus = new Petrus();
 
-		measure(fridrich);
+		//petrus.runAlg(cube);
+
+		//measure(fridrich);
 		//measure(petrus);
 	}
 

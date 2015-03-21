@@ -22,9 +22,35 @@ public class Cube {
 		fillSides();
 		//System.out.println(front);
 		printWholeCube();
+
+		F();
+		printWholeCube();
+		Fi();
+		printWholeCube();
+		B();
+		printWholeCube();
+		Bi();
+		printWholeCube();
+		R();
+		printWholeCube();
+		Ri();
+		printWholeCube();
+		L();
+		printWholeCube();
+		Li();
+		printWholeCube();
+		U();
+		printWholeCube();
+		Ui();
+		printWholeCube();
+		D();
+		printWholeCube();
+		Di();
+		printWholeCube();
+			
 	}
 
-	private void printWholeCube() {
+	public void printWholeCube() {
 		System.out.println("This is the whole cube:");
 		System.out.println("======================");
 		System.out.println("Front:");
@@ -68,6 +94,26 @@ public class Cube {
 		left = new Side(green);
 		right = new Side(blue);
 		back = new Side(orange);
+	}
+
+	public Side getSide(int side){
+		switch(side){
+			case 1:
+			return front;
+			case 2:
+			return top;
+			case 3:
+			return bot;
+			case 4:
+			return left;
+			case 5: 
+			return right;
+			case 6:
+			return back;
+			default:
+			return null;
+		}
+
 	}
 
 	/*
@@ -241,7 +287,7 @@ public class Cube {
 		right.c9 = tempTop.c3;
 
 		back.c9 = tempBack.c7;
-		back.c8 = tempBack.c5;
+		back.c8 = tempBack.c4;
 		back.c7 = tempBack.c1;
 		back.c6 = tempBack.c8;
 		back.c4 = tempBack.c2;
