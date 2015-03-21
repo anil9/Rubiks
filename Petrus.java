@@ -20,34 +20,28 @@ public class Petrus{
 	*	Step 1
 	*/
 	private Cube buildTwoBlock(Cube cube){
-		/*String[] cornerColours = findStartCorner(cube);
-		System.out.println(cornerColours[0] + " " + cornerColours[1] + " " + cornerColours[2]);
-		*/return cube;
+		int[] startcornerIndex = findStartCorner(cube);
+		System.out.println(startcornerIndex[0] + " " + startcornerIndex[1]);
+		return cube;
 	}
 
-	private Int[] findStartCorner(Cube cube){
-		/*
-			Tanke: kommer behöva att en sida vet vilken sida den är, samt dett grannsidor.
-			Här behöver jag en funktion som givet cubienummer och sida får fram vilken den närliggande sidan är. 
-			Om cubie-edge och cubie-corner (bredvid varandra) på samma sida har samma färg så måste jag kunna kolla att färgen är samma på andra sidan av cubien. 
-
-		*/	
-
+	/*
+	*	Searching for blue-yellow-orange corner and returning index for it. 
+	*/
+	private int[] findStartCorner(Cube cube){
 		for(int i = 1; i<=6;i++){
 			Side side = cube.getSide(i);
-			if(side.c1.equals(side.c2)||side.c1.equals(side.c4)){
-				int[] ret = new int[2];
-				// side,cubie pair
-				ret[0] = i;
-				ret[1] = 1;
-				return ret;
+			for(int j = 1; j<=4;j++){	
+				if(side.getC(j).equals("blue")||side.getC(j).equals("yellow")||side.getC(j).equals("orange")){
+					int[] ret = new int[2];
+					// side,cubie pair
+					ret[0] = i;
+					ret[1] = j;
+					return ret;
+				}
 			}
 		}
-		/*String[] ret = new String[3];
-		ret[0] = colour1;
-		ret[1] = colour2;
-		ret[2] = colour3;
-		*/return ret;
+		return null;
 
 	}
 

@@ -45,6 +45,30 @@ public String toString(){
 
 }
 
+public String getC(int i){
+	switch(i){
+		case 1:
+		return c1;
+		case 2:
+		return c2;
+		case 3:
+		return c3;
+		case 4: 
+		return c4;
+		case 5:
+		return c5;
+		case 6:
+		return c6;
+		case 7:
+		return c7;
+		case 8:
+		return c8;
+		case 9:
+		return c9;
+		default:
+		return "";
+	}
+}
 
 
 
