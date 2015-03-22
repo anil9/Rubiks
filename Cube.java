@@ -151,7 +151,88 @@ public class Cube {
 
 	//Operations on the cube
 
-	
+
+	// rotate the middle layer between left and right, in the direction of a regular L
+	public void M(){
+		Side tempTop = new Side(top);
+		top.c2 = back.c2;
+		top.c5 = back.c5;
+		top.c8 = back.c8;
+
+		back.c2 = bot.c2;
+		back.c5 = bot.c5;
+		back.c8 = bot.c8;
+
+		bot.c2 = face.c2;
+		bot.c5 = face.c5;
+		bot.c8 = face.c8;
+
+		face.c2 = tempTop.c2;
+		face.c5 = tempTop.c5;
+		face.c8 = tempTop.c8;
+
+	}
+	// rotate the middle layer between left and right, in the direction of a regular Li
+	public void Mi(){
+		Side tempTop = new Side(top);
+		top.c2 = face.c2;
+		top.c5 = face.c5;
+		top.c8 = face.c8;
+
+		face.c2 = bot.c2;
+		face.c5 = bot.c5;
+		face.c8 = bot.c8;
+
+		bot.c2 = back.c2;
+		bot.c5 = back.c5;
+		bot.c8 = back.c8;
+
+		back.c2 = tempTop.c2;
+		back.c5 = tempTop.c5;
+		back.c8 = tempTop.c8;
+	}
+
+	// rotate the middle layer between up and down, in the direction of a regular D
+	public void E(){
+		Side tempFace = new Side(face);
+		face.c4 = left.c4;
+		face.c5 = left.c5;
+		face.c6 = left.c6;
+
+		left.c4 = back.c4;
+		left.c5 = back.c5;
+		left.c6 = back.c6;
+
+		back.c4 = right.c4;
+		back.c5 = right.c5;
+		back.c6 = right.c6;
+
+		right.c4 = tempFace.c4;
+		right.c5 = tempFace.c5;
+		right.c6 = tempFace.c6;
+	}
+	// rotate the middle layer between up and down, in the direction of a regular Di
+	public void Ei(){
+		Side tempFace = new Side(face);
+		face.c4 = right.c4;
+		face.c5 = right.c5;
+		face.c6 = right.c6;
+
+		right.c4 = back.c4;
+		right.c5 = back.c5;
+		right.c6 = back.c6;
+
+		back.c4 = left.c4;
+		back.c5 = left.c5;
+		back.c6 = left.c6;		
+
+		left.c4 = tempFace.c4;
+		left.c5 = tempFace.c5;
+		left.c6 = tempFace.c6;
+
+	}
+
+
 	// Twisting front face 90 degrees clockwise
 	public void F() {
 		Side tempTop = new Side(top);
