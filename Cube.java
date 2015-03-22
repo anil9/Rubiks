@@ -151,6 +151,7 @@ public class Cube {
 
 	//Operations on the cube
 
+	
 	// Twisting front face 90 degrees clockwise
 	public void F() {
 		Side tempTop = new Side(top);
