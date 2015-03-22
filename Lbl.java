@@ -5,7 +5,7 @@ public class Lbl{
 	private HashMap<Integer, Double> times = new HashMap<Integer, Double>();
 	private HashMap<Integer, Integer> moves = new HashMap<Integer, Integer>();
 
-	public Petrus(){
+	public Lbl(){
 
 	}
 
