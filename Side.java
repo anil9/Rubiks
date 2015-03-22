@@ -56,7 +56,7 @@ public String getC(int i){
 		case 4: 
 		return c4;
 		case 5:
-		return c5;
+		return c5; // OBS finns inte alltid
 		case 6:
 		return c6;
 		case 7:
