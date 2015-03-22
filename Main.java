@@ -2,19 +2,20 @@ public class Main {
 	public static final int ALGO_RUNS = 10;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
-	Fridrich fridrich;
+	//Fridrich fridrich;
 	Petrus petrus;
 
 
 	public Main() {
 		cube = new Cube();
 		//fridrich = new Fridrich();
-		petrus = new Petrus();
+		//petrus = new Petrus();
 
-		petrus.runAlg(cube);
+		//petrus.runAlg(cube);
 
 		//measure(fridrich);
 		//measure(petrus);
+
 	}
 
 
