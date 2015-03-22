@@ -3,15 +3,15 @@ public class Main {
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
 	Fridrich fridrich;
-	Petrus petrus;
+	Lbl lbl;
 
 
 	public Main() {
 		cube = new Cube();
 		//fridrich = new Fridrich();
-		petrus = new Petrus();
+		lbl = new Petrus();
 
-		petrus.runAlg(cube);
+		lbl.runAlg(cube);
 
 		//measure(fridrich);
 		//measure(petrus);
