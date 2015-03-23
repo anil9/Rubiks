@@ -2,19 +2,20 @@ public class Main {
 	public static final int ALGO_RUNS = 10;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
-
-	Lbl lbl;
+	Dedmore dedmore;
+	//Lbl lbl;
 
 
 	public Main() {
 		cube = new Cube();
-		lbl = new Lbl();
+		//lbl = new Lbl();
 
-		lbl.runAlg(cube);
+		//lbl.runAlg(cube);
 
 		//measure(fridrich);
 		//measure(petrus);
-
+		dedmore = new Dedmore();
+		measure(dedmore);
 	}
 
 
@@ -30,9 +31,11 @@ public class Main {
 			long stopTime = System.currentTimeMillis() - startTime;
 			
 			result[i] = stopTime;
+			//cube.printWholeCube();		// remove later
 		}
 		// write results to file in some nice format.
 		printResult(result);
+
 
 	}
 
