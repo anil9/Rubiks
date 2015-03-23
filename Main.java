@@ -1,5 +1,5 @@
 public class Main {
-	public static final int ALGO_RUNS = 10;	// increase this to a good value
+	public static final int ALGO_RUNS = 100;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
 	Dedmore dedmore;
@@ -31,6 +31,7 @@ public class Main {
 			long stopTime = System.currentTimeMillis() - startTime;
 			
 			result[i] = stopTime;
+			System.out.println("done");
 			//cube.printWholeCube();		// remove later
 		}
 		// write results to file in some nice format.

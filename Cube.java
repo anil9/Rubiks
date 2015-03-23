@@ -97,7 +97,7 @@ public class Cube {
 	 * @param operations The number of operations used to scramble the cube.
 	*/
 	public void scramble(int operations) {
-		int numberOfOperations = 12;
+		int numberOfOperations = 20;
 		Random random = new Random();
 
 		for (int i = 0; i < operations; i++) {
@@ -140,6 +140,30 @@ public class Cube {
 			case 11:
 				Di();
 				break;
+			case 12:
+				M();
+				break;
+			case 13:
+				Mi();
+				break;
+			case 14:
+				E();
+				break;
+			case 15:
+				Ei();
+				break;
+			case 16:
+				rightToFront();
+				break;
+			case 17:
+				leftToFront();
+				break;
+			case 18:
+				topToFront();
+				break;
+			case 19:
+				botToFront();
+				break;
 			default:
 				System.err.println("Error in scramble. Wierd operation number:" + op);
 				break;
@@ -153,27 +177,48 @@ public class Cube {
 
 	public void topToFront(){
 
+		/*
 		Ri_NoCount();
 		M_NoCount();
 		L_NoCount();
+		*/
+
+		Ri();
+		M();
+		L();
 	}
 
 	public void botToFront(){
+		/*
 		R_NoCount();
 		Mi_NoCount();
 		Li_NoCount();
+		*/
+		R();
+		Mi();
+		Li();
 	}
 
 	public void rightToFront(){
+		/*
 		U_NoCount();
 		Ei_NoCount();
 		Di_NoCount();
+		*/
+		U();
+		Ei();
+		Di();
 	}
 
 	public void leftToFront(){
+		/*
 		Ui_NoCount();
 		E_NoCount();
 		D_NoCount();
+		*/
+		Ui();
+		E();
+		D();
 	}
 
 	// rotate the middle layer between left and right, in the direction of a regular L
