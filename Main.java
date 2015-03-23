@@ -10,7 +10,8 @@ public class Main {
 		cube = new Cube();
 		lbl = new Lbl();
 
-		lbl.runAlg(cube);
+			lbl.runAlg(cube);
+		
 
 		//measure(fridrich);
 		//measure(petrus);

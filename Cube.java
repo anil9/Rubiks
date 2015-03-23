@@ -666,41 +666,40 @@ public class Cube {
 	}
 	private void E_NoCount(){
 
-		Side tempFront = new Side(front);
+	Side tempFront = new Side(front);
 		front.c4 = left.c4;
 		front.c5 = left.c5;
 		front.c6 = left.c6;
 
-		left.c4 = back.c4;
+		left.c4 = back.c6;
 		left.c5 = back.c5;
-		left.c6 = back.c6;
+		left.c6 = back.c4;
 
-		back.c4 = right.c4;
+		back.c4 = right.c6;
 		back.c5 = right.c5;
-		back.c6 = right.c6;
+		back.c6 = right.c4;
 
 		right.c4 = tempFront.c4;
 		right.c5 = tempFront.c5;
 		right.c6 = tempFront.c6;
 	}
 	private void Ei_NoCount(){
-		Side tempFront = new Side(front);
+	Side tempFront = new Side(front);
 		front.c4 = right.c4;
 		front.c5 = right.c5;
 		front.c6 = right.c6;
 
-		right.c4 = back.c4;
+		right.c4 = back.c6;
 		right.c5 = back.c5;
-		right.c6 = back.c6;
+		right.c6 = back.c4;
 
-		back.c4 = left.c4;
+		back.c4 = left.c6;
 		back.c5 = left.c5;
-		back.c6 = left.c6;		
+		back.c6 = left.c4;		
 
 		left.c4 = tempFront.c4;
 		left.c5 = tempFront.c5;
 		left.c6 = tempFront.c6;
-
 	}
 
 	private void L_NoCount(){
@@ -735,7 +734,7 @@ public class Cube {
 	}
 	private void Li_NoCount(){
 
-		Side tempTop = new Side(top);
+	Side tempTop = new Side(top);
 		Side tempLeft = new Side(left);
 
 		top.c1 = front.c1;
@@ -762,11 +761,10 @@ public class Cube {
 		left.c7 = tempLeft.c1;
 		left.c8 = tempLeft.c4;
 		left.c9 = tempLeft.c7;
-
 	}
 	private void R_NoCount(){
 
-		Side tempTop = new Side(top);
+			Side tempTop = new Side(top);
 		Side tempRight = new Side(right);
 
 		top.c3 = front.c3;
@@ -881,11 +879,9 @@ Side temp = new Side(front);
 		top.c7 = temp_top.c1;
 		top.c8 = temp_top.c4;
 		top.c9 = temp_top.c7;
-
 	}
 	private void D_NoCount(){
-
-		Side tempFront = new Side(front);
+	Side tempFront = new Side(front);
 		Side tempBot = new Side(bot);
 
 		front.c7 = left.c7;
@@ -912,6 +908,7 @@ Side temp = new Side(front);
 		bot.c7 = tempBot.c9;
 		bot.c8 = tempBot.c6;
 		bot.c9 = tempBot.c3;
+
 	}
 	private void Di_NoCount(){
 
