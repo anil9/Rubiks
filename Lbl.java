@@ -6,6 +6,7 @@ public class Lbl implements Algorithm{
 	private HashMap<Integer, Integer> moves = new HashMap<Integer, Integer>();
 	private final int MAX_ROTATIONS_IN_LAP = 3;
 	private HashMap<String, Boolean> rotated = new HashMap<String, Boolean>();
+
 	
 	public Lbl(){
 
@@ -14,7 +15,7 @@ public class Lbl implements Algorithm{
 	public void runAlg(Cube cube){
 		for(int i = 0; i<100;i++){
 			cube.scramble(1000);;
-			cube = findWhiteCenter(cube);
+			cube = findYellowCenter(cube);
 			cube = whiteCross(cube);
 			if(!stepOneDone(cube)){
 				System.out.println("inte klar");
@@ -232,6 +233,34 @@ public class Lbl implements Algorithm{
 		return cube;
 	}
 
+	private findWhiteEdge(Cube cube){
+		if(cube.getSide(1).c3.equals("white")){
+			if(cube.getSide(2).c9.equals(cube.getSide(1).c5)){
+				cube.Fi();
+				cube.Ri();
+				cube.F();
+			}
+		}else if(cube.getSide(1).c3.equals(cube.getSide(1).c5)){
+			if(cube.getSide(5).c1.equals("white")){
+				cube.R();
+				cube.U();
+				cube.Ri();
+			}
+		}else if(cube.getSide(2).c9.equals("white")){
+			if(cube.getSide(5).c1.equals(cube.getSide(1).c5)){
+				cube.R();
+				cube.U();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+
+				cube.R();
+				cube.U();
+				cube.Ri();
+			}
+		}
+	}
+
 	/*
 	*	Step 3
 	*/
@@ -260,7 +289,7 @@ public class Lbl implements Algorithm{
 		return cube;
 	}
 	
-	private Cube findWhiteCenter(Cube cube){
+	private Cube findYellowCenter(Cube cube){
 		if(cube.getSide(1).c5.equals("yellow")){
 			cube.botToFront();
 			return cube;
