@@ -14,7 +14,7 @@ public class Main {
 		
 
 		//measure(fridrich);
-		//measure(petrus);
+		//measure(lbl);
 
 	}
 

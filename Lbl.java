@@ -1,27 +1,29 @@
 import java.util.HashMap;
 
-public class Lbl{
+public class Lbl implements Algorithm{
 
 	private HashMap<Integer, Double> times = new HashMap<Integer, Double>();
 	private HashMap<Integer, Integer> moves = new HashMap<Integer, Integer>();
 	private final int MAX_ROTATIONS_IN_LAP = 3;
-
+	private HashMap<String, Boolean> rotated = new HashMap<String, Boolean>();
+	
 	public Lbl(){
 
 	}
 
 	public void runAlg(Cube cube){
-		cube.scramble(1000);
-		//cube.printWholeCube();
-		cube = findWhiteCenter(cube);
-		cube = whiteCross(cube);
-		System.out.println("center" + cube.getSide(2).c5);
-		System.out.println(cube.getSide(2).c2);
-		System.out.println(cube.getSide(2).c4);
-		System.out.println(cube.getSide(2).c6);
-		System.out.println(cube.getSide(2).c8);
+		for(int i = 0; i<100;i++){
+			cube.scramble(1000);;
+			cube = findWhiteCenter(cube);
+			cube = whiteCross(cube);
+			if(!stepOneDone(cube)){
+				System.out.println("inte klar");
+				break;
 
-		cube.printWholeCube();
+			}
+		}
+		
+		//cube.printWholeCube();
 
 	}
 
@@ -36,21 +38,16 @@ public class Lbl{
 					if(!hasWhiteEdgeonVertical(cube)){
 						break;
 					}
-					cube = moveWhiteEdge(cube);
+					cube = moveWhiteEdgeEasy(cube);
+					cube = moveWhiteEdgeSpecial(cube);
 					cube.rightToFront();
 					
 					
 				}
-				
-				//cube.printWholeCube();
-
-
+			
 			}
 
-			//cube.printWholeCube();
-
 			while(!crossDone(cube)){
-				System.out.println("crossDone not");
 					while(cube.getSide(2).c8.equals("white")){
 						//System.out.println("top is white");
 						cube.U();
@@ -65,65 +62,44 @@ public class Lbl{
 			}
 		}
 
-		/*for(int i = 0;i<MAX_ROTATIONS_IN_LAP;i++){
-				cube.printWholeCube();
-				cube.U();
-			
-		}
-		if(!cube.getSide(1).c2.equals(cube.getSide(1).c5) && !cube.getSide(4).c2.equals(cube.getSide(4).c5)){
-			cube.F();
-			cube.F();
-			cube.D();
-			cube.L();
-			cube.L();
-			cube.D();
-			cube.F();
-			cube.F();
-			cube.D();
-			cube.L();
-			cube.L();
-		} else if(!cube.getSide(1).c2.equals(cube.getSide(1).c5) && !cube.getSide(5).c2.equals(cube.getSide(5).c5)){
-			cube.F();
-			cube.F();
-			cube.Di();
-			cube.R();
-			cube.R();
-			cube.Di();
-			cube.F();
-			cube.F();
-			cube.Di();
-			cube.L();
-			cube.L();
-		} else if(!cube.getSide(4).c2.equals(cube.getSide(4).c5) && !cube.getSide(6).c2.equals(cube.getSide(6).c5)){
-			cube.B();
-			cube.B();
-			cube.Di();
-			cube.L();
-			cube.L();
-			cube.Di();
-			cube.B();
-			cube.B();
-			cube.Di();
-			cube.L();
-			cube.L();
-		}else if(!cube.getSide(5).c2.equals(cube.getSide(5).c5) && !cube.getSide(6).c2.equals(cube.getSide(6).c5)){
-			cube.B();
-			cube.B();
-			cube.D();
-			cube.R();
-			cube.R();
-			cube.D();
-			cube.B();
-			cube.B();
-			cube.D();
-			cube.R();
-			cube.R();
-		}*/
 
+
+		//Daisy method
+		int count_back = 0;
+		for(int i = 0; i<4;i++){
+			while(!cube.getSide(2).c8.equals("white")){
+				cube.U();
+			}
+
+			if(cube.getSide(1).c2.equals(cube.getSide(1).c5)){
+				cube.F();
+				cube.F();
+				rotated.put(cube.getSide(1).c5, true);
+				cube.rightToFront();
+			}else{
+				while(!cube.getSide(1).c2.equals(cube.getSide(1).c5)){
+					//System.out.println("U");
+					cube.Ei();
+					cube.Di();
+					//count_back++;
+				}
+					/*if(rotated.get(cube.getSide(1).c5)!= null && rotated.get(cube.getSide(1).c5)== true){
+						System.out.println("redan roterad");
+					}
+					*/
+					cube.F();
+					cube.F();
+					rotated.put(cube.getSide(1).c5, true);
+					cube.rightToFront();
+				
+			}
+
+		}
+
+		//cube.printWholeCube();
 		return cube;
 	}
-
-	private Cube moveWhiteEdge(Cube cube){
+	private Cube moveWhiteEdgeEasy(Cube cube){
 		int rotation;
 			if(cube.getSide(2).c8.equals("white")){
 					rotation = 0;
@@ -136,8 +112,41 @@ public class Lbl{
 					}
 				
 			}
-
-			if(cube.getSide(1).c2.equals("white")){
+			if(cube.getSide(4).c6.equals("white")){
+				cube.F();
+				System.out.println("left");
+			}else if(cube.getSide(5).c4.equals("white")){
+				cube.Fi();
+				System.out.println("right");
+			}else if(cube.getSide(3).c2.equals("white")){
+				cube.F();
+				cube.F();
+				System.out.println("bot nära");
+			}else if(cube.getSide(3).c8.equals("white")){
+				cube.D();
+				cube.D();
+				cube.F();
+				cube.F();
+				System.out.println("bot bort");	
+			}else if(cube.getSide(3).c4.equals("white")){
+				cube.D();
+				cube.F();
+				cube.F();
+				System.out.println("bot left");
+			}else if(cube.getSide(3).c6.equals("white")){
+				cube.Di();
+				cube.F();
+				cube.F();
+				System.out.println("bot right");
+			}else if(cube.getSide(6).c4.equals("white")){
+				cube.E();
+				cube.F();
+				System.out.println("back left");
+			}else if(cube.getSide(6).c6.equals("white")){
+				cube.Ei();
+				cube.Fi();
+				System.out.println("back right");
+			} else if(cube.getSide(1).c2.equals("white")){
 				
 				cube.F();
 				cube.Ri();
@@ -145,8 +154,28 @@ public class Lbl{
 				cube.R();
 				cube.Fi();
 				cube.Fi();
+
 				
-			}else if(cube.getSide(1).c8.equals("white")){
+			}
+
+		return cube;
+
+	} 
+
+	private Cube moveWhiteEdgeSpecial(Cube cube){
+		int rotation;
+			if(cube.getSide(2).c8.equals("white")){
+					rotation = 0;
+					while(cube.getSide(2).c8.equals("white") && rotation<= MAX_ROTATIONS_IN_LAP){
+						cube.U();
+						rotation++;
+					}
+					if(cube.getSide(2).c8.equals("white")){
+						return cube;
+					}
+				
+			}
+			if(cube.getSide(1).c8.equals("white")){
 				
 				cube.Fi();
 				cube.Ri();
@@ -169,7 +198,7 @@ public class Lbl{
 				cube.Fi();
 				cube.Fi();
 			}
-			
+
 			return cube;
 	}
 
@@ -185,6 +214,13 @@ public class Lbl{
 
 	private boolean crossDone(Cube cube){
 		if(cube.getSide(2).c2.equals("white") && cube.getSide(2).c4.equals("white") && cube.getSide(2).c6.equals("white") && cube.getSide(2).c8.equals("white")){
+			return true;	
+		}
+		return false;
+	}
+
+	private boolean stepOneDone(Cube cube){
+		if(cube.getSide(3).c2.equals("white") && cube.getSide(3).c4.equals("white") && cube.getSide(3).c6.equals("white") && cube.getSide(3).c8.equals("white")){
 			return true;	
 		}
 		return false;
@@ -225,24 +261,24 @@ public class Lbl{
 	}
 	
 	private Cube findWhiteCenter(Cube cube){
-		if(cube.getSide(1).c5.equals("white")){
+		if(cube.getSide(1).c5.equals("yellow")){
 			cube.botToFront();
 			return cube;
-		}else if(cube.getSide(2).c5.equals("white")){
+		}else if(cube.getSide(2).c5.equals("yellow")){
 			return cube;
-		}else if(cube.getSide(3).c5.equals("white")){
+		}else if(cube.getSide(3).c5.equals("yellow")){
 			cube.botToFront();
 			cube.botToFront();
 			return cube;
-		}else if(cube.getSide(4).c5.equals("white")){
+		}else if(cube.getSide(4).c5.equals("yellow")){
 			cube.leftToFront();
 			cube.botToFront();
 			return cube;
-		}else if(cube.getSide(5).c5.equals("white")){
+		}else if(cube.getSide(5).c5.equals("yellow")){
 			cube.rightToFront();
 			cube.botToFront();
 			return cube;
-		}else if(cube.getSide(6).c5.equals("white")){
+		}else if(cube.getSide(6).c5.equals("yellow")){
 			cube.topToFront();
 			return cube;
 		}
