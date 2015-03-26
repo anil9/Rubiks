@@ -42,95 +42,80 @@ public class Dedmore implements Algorithm {
 	// place the top row corner
 	private void step1() {
 		putFirstCornerCubieToFront_topRightPosition();
-		cube.rightToFront();		// corner cubie is now the in the top left of the front
+		// corner cubie is now the in the top left of the front
 		int iterations = 0;
-
+		int primeCubiePosition = 9;
 		while (!topCornersDone()) {
+			cube.rightToFront();
+			if (primeCubiePosition == 3) {
+				primeCubiePosition = 9;
+			} else if (primeCubiePosition == 9) {
+				primeCubiePosition = 7;
+			} else if (primeCubiePosition == 7) {
+				primeCubiePosition = 1;
+			} else if (primeCubiePosition == 1) {
+				primeCubiePosition = 3;
+			}
 
-			if (top.c9.equals(cube.BLUE) && front.c3.equals(front.c1)) {
-				// this corner is done.
-				cube.rightToFront();
+			if (thisCornerCorrectlyPlaced(primeCubiePosition)) {
 				continue;
 			}
+
 
 			// find the correct cubie:
 
 			// check top layer
 			if (front.c3.equals(cube.BLUE) || right.c1.equals(cube.BLUE) || top.c9.equals(cube.BLUE)) {
-				// the cubie is the correct corner piece
-				if (top.c7.equals(cube.BLUE)) {
-					if (front.c3.equals(front.c1) || right.c1.equals(front.c1) || top.c9.equals(front.c1)) {
-						if (front.c3.equals(cube.BLUE)) {
-							algo1_4();
-							cube.rightToFront();
-							continue;
-						} else if (right.c1.equals(cube.BLUE)) {
-							algo1_5();
-							cube.rightToFront();
-							continue;
-						} else if (top.c9.equals(cube.BLUE)) {
-							cube.rightToFront();
-							continue;
-						}
+				if (topCorrectComparedToPrime(primeCubiePosition)) {
+					// the cubie is the correct corner piece
 
-					}
-				} 
-				// hela if-satsen är tillagd random.
-				//http://www.helm.lu/cube/solutions/rubikscube/top/toplayer.html
-				else if (top.c1.equals(cube.BLUE)) {
-					if ((back.c7.equals(primeCornerColor1) && left.c1.equals(primeCornerColor2)) || (back.c7.equals(primeCornerColor2) && left.c1.equals(primeCornerColor1))) {
-						String color = oppositeColor.get(back.c7);
-						System.out.println("in the color if-statement");
-						if (front.c3.equals(color) || right.c1.equals(color) || top.c9.equals(color)) {
-							if (front.c3.equals(cube.BLUE)) {
-								algo1_4();
-								cube.rightToFront();
-								continue;
-							} else if (right.c1.equals(cube.BLUE)) {
-								algo1_5();
-								cube.rightToFront();
-								continue;
-							} else if (top.c9.equals(cube.BLUE)) {
-								cube.rightToFront();
-								continue;
-							}
-
-						}
-
-
+					if (front.c3.equals(cube.BLUE)) {
+						algo1_4();
+						continue;
+					} else if (right.c1.equals(cube.BLUE)) {
+						algo1_5();
+						continue;
+					} else if (top.c9.equals(cube.BLUE)) {
+						//continue;
 					}
 				}
-
 			}
 
 			// use D() to check bot layer
-
-			for (int i = 0; i < 4; i++) {
+			boolean executedAlgo = false;
+			for (int i = 0; i < 3; i++) {
 
 				// the cubie has blue in it.
 				if (right.c7.equals(cube.BLUE) || front.c9.equals(cube.BLUE) || bot.c3.equals(cube.BLUE)) {
 					// the cubie is the correct corner piece
-					if (right.c7.equals(front.c1) || front.c9.equals(front.c1) || bot.c3.equals(front.c1)) {
+					if (botCorrectComparedToPrime(primeCubiePosition)) {
 						if (right.c7.equals(cube.BLUE)) {
 							algo1_1();
+							executedAlgo = true;
 							break;
 						} else if (front.c9.equals(cube.BLUE)) {
 							algo1_2();
+							executedAlgo = true;
 							break;
 						} else if (bot.c3.equals(cube.BLUE)) {
 							algo1_3();
+							executedAlgo = true;
 							break;
 						}
 					}
 				}
 				cube.D();
 			}
+			if (!executedAlgo) {
+				cube.Ri();
+				cube.Di();
+				cube.R();
+			}
 			//  desired cubie is trapped in the middle layer, simply skip
 			// to another corner and once you solve it the target cubie
 			// will have been forced back into the top or bottom row.
 
 			// next
-			cube.rightToFront();
 			iterations++;
 
 			if (iterations > 100 && iterations < 110) {
@@ -334,5 +319,101 @@ public class Dedmore implements Algorithm {
 		cube.R();
 	}
 
+	private boolean thisCornerCorrectlyPlaced(int primeCubiePosition) {
+		if (primeCubiePosition == 9) {
+			// find prime
+			// is prime corner
+			return true;
 
+		} else if (primeCubiePosition == 7) {
+			// check if c7 is prime corner
+			// c7 is prime corner.
+			if (front.c3.equals(front.c1) && right.c1.equals(oppositeColor.get(left.c3))) {
+				// this corner is done.
+				return true;
+			}
+		} else if (primeCubiePosition == 1) {
+			// check if c1 is prime corner
+			// c1 is prime corner
+
+			if (front.c3.equals(oppositeColor.get(back.c7)) && right.c1.equals(oppositeColor.get(left.c1))) {
+				// this corner is done.
+				return true;
+			}
+
+		} else if (primeCubiePosition == 3) {
+
+			if (front.c3.equals(oppositeColor.get(back.c9)) && right.c1.equals(right.c3)) {
+				// this corner is done
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private boolean topCorrectComparedToPrime(int primeCubiePosition) {
+		if (primeCubiePosition == 7) {
+			if (front.c3.equals(front.c1) || right.c1.equals(front.c1) || top.c9.equals(front.c1)) {
+				if (front.c3.equals(oppositeColor.get((left.c3))) || right.c1.equals(oppositeColor.get((left.c3))) || top.c9.equals(oppositeColor.get((left.c3)))) {
+					if (front.c3.equals(top.c7) || right.c1.equals(top.c7) || top.c9.equals(top.c7)) {
+						return true;
+					}
+				}
+			}
+
+		} else if (primeCubiePosition == 1) {
+
+			if (front.c3.equals(oppositeColor.get((back.c7))) || right.c1.equals(oppositeColor.get((back.c7))) || top.c9.equals(oppositeColor.get((back.c7)))) {
+				if (front.c3.equals((oppositeColor.get((left.c1)))) || right.c1.equals(oppositeColor.get((left.c1))) || top.c9.equals(oppositeColor.get((left.c1)))) {
+					if (front.c3.equals(top.c1) || right.c1.equals(top.c1) || top.c9.equals(top.c1)) {
+						return true;
+					}
+				}
+			}
+
+		} else if (primeCubiePosition == 3) {
+
+			if (front.c3.equals(right.c3) || right.c1.equals(right.c3) || top.c9.equals(right.c3)) {
+				if (front.c3.equals(oppositeColor.get((back.c9))) || right.c1.equals(oppositeColor.get((back.c9))) || top.c9.equals(oppositeColor.get((back.c9)))) {
+					if (front.c3.equals(top.c3) || right.c1.equals(top.c3) || top.c9.equals(top.c3)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+	private boolean botCorrectComparedToPrime(int primeCubiePosition) {
+		if (primeCubiePosition == 7) {
+			if (front.c9.equals(front.c1) || right.c7.equals(front.c1) || bot.c3.equals(front.c1)) {
+				if (front.c9.equals(oppositeColor.get((left.c3))) || right.c7.equals(oppositeColor.get((left.c3))) || bot.c3.equals(oppositeColor.get((left.c3)))) {
+					if (front.c9.equals(top.c7) || right.c7.equals(top.c7) || bot.c3.equals(top.c7)) {
+						return true;
+					}
+				}
+			}
+
+		} else if (primeCubiePosition == 1) {
+
+			if (front.c9.equals(oppositeColor.get((back.c7))) || right.c7.equals(oppositeColor.get((back.c7))) || bot.c3.equals(oppositeColor.get((back.c7)))) {
+				if (front.c9.equals(oppositeColor.get((left.c1))) || right.c7.equals(oppositeColor.get((left.c1))) || bot.c3.equals(oppositeColor.get((left.c1)))) {
+					if (front.c9.equals(top.c1) || right.c7.equals(top.c1) || bot.c3.equals(top.c1)) {
+						return true;
+					}
+				}
+			}
+
+		} else if (primeCubiePosition == 3) {
+
+			if (front.c9.equals(right.c3) || right.c7.equals(right.c3) || bot.c3.equals(right.c3)) {
+				if (front.c9.equals(oppositeColor.get((back.c9))) || right.c7.equals(oppositeColor.get((back.c9))) || bot.c3.equals(oppositeColor.get((back.c9)))) {
+					if (front.c9.equals(top.c3) || right.c7.equals(top.c3) || bot.c3.equals(top.c3)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
 }
