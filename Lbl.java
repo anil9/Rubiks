@@ -13,18 +13,19 @@ public class Lbl implements Algorithm{
 	}
 
 	public void runAlg(Cube cube){
-		for(int i = 0; i<100;i++){
 			cube.scramble(1000);;
 			cube = findYellowCenter(cube);
 			cube = whiteCross(cube);
-			if(!stepOneDone(cube)){
+			cube = secondLayer(cube);
+			/*if(!stepOneDone(cube)){
 				System.out.println("inte klar");
 				break;
 
-			}
-		}
+			}*/
+			cube = whiteCorners(cube);
 		
-		//cube.printWholeCube();
+		
+		cube.printWholeCube();
 
 	}
 
@@ -115,38 +116,38 @@ public class Lbl implements Algorithm{
 			}
 			if(cube.getSide(4).c6.equals("white")){
 				cube.F();
-				System.out.println("left");
+			//	System.out.println("left");
 			}else if(cube.getSide(5).c4.equals("white")){
 				cube.Fi();
-				System.out.println("right");
+			//	System.out.println("right");
 			}else if(cube.getSide(3).c2.equals("white")){
 				cube.F();
 				cube.F();
-				System.out.println("bot nära");
+			//	System.out.println("bot nära");
 			}else if(cube.getSide(3).c8.equals("white")){
 				cube.D();
 				cube.D();
 				cube.F();
 				cube.F();
-				System.out.println("bot bort");	
+			//	System.out.println("bot bort");	
 			}else if(cube.getSide(3).c4.equals("white")){
 				cube.D();
 				cube.F();
 				cube.F();
-				System.out.println("bot left");
+			//	System.out.println("bot left");
 			}else if(cube.getSide(3).c6.equals("white")){
 				cube.Di();
 				cube.F();
 				cube.F();
-				System.out.println("bot right");
+			//	System.out.println("bot right");
 			}else if(cube.getSide(6).c4.equals("white")){
 				cube.E();
 				cube.F();
-				System.out.println("back left");
+			//	System.out.println("back left");
 			}else if(cube.getSide(6).c6.equals("white")){
 				cube.Ei();
 				cube.Fi();
-				System.out.println("back right");
+			//	System.out.println("back right");
 			} else if(cube.getSide(1).c2.equals("white")){
 				
 				cube.F();
@@ -230,42 +231,336 @@ public class Lbl implements Algorithm{
 	*	Step 2
 	*/
 	private Cube whiteCorners(Cube cube){
+		for(int i = 0; i<4;i++){
+				cube = findWhiteEdge(cube);
+				if(!((cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5)))){
+					cube = moveWhiteEdge(cube);
+				}
+
+				cube.rightToFront();
+				//cube.printWholeCube();
+		}
 		return cube;
 	}
 
-	private findWhiteEdge(Cube cube){
-		if(cube.getSide(1).c3.equals("white")){
-			if(cube.getSide(2).c9.equals(cube.getSide(1).c5)){
-				cube.Fi();
-				cube.Ri();
-				cube.F();
-			}
-		}else if(cube.getSide(1).c3.equals(cube.getSide(1).c5)){
-			if(cube.getSide(5).c1.equals("white")){
-				cube.R();
-				cube.U();
-				cube.Ri();
-			}
-		}else if(cube.getSide(2).c9.equals("white")){
-			if(cube.getSide(5).c1.equals(cube.getSide(1).c5)){
-				cube.R();
-				cube.U();
-				cube.U();
-				cube.Ri();
-				cube.Ui();
+	private Cube findWhiteEdge(Cube cube){
+		if(hasWhiteEdgeFront(cube)){
 
-				cube.R();
-				cube.U();
-				cube.Ri();
-			}
+			return cube;
 		}
+		// Right down front corner
+		if(cube.getSide(1).c9.equals(cube.getSide(3).c5)||cube.getSide(3).c3.equals(cube.getSide(3).c5)||cube.getSide(5).c7.equals(cube.getSide(3).c5)){
+			if(cube.getSide(1).c9.equals(cube.getSide(1).c5)||cube.getSide(3).c3.equals(cube.getSide(1).c5)||cube.getSide(5).c7.equals(cube.getSide(1).c5)){
+				if(cube.getSide(1).c9.equals(cube.getSide(5).c5)||cube.getSide(3).c3.equals(cube.getSide(5).c5)||cube.getSide(5).c7.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.R();
+						cube.U();
+						cube.Ri();
+						cube.Ui();
+					}
+					return cube;
+				}
+			}
+
+			
+		}
+		// Left down front corner
+		if(cube.getSide(1).c7.equals(cube.getSide(3).c5)||cube.getSide(3).c1.equals(cube.getSide(3).c5)||cube.getSide(4).c9.equals(cube.getSide(3).c5)){
+			if(cube.getSide(1).c7.equals(cube.getSide(1).c5)||cube.getSide(3).c1.equals(cube.getSide(1).c5)||cube.getSide(4).c9.equals(cube.getSide(1).c5)){
+				if(cube.getSide(1).c7.equals(cube.getSide(5).c5)||cube.getSide(3).c1.equals(cube.getSide(5).c5)||cube.getSide(4).c9.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.Li();
+						cube.Ui();
+						cube.L();
+					}
+					return cube;
+				}
+			}
+
+
+		}
+		// Left up front corner
+		if(cube.getSide(4).c3.equals(cube.getSide(3).c5)||cube.getSide(2).c7.equals(cube.getSide(3).c5)||cube.getSide(1).c1.equals(cube.getSide(3).c5)){
+			if(cube.getSide(4).c3.equals(cube.getSide(1).c5)||cube.getSide(2).c7.equals(cube.getSide(1).c5)||cube.getSide(1).c1.equals(cube.getSide(1).c5)){
+				if(cube.getSide(4).c3.equals(cube.getSide(5).c5)||cube.getSide(2).c7.equals(cube.getSide(5).c5)||cube.getSide(1).c1.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.Ui();
+					}
+					return cube;
+				}
+			}
+
+
+		}
+		// Right up back corner
+		if(cube.getSide(5).c3.equals(cube.getSide(3).c5)||cube.getSide(2).c3.equals(cube.getSide(3).c5)||cube.getSide(6).c9.equals(cube.getSide(3).c5)){
+			if(cube.getSide(5).c3.equals(cube.getSide(1).c5)||cube.getSide(2).c3.equals(cube.getSide(1).c5)||cube.getSide(6).c9.equals(cube.getSide(1).c5)){
+				if(cube.getSide(5).c3.equals(cube.getSide(5).c5)||cube.getSide(2).c3.equals(cube.getSide(5).c5)||cube.getSide(6).c9.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.U();
+					}
+					return cube;
+				}
+			}
+
+			
+		}
+		// Left up back corner
+		if(cube.getSide(4).c1.equals(cube.getSide(3).c5)||cube.getSide(2).c1.equals(cube.getSide(3).c5)||cube.getSide(6).c7.equals(cube.getSide(3).c5)){
+			if(cube.getSide(4).c1.equals(cube.getSide(1).c5)||cube.getSide(2).c1.equals(cube.getSide(1).c5)||cube.getSide(6).c7.equals(cube.getSide(1).c5)){
+				if(cube.getSide(4).c1.equals(cube.getSide(5).c5)||cube.getSide(2).c1.equals(cube.getSide(5).c5)||cube.getSide(6).c7.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.Ui();
+						cube.Ui();
+					}
+					return cube;
+				}
+			}
+
+		}
+		//Right down back corner
+		if(cube.getSide(5).c9.equals(cube.getSide(3).c5)||cube.getSide(3).c9.equals(cube.getSide(3).c5)||cube.getSide(6).c3.equals(cube.getSide(3).c5)){
+			if(cube.getSide(5).c9.equals(cube.getSide(1).c5)||cube.getSide(3).c9.equals(cube.getSide(1).c5)||cube.getSide(6).c3.equals(cube.getSide(1).c5)){
+				if(cube.getSide(5).c9.equals(cube.getSide(5).c5)||cube.getSide(3).c9.equals(cube.getSide(5).c5)||cube.getSide(6).c3.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.B();
+						cube.U();
+						cube.Bi();	
+					}
+					return cube;
+				}
+			}			
+			
+		}
+		//Left down back corner
+		if(cube.getSide(4).c7.equals(cube.getSide(1).c5)||cube.getSide(3).c7.equals(cube.getSide(1).c5)||cube.getSide(6).c1.equals(cube.getSide(1).c5)){
+			if(cube.getSide(4).c7.equals(cube.getSide(3).c5)||cube.getSide(3).c7.equals(cube.getSide(3).c5)||cube.getSide(6).c1.equals(cube.getSide(3).c5)){
+				if(cube.getSide(4).c7.equals(cube.getSide(5).c5)||cube.getSide(3).c7.equals(cube.getSide(5).c5)||cube.getSide(6).c1.equals(cube.getSide(5).c5)){
+					if(!(cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+						cube.Bi();
+						cube.Ui();
+						cube.B();
+						cube.Ui();
+					}
+					return cube;
+				}
+			}
+				
+			
+		}
+		System.out.println("Inget fall");
+		return cube;
+	}
+
+	private boolean hasWhiteEdgeFront(Cube cube){
+		if(cube.getSide(1).c3.equals(cube.getSide(3).c5)){
+			if(cube.getSide(2).c9.equals(cube.getSide(1).c5) && cube.getSide(5).c1.equals(cube.getSide(5).c5)){
+				return true;
+			}
+		} else if(cube.getSide(1).c3.equals(cube.getSide(1).c5)){
+			if(cube.getSide(5).c1.equals(cube.getSide(3).c5) && cube.getSide(2).c9.equals(cube.getSide(5).c5)){
+				return true;
+			}
+		} else if(cube.getSide(2).c9.equals(cube.getSide(3).c5)){
+			if(cube.getSide(5).c1.equals(cube.getSide(1).c5) && cube.getSide(1).c3.equals(cube.getSide(5).c5)){
+				return true;
+			}
+		} 
+		return false;
+	}
+
+	private Cube moveWhiteEdge(Cube cube){
+		
+			
+			if(cube.getSide(1).c3.equals(cube.getSide(3).c5)){
+				if(cube.getSide(2).c9.equals(cube.getSide(1).c5)){
+					if(cube.getSide(5).c1.equals(cube.getSide(5).c5)){
+						if(!(cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+							cube.Fi();
+							cube.Ui();
+							cube.F();
+						}
+					}
+				}
+			}else if(cube.getSide(1).c3.equals(cube.getSide(1).c5)){
+				if(cube.getSide(5).c1.equals(cube.getSide(3).c5)){
+					if(cube.getSide(2).c9.equals(cube.getSide(5).c5)){
+						if(!(cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+							cube.R();
+							cube.U();
+							cube.Ri();
+						}
+					}
+				}
+			}else if(cube.getSide(2).c9.equals(cube.getSide(3).c5)){
+				if(cube.getSide(5).c1.equals(cube.getSide(1).c5)){
+					if(cube.getSide(1).c3.equals(cube.getSide(5).c5)){
+						if(!(cube.getSide(1).c9.equals(cube.getSide(1).c5)&&cube.getSide(3).c3.equals(cube.getSide(3).c5)&&cube.getSide(5).c7.equals(cube.getSide(5).c5))){
+							cube.Fi();
+							cube.U();
+							cube.U();
+							cube.F();
+							cube.U();
+
+							cube.Fi();
+							cube.Ui();
+							cube.F();
+							
+						}
+					}
+				}
+			}
+		
+			
+		return cube;
 	}
 
 	/*
 	*	Step 3
 	*/
 	private Cube secondLayer(Cube cube){
+		for(int i = 0; i<4;i++){
+
+			if(edgeInMiddleLayer(cube)){
+				System.out.println("middle");
+			 cube = getMiddleLayerEdge(cube);
+			}
+
+			for(int j=0;j<4;j++){
+				if(cube.getSide(2).c8.equals(cube.getSide(5).c5) && cube.getSide(1).c2.equals(cube.getSide(1).c5)){
+					System.out.println("prepp för första");
+					break;
+				}
+				if(cube.getSide(2).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c2.equals(cube.getSide(5).c5)){
+					System.out.println("prepp för andra");
+					break;
+				}
+				cube.U();
+			}
+			if(cube.getSide(2).c8.equals(cube.getSide(5).c5) && cube.getSide(1).c2.equals(cube.getSide(1).c5)){
+				System.out.println("första");
+
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+			}else if(cube.getSide(2).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c2.equals(cube.getSide(5).c5)){
+				System.out.println("andra");
+
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+			}
+
+			cube.rightToFront();
+		}
 		return cube;
+	}
+
+	private boolean edgeInMiddleLayer(Cube cube){
+		if(cube.getSide(1).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c8.equals(cube.getSide(1).c5)){
+			if(cube.getSide(1).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c8.equals(cube.getSide(5).c5)){
+				return false;
+			}		
+		}
+		if(cube.getSide(5).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c6.equals(cube.getSide(1).c5)){
+			if(cube.getSide(5).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c6.equals(cube.getSide(5).c5)){
+				return false;
+			}		
+		}
+		if(cube.getSide(6).c8.equals(cube.getSide(1).c5) || cube.getSide(2).c2.equals(cube.getSide(1).c5)){
+			if(cube.getSide(6).c8.equals(cube.getSide(5).c5) || cube.getSide(2).c2.equals(cube.getSide(5).c5)){
+				return false;
+			}		
+		}
+		if(cube.getSide(4).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c4.equals(cube.getSide(1).c5)){
+			if(cube.getSide(4).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c4.equals(cube.getSide(5).c5)){
+				return false;
+			}		
+		}
+
+		return true;
+	}
+
+	private Cube getMiddleLayerEdge(Cube cube){
+		// edges is in correct spot but wrong colorpos. 
+			if((cube.getSide(1).c6.equals(cube.getSide(5).c5) && cube.getSide(5).c4.equals(cube.getSide(1).c5))||(cube.getSide(1).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c4.equals(cube.getSide(5).c5))){
+				System.out.println("första");
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+
+				return cube; 
+			}
+			if((cube.getSide(5).c6.equals(cube.getSide(5).c5) && cube.getSide(6).c6.equals(cube.getSide(1).c5))||(cube.getSide(5).c6.equals(cube.getSide(1).c5) && cube.getSide(6).c6.equals(cube.getSide(5).c5))){
+				System.out.println("andra");
+				cube.rightToFront();
+
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+
+				cube.leftToFront();
+
+				return cube; 
+			}
+			if((cube.getSide(4).c4.equals(cube.getSide(5).c5) && cube.getSide(6).c4.equals(cube.getSide(1).c5))||(cube.getSide(4).c4.equals(cube.getSide(1).c5) && cube.getSide(6).c4.equals(cube.getSide(5).c5))){
+				System.out.println("tredje");
+				cube.rightToFront();
+				cube.rightToFront();
+
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+
+				cube.leftToFront();
+				cube.leftToFront();
+
+				return cube; 
+			}
+
+			if((cube.getSide(4).c6.equals(cube.getSide(5).c5) && cube.getSide(1).c4.equals(cube.getSide(1).c5))||(cube.getSide(4).c6.equals(cube.getSide(1).c5) && cube.getSide(1).c4.equals(cube.getSide(5).c5))){
+				System.out.println("fjärde");
+				cube.leftToFront();
+
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+				
+				cube.rightToFront();
+
+				return cube; 
+			}
+			return cube;
 	}
 
 	/*
