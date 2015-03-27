@@ -31,7 +31,7 @@ public class Main {
 			double stopTime = (System.nanoTime() - startTime)/(double)1000000;	// ms
 			
 			result[i] = stopTime;
-			System.out.println("done");
+			//System.out.println("done");
 			//cube.printWholeCube();		// remove later
 		}
 		// write results to file in some nice format.

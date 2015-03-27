@@ -46,9 +46,14 @@ public class Dedmore implements Algorithm {
 
 		while (!topEdgesDone()) {
 			cube.rightToFront();
-			System.out.println("outer loop");
+			//System.out.println("outer loop");
 			int i = 0;
 			while (true) {
+				if(i == 3){
+					// tested moving layer 2 and 3 enough times. Try another side.
+					i = 0;
+					break;
+				}
 				if (top.c8.equals(cube.BLUE) && front.c2.equals(front.c1)) {
 					// this side is done
 					break;
@@ -87,9 +92,11 @@ public class Dedmore implements Algorithm {
 				cube.Ei();
 				cube.Di();
 				i++;
+				/*
 				if(i > 100 && i < 110){
 					cube.printWholeCube();
 				}
+				*/
 			}
 
 
