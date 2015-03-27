@@ -1,5 +1,5 @@
 public class Main {
-	public static final int ALGO_RUNS = 100;	// increase this to a good value
+	public static final int ALGO_RUNS = 100000;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
 	Dedmore dedmore;

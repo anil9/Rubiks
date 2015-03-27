@@ -43,11 +43,11 @@ public class Dedmore implements Algorithm {
 
 	// only allowed to spin 2nd and 3rd layer when searching for cubie
 	private void topEdges() {
-
 		while (!topEdgesDone()) {
 			cube.rightToFront();
 			//System.out.println("outer loop");
 			int i = 0;
+			
 			while (true) {
 				if(i == 3){
 					// tested moving layer 2 and 3 enough times. Try another side.
@@ -92,13 +92,9 @@ public class Dedmore implements Algorithm {
 				cube.Ei();
 				cube.Di();
 				i++;
-				/*
-				if(i > 100 && i < 110){
-					cube.printWholeCube();
-				}
-				*/
+				
 			}
-
+			j++;
 
 		}
 
@@ -206,7 +202,16 @@ public class Dedmore implements Algorithm {
 
 	private boolean topCornersDone() {
 		//cube.printWholeCube();
-		return top.c1.equals(cube.BLUE) && top.c3.equals(cube.BLUE) && top.c7.equals(cube.BLUE) && top.c9.equals(cube.BLUE);
+		 if(top.c1.equals(cube.BLUE) && top.c3.equals(cube.BLUE) && top.c7.equals(cube.BLUE) && top.c9.equals(cube.BLUE)){
+
+		 	if(back.c7.equals(back.c9) && left.c1.equals(left.c3) && right.c1.equals(right.c3) && front.c1.equals(front.c3)){
+		 		return true;
+		 	}
+
+
+
+		 }
+		 return false;
 	}
 
 
