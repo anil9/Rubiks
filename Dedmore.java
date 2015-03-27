@@ -34,15 +34,86 @@ public class Dedmore implements Algorithm {
 		right = cube.right;
 		back = cube.back;
 		setColorToTop(cube.BLUE);
-		step1();
+		topCorners();
+		topEdges();
+
 
 
 	}
 
-	// place the top row corner
-	private void step1() {
+	// only allowed to spin 2nd and 3rd layer when searching for cubie
+	private void topEdges() {
+
+		while (!topEdgesDone()) {
+			cube.rightToFront();
+			System.out.println("outer loop");
+			int i = 0;
+			while (true) {
+				if (top.c8.equals(cube.BLUE) && front.c2.equals(front.c1)) {
+					// this side is done
+					break;
+				}
+
+				// is front.c8 the correct edge piece?
+				if ((front.c8.equals(front.c1) || front.c8.equals(top.c7)) && (bot.c2.equals(front.c1) || bot.c2.equals(top.c7))) {
+					if (front.c8.equals(top.c7)) {
+						algo2_1();
+					} else if (front.c8.equals(front.c1)) {
+						algo2_2();
+					}
+					break;
+				}
+				// is front.c6 the correct edge piece?
+				if ((front.c6.equals(front.c1) || front.c6.equals(top.c7)) && (right.c4.equals(front.c1) || right.c4.equals(top.c7))) {
+					if (front.c6.equals(front.c1)) {
+						algo2_3();
+					} else if (front.c6.equals(top.c7)) {
+						algo2_4();
+					}
+					break;
+				}
+				// is front.c2 the correct edge piece?
+				if (front.c2.equals(top.c7) && top.c8.equals(front.c1)) {
+					algo2_5();
+					break;
+				}
+				// the edge is wrongly placed.
+				if (front.c2.equals(top.c7) || top.c8.equals(top.c7)) {
+					cube.M();
+					cube.Di();
+					cube.Mi();
+				}
+				// search for the correct edge piece.
+				cube.Ei();
+				cube.Di();
+				i++;
+				if(i > 100 && i < 110){
+					cube.printWholeCube();
+				}
+			}
+
+
+		}
+
+
+
+
+
+	}
+
+	private boolean topEdgesDone() {
+		if (front.c2.equals(front.c1) && right.c2.equals(right.c1) && left.c2.equals(left.c1) && back.c8.equals(back.c7)) {
+			if (top.c2.equals(cube.BLUE) && top.c4.equals(cube.BLUE) && top.c6.equals(cube.BLUE) && top.c8.equals(cube.BLUE)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+	// place the correct corners and color on top
+	private void topCorners() {
 		putFirstCornerCubieToFront_topRightPosition();
-		// corner cubie is now the in the top left of the front
 		int iterations = 0;
 		int primeCubiePosition = 9;
 		while (!topCornersDone()) {
@@ -117,11 +188,6 @@ public class Dedmore implements Algorithm {
 
 			// next
 			iterations++;
-
-			if (iterations > 100 && iterations < 110) {
-				cube.printWholeCube();
-			}
-
 
 		}
 
@@ -317,6 +383,47 @@ public class Dedmore implements Algorithm {
 		cube.Ri();
 		cube.Di();
 		cube.R();
+	}
+	// Algorithms for step 2.
+
+	private void algo2_1() {
+		cube.Di();
+		cube.M();
+		cube.D();
+		cube.Mi();
+	}
+
+	private void algo2_2() {
+		cube.M();
+		cube.Di();
+		cube.Di();
+		cube.Mi();
+	}
+
+	private void algo2_3() {
+		cube.E();
+		cube.F();
+		cube.Ei();
+		cube.Fi();
+	}
+
+	private void algo2_4() {
+		cube.E();
+		cube.Fi();
+		cube.Ei();
+		cube.Ei();
+		cube.F();
+	}
+
+	private void algo2_5() {
+		cube.M();
+		cube.Di();
+		cube.Di();
+		cube.Mi();
+		cube.Di();
+		cube.M();
+		cube.D();
+		cube.Mi();
 	}
 
 	private boolean thisCornerCorrectlyPlaced(int primeCubiePosition) {
