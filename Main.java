@@ -1,5 +1,5 @@
 public class Main {
-	public static final int ALGO_RUNS = 100000;	// increase this to a good value
+	public static final int ALGO_RUNS = 1000;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
 	Dedmore dedmore;
@@ -36,6 +36,7 @@ public class Main {
 		}
 		// write results to file in some nice format.
 		printResult(result);
+
 
 
 	}

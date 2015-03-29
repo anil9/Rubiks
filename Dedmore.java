@@ -36,9 +36,233 @@ public class Dedmore implements Algorithm {
 		setColorToTop(cube.BLUE);
 		topCorners();
 		topEdges();
+		middleLayer();
+		//cube.printWholeCube();
+		lastCorners();
 
 
 
+	}
+
+
+	private void lastCorners() {
+		// first two corners correct at front
+		while (true) {
+			if (front.c1.equals(front.c5) || left.c3.equals(front.c5) || top.c7.equals(front.c5)) {
+				String desiredColor = front.c5;
+				if (front.c3.equals(desiredColor) || top.c9.equals(desiredColor) || right.c1.equals(desiredColor)) {
+					// is correctly positioned?
+					if (front.c3.equals(right.c5) || top.c9.equals(right.c5) || right.c1.equals(right.c5)) {
+						// no need to switch.
+						break;
+					} else {
+						// need to switch
+						algo4_1();
+						break;
+					}
+
+				} else if (top.c3.equals(front.c5) || right.c3.equals(front.c5) || back.c9.equals(front.c5)){
+					//diagonal
+					algo4_2();
+					continue;	// need to make sure that they are correctly placed.
+				} else {
+					// not switch position and not diagonal. Try another.
+					cube.U();
+				}
+
+			} else {
+				cube.U();
+			}
+		}
+		// the other two corners.
+		cube.rightToFront();
+		cube.rightToFront();
+		if (front.c1.equals(right.c5) || left.c3.equals(right.c5) || top.c7.equals(right.c5)) {
+			// need to switch
+			algo4_1();
+		}
+		// so now we have 4 corners correctly positioned.
+		// now we need to show the correct color
+		while (!lastCornersCorrect()) {
+			// several different patterns following.
+
+			if (front.c1.equals(top.c5)) {
+				if (front.c3.equals(top.c5)) {
+					if (top.c1.equals(top.c5) && top.c3.equals(top.c5)) {
+						algo4_3();
+						continue;
+					}
+				} else if (right.c1.equals(top.c5) && right.c3.equals(top.c5)) {
+					algo4_3();
+					continue;
+				} else if (top.c9.equals(top.c5)) {
+					algo4_3();
+					continue;
+				}
+			} if (front.c3.equals(top.c5)) {
+				if (top.c7.equals(top.c5)) {
+					if (top.c1.equals(top.c5)) {
+						algo4_3();
+						continue;
+					} else if (top.c3.equals(top.c5)) {
+						algo4_3();
+						continue;
+					}
+				}
+			}
+			if (right.c3.equals(top.c5)) {
+				if (right.c1.equals(top.c5)) {
+					algo4_3();
+					continue;
+				} else if (top.c9.equals(top.c5)) {
+					algo4_3();
+					continue;
+				}
+			}
+			// got no match
+			cube.rightToFront();
+
+		}
+
+
+
+	}
+
+	private void middleLayer() {
+		// begin by turning the cube upside-down.
+		cube.botToFront();
+		cube.botToFront();
+		for (int i = 0; i < 4; i++) {
+
+			if (edgeInMiddleLayer()) {
+				getMiddleLayerEdge();
+			}
+
+			for (int j = 0; j < 4; j++) {
+				if (cube.getSide(2).c8.equals(cube.getSide(5).c5) && cube.getSide(1).c2.equals(cube.getSide(1).c5)) {
+					break;
+				}
+				if (cube.getSide(2).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c2.equals(cube.getSide(5).c5)) {
+					break;
+				}
+				cube.U();
+			}
+			if (cube.getSide(2).c8.equals(cube.getSide(5).c5) && cube.getSide(1).c2.equals(cube.getSide(1).c5)) {
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+			} else if (cube.getSide(2).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c2.equals(cube.getSide(5).c5)) {
+				cube.Ui();
+				cube.Fi();
+				cube.Ui();
+				cube.F();
+				cube.U();
+				cube.R();
+				cube.U();
+				cube.Ri();
+			}
+
+			cube.rightToFront();
+		}
+		while (!front.c5.equals(front.c8)) {
+			cube.E();
+		}
+	}
+
+	private boolean edgeInMiddleLayer() {
+		if (cube.getSide(1).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c8.equals(cube.getSide(1).c5)) {
+			if (cube.getSide(1).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c8.equals(cube.getSide(5).c5)) {
+				return false;
+			}
+		}
+		if (cube.getSide(5).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c6.equals(cube.getSide(1).c5)) {
+			if (cube.getSide(5).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c6.equals(cube.getSide(5).c5)) {
+				return false;
+			}
+		}
+		if (cube.getSide(6).c8.equals(cube.getSide(1).c5) || cube.getSide(2).c2.equals(cube.getSide(1).c5)) {
+			if (cube.getSide(6).c8.equals(cube.getSide(5).c5) || cube.getSide(2).c2.equals(cube.getSide(5).c5)) {
+				return false;
+			}
+		}
+		if (cube.getSide(4).c2.equals(cube.getSide(1).c5) || cube.getSide(2).c4.equals(cube.getSide(1).c5)) {
+			if (cube.getSide(4).c2.equals(cube.getSide(5).c5) || cube.getSide(2).c4.equals(cube.getSide(5).c5)) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	private void getMiddleLayerEdge() {
+		// edges is in correct spot but wrong colorpos.
+		if ((cube.getSide(1).c6.equals(cube.getSide(5).c5) && cube.getSide(5).c4.equals(cube.getSide(1).c5)) || (cube.getSide(1).c6.equals(cube.getSide(1).c5) && cube.getSide(5).c4.equals(cube.getSide(5).c5))) {
+			cube.U();
+			cube.R();
+			cube.U();
+			cube.Ri();
+			cube.Ui();
+			cube.Fi();
+			cube.Ui();
+			cube.F();
+			return;
+		}
+		if ((cube.getSide(5).c6.equals(cube.getSide(5).c5) && cube.getSide(6).c6.equals(cube.getSide(1).c5)) || (cube.getSide(5).c6.equals(cube.getSide(1).c5) && cube.getSide(6).c6.equals(cube.getSide(5).c5))) {
+			cube.rightToFront();
+
+			cube.U();
+			cube.R();
+			cube.U();
+			cube.Ri();
+			cube.Ui();
+			cube.Fi();
+			cube.Ui();
+			cube.F();
+
+			cube.leftToFront();
+			return;
+		}
+		if ((cube.getSide(4).c4.equals(cube.getSide(5).c5) && cube.getSide(6).c4.equals(cube.getSide(1).c5)) || (cube.getSide(4).c4.equals(cube.getSide(1).c5) && cube.getSide(6).c4.equals(cube.getSide(5).c5))) {
+			cube.rightToFront();
+			cube.rightToFront();
+
+			cube.U();
+			cube.R();
+			cube.U();
+			cube.Ri();
+			cube.Ui();
+			cube.Fi();
+			cube.Ui();
+			cube.F();
+
+			cube.leftToFront();
+			cube.leftToFront();
+
+			return;
+		}
+
+		if ((cube.getSide(4).c6.equals(cube.getSide(5).c5) && cube.getSide(1).c4.equals(cube.getSide(1).c5)) || (cube.getSide(4).c6.equals(cube.getSide(1).c5) && cube.getSide(1).c4.equals(cube.getSide(5).c5))) {
+			cube.leftToFront();
+
+			cube.U();
+			cube.R();
+			cube.U();
+			cube.Ri();
+			cube.Ui();
+			cube.Fi();
+			cube.Ui();
+			cube.F();
+
+			cube.rightToFront();
+
+			return;
+		}
+		return;
 	}
 
 	// only allowed to spin 2nd and 3rd layer when searching for cubie
@@ -47,9 +271,9 @@ public class Dedmore implements Algorithm {
 			cube.rightToFront();
 			//System.out.println("outer loop");
 			int i = 0;
-			
+
 			while (true) {
-				if(i == 3){
+				if (i == 3) {
 					// tested moving layer 2 and 3 enough times. Try another side.
 					i = 0;
 					break;
@@ -92,9 +316,8 @@ public class Dedmore implements Algorithm {
 				cube.Ei();
 				cube.Di();
 				i++;
-				
+
 			}
-			j++;
 
 		}
 
@@ -202,16 +425,16 @@ public class Dedmore implements Algorithm {
 
 	private boolean topCornersDone() {
 		//cube.printWholeCube();
-		 if(top.c1.equals(cube.BLUE) && top.c3.equals(cube.BLUE) && top.c7.equals(cube.BLUE) && top.c9.equals(cube.BLUE)){
+		if (top.c1.equals(cube.BLUE) && top.c3.equals(cube.BLUE) && top.c7.equals(cube.BLUE) && top.c9.equals(cube.BLUE)) {
 
-		 	if(back.c7.equals(back.c9) && left.c1.equals(left.c3) && right.c1.equals(right.c3) && front.c1.equals(front.c3)){
-		 		return true;
-		 	}
+			if (back.c7.equals(back.c9) && left.c1.equals(left.c3) && right.c1.equals(right.c3) && front.c1.equals(front.c3)) {
+				return true;
+			}
 
 
 
-		 }
-		 return false;
+		}
+		return false;
 	}
 
 
@@ -436,6 +659,57 @@ public class Dedmore implements Algorithm {
 		cube.M();
 		cube.D();
 		cube.Mi();
+	}
+
+	// algorithms for step 4
+	private void algo4_1() {
+		cube.Li();
+		cube.Ui();
+		cube.L();
+		cube.F();
+		cube.U();
+		cube.Fi();
+		cube.Li();
+		cube.U();
+		cube.L();
+		cube.U();
+		cube.U();
+	}
+
+	private void algo4_2() {
+		cube.U();
+		cube.Li();
+		cube.Ui();
+		cube.L();
+		cube.F();
+		cube.U();
+		cube.Fi();
+		cube.Li();
+		cube.U();
+		cube.L();
+		cube.U();
+	}
+
+	private void algo4_3() {
+		cube.Li();
+		cube.Ui();
+		cube.L();
+		cube.Ui();
+		cube.Li();
+		cube.Ui();
+		cube.Ui();
+		cube.L();
+		cube.Ui();
+		cube.Ui();
+	}
+
+	private boolean lastCornersCorrect() {
+		if (top.c1.equals(top.c5) && top.c3.equals(top.c5) && top.c7.equals(top.c5) && top.c9.equals(top.c5)) {
+			if (left.c1.equals(left.c5) && left.c3.equals(left.c5) && right.c1.equals(right.c5) && right.c3.equals(right.c5)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private boolean thisCornerCorrectlyPlaced(int primeCubiePosition) {
