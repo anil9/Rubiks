@@ -25,11 +25,11 @@ public class Lbl implements Algorithm{
 			cube = yellowEdges(cube);
 
 
-			cube.printWholeCube();
+			//cube.printWholeCube();
 			cube = orientLastLayer(cube);
 
-			/*if(!(cube.getSide(2).c1.equals("yellow") && cube.getSide(2).c3.equals("yellow") && cube.getSide(2).c7.equals("yellow") && cube.getSide(2).c9.equals("yellow"))){
-				System.out.println("gula hörn ej korrekt");
+			/*if(!(cubeDone(cube))){
+				System.out.println("ej korrekt");
 				break;
 			}*/
 
@@ -38,7 +38,7 @@ public class Lbl implements Algorithm{
 			
 		
 		
-		cube.printWholeCube();
+		//cube.printWholeCube();
 
 	}
 
@@ -808,6 +808,45 @@ public class Lbl implements Algorithm{
 	private Cube orientLastLayer(Cube cube){
 		int i = 0;
 		while(!cornersCorrect(cube)){
+
+			if(cube.getSide(1).c3.equals(cube.getSide(6).c5) && cube.getSide(5).c1.equals(cube.getSide(5).c3)){
+				cube.leftToFront();
+				cube.R();
+				cube.Bi();
+				cube.R();
+				cube.F();
+				cube.F();
+				cube.Ri();
+				cube.B();
+				cube.R();
+				cube.F();
+				cube.F();
+				cube.R();
+				cube.R();
+				cube.U();
+				cube.rightToFront();
+			}
+
+			if(cube.getSide(1).c1.equals(cube.getSide(5).c5) || cube.getSide(1).c1.equals(cube.getSide(6).c5)){
+				if(cube.getSide(4).c3.equals(cube.getSide(5).c5) || cube.getSide(4).c3.equals(cube.getSide(6).c5)){
+					cube.rightToFront();
+					cube.R();
+					cube.Bi();
+					cube.R();
+					cube.F();
+					cube.F();
+					cube.Ri();
+					cube.B();
+					cube.R();
+					cube.F();
+					cube.F();
+					cube.R();
+					cube.R();
+					cube.U();
+					cube.leftToFront();
+				}
+			}
+
 			if((!cube.getSide(4).c1.equals(cube.getSide(4).c5) && !cube.getSide(5).c3.equals(cube.getSide(5).c5))){
 				System.out.println("orient corners");
 				cube.R();
@@ -828,47 +867,72 @@ public class Lbl implements Algorithm{
 
 			cube.rightToFront();
 			i++;
-			if(i<15){
-				System.out.println("OPS");
-				cube.printWholeCube();
-				break;
-			}
+			
 		}
 
-		for(int j = 0; j<4;j++){
-			if(cube.getSide(1).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(1).c5)){
-				System.out.println("orient edges clockwise");
-				cube.F();
-				cube.F();
-				cube.U();
-				cube.Ri();
-				cube.L();
-				cube.F();
-				cube.F();
-				cube.R();
-				cube.Li();
-				cube.U();
-				cube.F();
-				cube.F();
-				//break;
-			}
-			else if(cube.getSide(1).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(1).c5)){
-				System.out.println("orient edges anti-clockwise");
-				cube.F();
-				cube.F();
-				cube.Ui();
-				cube.Ri();
-				cube.L();
-				cube.F();
-				cube.F();
-				cube.R();
-				cube.Li();
-				cube.Ui();
-				cube.F();
-				cube.F();
-				//break;
-			}
+		//System.out.println(i);
+
+		while(!cubeDone(cube)){
+				if(!cube.getSide(1).c2.equals(cube.getSide(1).c5) && !cube.getSide(5).c2.equals(cube.getSide(5).c5) && !cube.getSide(6).c8.equals(cube.getSide(6).c5)){
+					cube.rightToFront();
+				}
+				else if(!cube.getSide(1).c2.equals(cube.getSide(1).c5) && !cube.getSide(4).c2.equals(cube.getSide(4).c5) && !cube.getSide(6).c8.equals(cube.getSide(6).c5)){
+					cube.leftToFront();
+				}
+				else if(!cube.getSide(4).c2.equals(cube.getSide(4).c5) && !cube.getSide(5).c2.equals(cube.getSide(5).c5) && !cube.getSide(6).c8.equals(cube.getSide(6).c5)){
+					cube.rightToFront();
+					cube.rightToFront();
+				}
+
+				if(cube.getSide(1).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(1).c5)){
+					System.out.println("orient edges clockwise");
+					cube.F();
+					cube.F();
+					cube.U();
+					cube.Ri();
+					cube.L();
+					cube.F();
+					cube.F();
+					cube.R();
+					cube.Li();
+					cube.U();
+					cube.F();
+					cube.F();
+					//break;
+				}
+				else if(cube.getSide(1).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(1).c5)){
+					System.out.println("orient edges anti-clockwise");
+					cube.F();
+					cube.F();
+					cube.Ui();
+					cube.Ri();
+					cube.L();
+					cube.F();
+					cube.F();
+					cube.R();
+					cube.Li();
+					cube.Ui();
+					cube.F();
+					cube.F();
+					//break;
+				}
+				else{ // all corners wrong
+				System.out.println("random test");
+					cube.F();
+					cube.F();
+					cube.U();
+					cube.Ri();
+					cube.L();
+					cube.F();
+					cube.F();
+					cube.R();
+					cube.Li();
+					cube.U();
+					cube.F();
+					cube.F();
+				}
 			cube.rightToFront();
+
 		}
 
 		return cube;
@@ -910,6 +974,34 @@ public class Lbl implements Algorithm{
 			return cube;
 		}
 		return null;
+	}
+
+	private boolean cubeDone(Cube cube){
+		int count = 0;
+		for(int i = 1;i<7;i++){
+			if(cube.getSide(i).c1.equals(cube.getSide(i).c5)){
+				if(cube.getSide(i).c2.equals(cube.getSide(i).c5)){
+					if(cube.getSide(i).c3.equals(cube.getSide(i).c5)){
+						if(cube.getSide(i).c4.equals(cube.getSide(i).c5)){
+							if(cube.getSide(i).c6.equals(cube.getSide(i).c5)){
+								if(cube.getSide(i).c7.equals(cube.getSide(i).c5)){
+									if(cube.getSide(i).c8.equals(cube.getSide(i).c5)){
+										if(cube.getSide(i).c9.equals(cube.getSide(i).c5)){
+
+											count++;
+										}
+									}
+								}	
+							}
+						}
+					}
+				}		
+			}
+		}
+		if(count==6){
+			System.out.println("klar");
+			return true;
+		}else{return false;}
 	}
 
 	private void setTime(int i, Double time){
