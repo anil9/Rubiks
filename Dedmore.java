@@ -39,11 +39,69 @@ public class Dedmore implements Algorithm {
 		middleLayer();
 		//cube.printWholeCube();
 		lastCorners();
+		lastEdges();
+
 
 
 
 	}
 
+
+	private void lastEdges() {
+		while (true) {
+			// find the cubie edge that's in place and put it in front:
+			if (front.c2.equals(front.c5) || top.c8.equals(front.c5)) {
+				// it's in place.
+				break;
+			} else if (right.c2.equals(right.c5) || top.c6.equals(right.c5)) {
+				cube.rightToFront();
+				break;
+			} else if (left.c2.equals(left.c5) || top.c4.equals(left.c5)) {
+				cube.leftToFront();
+				break;
+			} else if (back.c8.equals(back.c5) || top.c2.equals(back.c5)) {
+				cube.rightToFront();
+				cube.rightToFront();
+				break;
+			} else {
+				algo5_2();
+			}
+		}
+		// we now have front edge in place.
+		while (!lastEdgesCorrect()) {
+			algo5_1();
+		}
+		if (front.c2.equals(front.c5) && right.c2.equals(right.c5) && left.c2.equals(left.c5) && back.c8.equals(back.c5)) {
+			// finished!!
+			return;
+		}
+		if (front.c2.equals(top.c5) && right.c2.equals(top.c5) && left.c2.equals(top.c5) && back.c8.equals(top.c5)) {
+			// double H pattern
+			algoH();
+			cube.rightToFront();
+			algoH();
+			return;
+		}
+		while (!right.c2.equals(top.c5)) {
+			cube.rightToFront();
+		}
+		if (left.c2.equals(top.c5)) {
+			// H pattern
+			algoH();
+			return;
+		}
+		if (front.c2.equals(top.c5)) {
+			// fish pattern
+			algoFish();
+			return;
+		}
+		cube.rightToFront();
+		if(front.c2.equals(top.c5) && right.c2.equals(top.c5)){
+			// fish pattern
+			algoFish();
+			return;
+		}
+	}
 
 	private void lastCorners() {
 		// first two corners correct at front
@@ -61,7 +119,7 @@ public class Dedmore implements Algorithm {
 						break;
 					}
 
-				} else if (top.c3.equals(front.c5) || right.c3.equals(front.c5) || back.c9.equals(front.c5)){
+				} else if (top.c3.equals(front.c5) || right.c3.equals(front.c5) || back.c9.equals(front.c5)) {
 					//diagonal
 					algo4_2();
 					continue;	// need to make sure that they are correctly placed.
@@ -701,6 +759,96 @@ public class Dedmore implements Algorithm {
 		cube.L();
 		cube.Ui();
 		cube.Ui();
+	}
+
+	// algorithms for step 5
+
+	private void algo5_1() {
+		cube.Mi();
+		cube.Ui();
+		cube.M();
+		cube.Ui();
+		cube.Ui();
+		cube.Mi();
+		cube.Ui();
+		cube.M();
+	}
+
+	private void algoFish() {
+		cube.Fi();
+		cube.Li();
+		cube.Ri();
+		cube.Ei();
+		cube.Ri();
+		cube.Ri();
+		cube.Ei();
+		cube.Ei();
+		cube.Ri();
+		cube.Ui();
+		cube.Ui();
+		cube.R();
+		cube.E();
+		cube.E();
+		cube.Ri();
+		cube.Ri();
+		cube.E();
+		cube.R();
+		cube.Ui();
+		cube.Ui();
+		cube.L();
+		cube.F();
+	}
+
+	private void algoH() {
+		cube.Ri();
+		cube.Ei();
+		cube.Ri();
+		cube.Ri();
+		cube.Ei();
+		cube.Ei();
+		cube.Ri();
+		cube.Ui();
+		cube.Ui();
+		cube.R();
+		cube.E();
+		cube.E();
+		cube.Ri();
+		cube.Ri();
+		cube.E();
+		cube.R();
+		cube.Ui();
+		cube.Ui();
+	}
+
+	private void algo5_2() {
+		cube.F();
+		cube.F();
+		cube.U();
+		cube.L();
+		cube.Ri();
+		cube.F();
+		cube.F();
+		cube.Li();
+		cube.R();
+		cube.U();
+		cube.F();
+		cube.F();
+	}
+
+	private boolean lastEdgesCorrect() {
+		if (front.c2.equals(front.c5) || top.c8.equals(front.c5)) {
+			// it's in place.
+			if (right.c2.equals(right.c5) || top.c6.equals(right.c5)) {
+
+				if (left.c2.equals(left.c5) || top.c4.equals(left.c5)) {
+
+					if (back.c8.equals(back.c5) || top.c2.equals(back.c5)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 
 	private boolean lastCornersCorrect() {

@@ -989,11 +989,49 @@ Side temp = new Side(front);
 		bot.c9 = tempBot.c7;
 	}
 
+	public boolean solved(){
+		String[] colors = front.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
 
-	/*public static void main(String [] args) {
-		Cube cube = new Cube();
+		colors = left.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
 
+		colors = right.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+
+		colors = top.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+
+		colors = bot.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+		colors = back.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+		return true;
 	}
-	*/
+
 }
 
