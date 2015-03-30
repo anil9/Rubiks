@@ -10,11 +10,11 @@ public class Main {
 		cube = new Cube();
 		lbl = new Lbl();
 
-			lbl.runAlg(cube);
+			//lbl.runAlg(cube);
 		
 
 		//measure(fridrich);
-		//measure(lbl);
+		measure(lbl);
 
 	}
 
@@ -34,6 +34,7 @@ public class Main {
 		}
 		// write results to file in some nice format.
 		printResult(result);
+		
 
 	}
 

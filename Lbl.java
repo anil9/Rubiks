@@ -15,7 +15,7 @@ public class Lbl implements Algorithm{
 	public void runAlg(Cube cube){
 			
 		//for(int i = 0; i<100; i++){
-			cube.scramble(1000);;
+			//cube.scramble(1000);
 			cube = findYellowCenter(cube);
 			cube = whiteCross(cube);
 			cube = whiteCorners(cube);
@@ -848,7 +848,7 @@ public class Lbl implements Algorithm{
 			}
 
 			if((!cube.getSide(4).c1.equals(cube.getSide(4).c5) && !cube.getSide(5).c3.equals(cube.getSide(5).c5))){
-				System.out.println("orient corners");
+				//System.out.println("orient corners");
 				cube.R();
 				cube.Bi();
 				cube.R();
@@ -885,7 +885,7 @@ public class Lbl implements Algorithm{
 				}
 
 				if(cube.getSide(1).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(1).c5)){
-					System.out.println("orient edges clockwise");
+					//System.out.println("orient edges clockwise");
 					cube.F();
 					cube.F();
 					cube.U();
@@ -901,7 +901,7 @@ public class Lbl implements Algorithm{
 					//break;
 				}
 				else if(cube.getSide(1).c2.equals(cube.getSide(5).c5) && cube.getSide(5).c2.equals(cube.getSide(4).c5) && cube.getSide(4).c2.equals(cube.getSide(1).c5)){
-					System.out.println("orient edges anti-clockwise");
+					//System.out.println("orient edges anti-clockwise");
 					cube.F();
 					cube.F();
 					cube.Ui();
@@ -917,7 +917,7 @@ public class Lbl implements Algorithm{
 					//break;
 				}
 				else{ // all corners wrong
-				System.out.println("random test");
+				//System.out.println("random test");
 					cube.F();
 					cube.F();
 					cube.U();
@@ -999,7 +999,7 @@ public class Lbl implements Algorithm{
 			}
 		}
 		if(count==6){
-			System.out.println("klar");
+			//System.out.println("klar");
 			return true;
 		}else{return false;}
 	}
