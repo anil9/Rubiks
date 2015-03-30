@@ -1,5 +1,5 @@
 public class Main {
-	public static final int ALGO_RUNS = 10;	// increase this to a good value
+	public static final int ALGO_RUNS = 100;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
 	Cube solvedCube;
@@ -10,11 +10,13 @@ public class Main {
 	public Main() {
 		cube = new Cube();
 
-		lbl = new Lbl();		
+		lbl = new Lbl();
+		System.out.println("LBL:");		
 		measure(lbl);
 
+		System.out.println("\ndedmore:");
 		dedmore = new Dedmore();
-		measure(dedmore);
+		//measure(dedmore);
 	}
 
 
