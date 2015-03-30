@@ -97,7 +97,7 @@ public class Cube {
 	 * @param operations The number of operations used to scramble the cube.
 	*/
 	public void scramble(int operations) {
-		int numberOfOperations = 12;
+		int numberOfOperations = 20;
 		Random random = new Random();
 
 		for (int i = 0; i < operations; i++) {
@@ -140,6 +140,30 @@ public class Cube {
 			case 11:
 				Di();
 				break;
+			case 12:
+				M();
+				break;
+			case 13:
+				Mi();
+				break;
+			case 14:
+				E();
+				break;
+			case 15:
+				Ei();
+				break;
+			case 16:
+				rightToFront();
+				break;
+			case 17:
+				leftToFront();
+				break;
+			case 18:
+				topToFront();
+				break;
+			case 19:
+				botToFront();
+				break;
 			default:
 				System.err.println("Error in scramble. Wierd operation number:" + op);
 				break;
@@ -153,27 +177,48 @@ public class Cube {
 
 	public void topToFront(){
 
+		/*
 		Ri_NoCount();
 		M_NoCount();
 		L_NoCount();
+		*/
+
+		Ri();
+		M();
+		L();
 	}
 
 	public void botToFront(){
+		/*
 		R_NoCount();
 		Mi_NoCount();
 		Li_NoCount();
+		*/
+		R();
+		Mi();
+		Li();
 	}
 
 	public void rightToFront(){
+		/*
 		U_NoCount();
 		Ei_NoCount();
 		Di_NoCount();
+		*/
+		U();
+		Ei();
+		Di();
 	}
 
 	public void leftToFront(){
+		/*
 		Ui_NoCount();
 		E_NoCount();
 		D_NoCount();
+		*/
+		Ui();
+		E();
+		D();
 	}
 
 	// rotate the middle layer between left and right, in the direction of a regular L
@@ -941,11 +986,49 @@ Side temp = new Side(front);
 		bot.c9 = tempBot.c7;
 	}
 
+	public boolean solved(){
+		String[] colors = front.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
 
-	/*public static void main(String [] args) {
-		Cube cube = new Cube();
+		colors = left.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
 
+		colors = right.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+
+		colors = top.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+
+		colors = bot.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+		colors = back.getColors();
+		for(int i = 1; i < 9; i++){
+			if(!colors[0].equals(colors[i])){
+				return false;
+			}
+		}
+		return true;
 	}
-	*/
+
 }
 

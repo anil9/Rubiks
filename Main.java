@@ -2,51 +2,53 @@ public class Main {
 	public static final int ALGO_RUNS = 10;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 1000;
 	Cube cube;
-
+	Cube solvedCube;
+	Dedmore dedmore;
 	Lbl lbl;
 
 
 	public Main() {
 		cube = new Cube();
-		lbl = new Lbl();
 
-			//lbl.runAlg(cube);
-		
-
-		//measure(fridrich);
+		lbl = new Lbl();		
 		measure(lbl);
 
+		dedmore = new Dedmore();
+		measure(dedmore);
 	}
 
 
 
 	private void measure(Algorithm algo) {
-		long[] result = new long[ALGO_RUNS];
+		double[] result = new double[ALGO_RUNS];
 
 		for (int i = 0; i < ALGO_RUNS; i++) {
 			cube.scramble(CUBE_SCRAMBLE);
-			long startTime = System.currentTimeMillis();
+			long startTime = System.nanoTime();
 
 			algo.runAlg(cube);
-			long stopTime = System.currentTimeMillis() - startTime;
+			double stopTime = (System.nanoTime() - startTime)/(double)1000000;	// ms
+			if(!cube.solved()){
+				cube.printWholeCube();
+				System.exit(1);
+			}
 			
 			result[i] = stopTime;
+			//System.out.println("done");0
 		}
 		// write results to file in some nice format.
 		printResult(result);
 		
 
+
+
 	}
 
-	private void printResult(long[] results) {
+	private void printResult(double[] results) {
 		for (int i = 0; i < ALGO_RUNS; i++) {
-			System.out.println(results[i]);
+			System.out.println(results[i] + " ms");	// ms
 		}
 	}
-
-
-
-
 
 	public static void main(String [] args) {
 		Main main = new Main();

@@ -35,6 +35,11 @@ public Side(Side side){
 	c9 = side.c9;
 }
 
+public String[] getColors(){
+	String[] colors = new String[]{c1, c2, c3, c4, c5, c6, c7, c8, c9};
+	return colors;
+}
+
 public String toString(){
 
 	StringBuilder sb = new StringBuilder();
