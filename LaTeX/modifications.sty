@@ -19,11 +19,12 @@
 \setsubparaheadstyle{\normalsize\bfseries\boldmath}
 \addto\captionsswedish{%
 \def\abstractname{Referat}%
+\def\abstractname{Sammanfattning}%
 \def\appendixtocname{Bilagor}%
 \def\appendixpagename{Bilagor}%
 }
 \newcommand\theforeigntitle{}
-\newcommand\foreigntitle[1]{\renewcommand\theforeigntitle{#1}}
+\newcommand\foreigntitle[2]{\renewcommand\theforeigntitle{#2}}
 \addtolength{\absleftindent}{1.5cm}
 \addtolength{\absrightindent}{1.5cm}
 \renewenvironment{abstract}{%

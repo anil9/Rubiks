@@ -2,7 +2,8 @@
 \select@language {swedish}
 \select@language {english}
 \select@language {english}
-\contentsline {section}{Sammanfattning}{}
+\select@language {swedish}
+\select@language {english}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Definition}{2}
 \contentsline {section}{\numberline {1.2}Problem Statement}{2}
