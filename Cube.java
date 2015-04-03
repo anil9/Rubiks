@@ -1,9 +1,12 @@
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.HashMap;
 
 
 public class Cube {
+	int move_counter;
+	HashMap<String, Double> num_moves_per_op = new HashMap<String, Double>();
 	public final String WHITE = "white";
 	public final String RED = "red";
 	public final String YELLOW = "yellow";
@@ -19,11 +22,21 @@ public class Cube {
 	public Side back;
 
 	public Cube() {
+		move_counter = 0;
 		fillSides();
 		//System.out.println(front);
 //		System.out.println("Hel");
 		//printWholeCube();
 
+	}
+
+	public Cube(Cube cube){
+		front = new Side(cube.front);
+		top = new Side(cube.top);
+		bot = new Side(cube.bot);
+		left = new Side(cube.left);
+		right = new Side(cube.right);
+		back = new Side(cube.back);
 	}
 
 	public void printWholeCube() {
@@ -177,52 +190,63 @@ public class Cube {
 
 	public void topToFront(){
 
-		/*
 		Ri_NoCount();
 		M_NoCount();
 		L_NoCount();
-		*/
-
+		
+		/*
 		Ri();
 		M();
 		L();
+		*/
 	}
 
 	public void botToFront(){
-		/*
+		
 		R_NoCount();
 		Mi_NoCount();
 		Li_NoCount();
-		*/
-		R();
+		
+		/*R();
 		Mi();
 		Li();
+		*/
 	}
 
 	public void rightToFront(){
-		/*
+		
 		U_NoCount();
 		Ei_NoCount();
 		Di_NoCount();
-		*/
+		/*
 		U();
 		Ei();
 		Di();
+		*/
 	}
 
 	public void leftToFront(){
-		/*
+		
 		Ui_NoCount();
 		E_NoCount();
 		D_NoCount();
-		*/
+		/*
 		Ui();
 		E();
 		D();
+		*/
 	}
 
 	// rotate the middle layer between left and right, in the direction of a regular L
 	public void M(){
+		if(!num_moves_per_op.containsKey("M")){
+			num_moves_per_op.put("M", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("M");
+			num_moves_per_op.put("M", temp+1.0);	
+		}
+		
+		move_counter++;
 		Side tempTop = new Side(top);
 		top.c2 = back.c2;
 		top.c5 = back.c5;
@@ -243,6 +267,14 @@ public class Cube {
 	}
 	// rotate the middle layer between left and right, in the direction of a regular Li
 	public void Mi(){
+		if(!num_moves_per_op.containsKey("Mi")){
+			num_moves_per_op.put("Mi", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Mi");
+			num_moves_per_op.put("Mi", temp+1.0);	
+		}
+
+		move_counter++;
 		Side tempTop = new Side(top);
 		top.c2 = front.c2;
 		top.c5 = front.c5;
@@ -263,6 +295,13 @@ public class Cube {
 
 	// rotate the middle layer between up and down, in the direction of a regular D
 	public void E(){
+		if(!num_moves_per_op.containsKey("E")){
+			num_moves_per_op.put("E", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("E");
+			num_moves_per_op.put("E", temp+1.0);	
+		}
+		move_counter++;
 		Side tempFront = new Side(front);
 		front.c4 = left.c4;
 		front.c5 = left.c5;
@@ -282,6 +321,14 @@ public class Cube {
 	}
 	// rotate the middle layer between up and down, in the direction of a regular Di
 	public void Ei(){
+		if(!num_moves_per_op.containsKey("Ei")){
+			num_moves_per_op.put("Ei", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Ei");
+			num_moves_per_op.put("Ei", temp+1.0);	
+		}
+
+		move_counter++;
 		Side tempFront = new Side(front);
 		front.c4 = right.c4;
 		front.c5 = right.c5;
@@ -302,6 +349,13 @@ public class Cube {
 
 	// Twisting front face 90 degrees clockwise
 	public void F() {
+		if(!num_moves_per_op.containsKey("F")){
+			num_moves_per_op.put("F", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("F");
+			num_moves_per_op.put("F", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempFront = new Side(front);
 		top.c7 = left.c9;
@@ -332,6 +386,13 @@ public class Cube {
 	}
 	// Twisting front face 90 degrees anti-clockwise
 	public void Fi() {
+		if(!num_moves_per_op.containsKey("Fi")){
+			num_moves_per_op.put("Fi", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Fi");
+			num_moves_per_op.put("Fi", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempFront = new Side(front);
 		top.c7 = right.c1;
@@ -361,6 +422,13 @@ public class Cube {
 	}
 	// Twisting Back face 90 degrees clockwise
 	public void B() {
+		if(!num_moves_per_op.containsKey("B")){
+			num_moves_per_op.put("B", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("B");
+			num_moves_per_op.put("B", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempBack = new Side(back);
 
@@ -392,6 +460,13 @@ public class Cube {
 	}
 	// Twisting back face 90 degrees anti-clockwise
 	public void Bi() {
+		if(!num_moves_per_op.containsKey("Bi")){
+			num_moves_per_op.put("Bi", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Bi");
+			num_moves_per_op.put("Bi", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempBack = new Side(back);
 
@@ -423,6 +498,13 @@ public class Cube {
 	}
 	// Twisting right face 90 degrees clockwise
 	public void R() {
+		if(!num_moves_per_op.containsKey("R")){
+			num_moves_per_op.put("R", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("R");
+			num_moves_per_op.put("R", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempRight = new Side(right);
 
@@ -453,6 +535,13 @@ public class Cube {
 	}
 	// Twisting right face 90 degrees anti-clockwise
 	public void Ri() {
+		if(!num_moves_per_op.containsKey("Ri")){
+			num_moves_per_op.put("Ri", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Ri");
+			num_moves_per_op.put("Ri", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempRight = new Side(right);
 
@@ -484,6 +573,13 @@ public class Cube {
 	}
 	// Twisting left face 90 degrees clockwise
 	public void L() {
+		if(!num_moves_per_op.containsKey("L")){
+			num_moves_per_op.put("L", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("L");
+			num_moves_per_op.put("L", temp+1.0);	
+		}
+		move_counter++;
 		Side tempTop = new Side(top);
 		Side tempLeft = new Side(left);
 
@@ -514,6 +610,13 @@ public class Cube {
 	}
 	// Twisting left face 90 degrees anti-clockwise
 	public void Li() {
+		if(!num_moves_per_op.containsKey("Li")){
+			num_moves_per_op.put("Li", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Li");
+			num_moves_per_op.put("Li", temp+1.0);	
+		}
+		move_counter++;
 
 		Side tempTop = new Side(top);
 		Side tempLeft = new Side(left);
@@ -545,7 +648,13 @@ public class Cube {
 	}
 	// Twisting upper face 90 degrees clockwise
 	public void U() {
-
+		if(!num_moves_per_op.containsKey("U")){
+			num_moves_per_op.put("U", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("U");
+			num_moves_per_op.put("U", temp+1.0);	
+		}
+		move_counter++;
 		Side temp = new Side(front);
 		Side temp_top = new Side(top);
 		front.c1 = right.c1;
@@ -575,7 +684,13 @@ public class Cube {
 	}
 	// Twisting upper face 90 degrees anti-clockwise
 	public void Ui() {
-
+		if(!num_moves_per_op.containsKey("Ui")){
+			num_moves_per_op.put("Ui", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Ui");
+			num_moves_per_op.put("Ui", temp+1.0);	
+		}
+		move_counter++;
 		Side temp = new Side(front);
 		Side temp_top = new Side(top);
 		front.c1 = left.c1;
@@ -606,6 +721,13 @@ public class Cube {
 	}
 	// Twisting bottom face 90 degrees clockwise
 	public void D() {
+		if(!num_moves_per_op.containsKey("D")){
+			num_moves_per_op.put("D", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("D");
+			num_moves_per_op.put("D", temp+1.0);	
+		}
+		move_counter++;
 		Side tempFront = new Side(front);
 		Side tempBot = new Side(bot);
 
@@ -637,6 +759,13 @@ public class Cube {
 	}
 	// Twisting bottom face 90 degrees anti-clockwise
 	public void Di() {
+		if(!num_moves_per_op.containsKey("Di")){
+			num_moves_per_op.put("Di", 1.0);	
+		}else{
+			double temp = num_moves_per_op.get("Di");
+			num_moves_per_op.put("Di", temp+1.0);	
+		}
+		move_counter++;
 		Side tempFront = new Side(front);
 		Side tempBot = new Side(bot);
 

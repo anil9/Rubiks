@@ -17,17 +17,32 @@ public class Lbl implements Algorithm{
 		//for(int i = 0; i<100; i++){
 			//cube.scramble(1000);
 			cube = findYellowCenter(cube);
+			if(cube.solved()){
+				return;
+			}
 			cube = whiteCross(cube);
+			if(cube.solved()){
+				return;
+			}
 			cube = whiteCorners(cube);
+			if(cube.solved()){
+				return;
+			}
 			cube = secondLayer(cube);
-			
+			if(cube.solved()){
+				return;
+			}
 			cube = yellowCross(cube);
+			if(cube.solved()){
+				return;
+			}
 			cube = yellowEdges(cube);
-
-
+			if(cube.solved()){
+				return;
+			}
 			//cube.printWholeCube();
 			cube = orientLastLayer(cube);
-
+			
 			/*if(!(cubeDone(cube))){
 				System.out.println("ej korrekt");
 				break;
