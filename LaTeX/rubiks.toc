@@ -48,4 +48,4 @@
 \contentsline {chapter}{\chapternumberline {7}Conclusion}{13}
 \contentsline {chapter}{References}{15}
 \contentsline {chapter}{Bilagor}{15}
-\contentsline {appendix}{\chapternumberline {A}RDF}{17}
+\contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{17}
