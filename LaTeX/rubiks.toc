@@ -2,13 +2,12 @@
 \select@language {swedish}
 \select@language {english}
 \select@language {english}
-\select@language {swedish}
-\select@language {english}
+\contentsline {section}{Sammanfattning}{}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Problem Definition}{1}
-\contentsline {section}{\numberline {1.2}Problem Statement}{1}
-\contentsline {section}{\numberline {1.3}Purpose}{1}
-\contentsline {section}{\numberline {1.4}Structure}{1}
+\contentsline {section}{\numberline {1.1}Problem Definition}{2}
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}
+\contentsline {section}{\numberline {1.3}Purpose}{2}
+\contentsline {section}{\numberline {1.4}Structure}{2}
 \contentsline {chapter}{\chapternumberline {2}Background}{4}
 \contentsline {section}{\numberline {2.1}Competitions}{4}
 \contentsline {subsection}{\numberline {2.1.1}Speedcubing}{4}
