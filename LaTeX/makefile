@@ -1,8 +1,7 @@
 all:
-	latex rubiks.tex
+	pdflatex rubiks.tex
 	bibtex rubiks.aux
-	latex rubiks.tex
-	latex rubiks.tex
-	dvipdf rubiks.dvi
-
+	pdflatex rubiks.tex
+	pdflatex rubiks.tex
+	
 
