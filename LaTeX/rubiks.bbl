@@ -1,9 +1,30 @@
 \begin{thebibliography}{1}
 
+\bibitem{Lar5}
+Lars Petrus.
+\newblock Solving rubik's cube for speed.
+\newblock \url{http://lar5.com/cube/}, May 1997.
+\newblock [Accessed 3 April 2015].
+
 \bibitem{MadeHow}
-Hej.
-\newblock Madehow.
-\newblock \url{http://www.madehow.com/Volume-7/Rubik-s-Cube.html}, vene 2001.
-\newblock [Accessed nu typ].
+Unknown.
+\newblock How products are made, volume 7 - rubik's cube.
+\newblock \url{http://www.madehow.com/Volume-7/Rubik-s-Cube.html}.
+\newblock [Accessed 3 April 2015].
+
+\bibitem{WCA2}
+WCA.
+\newblock Wca regulations article a: Speed cubing.
+\newblock \url{https://www.worldcubeassociation.org/regulations/#A3a1}, April
+  2014.
+\newblock [Accessed 3 April 2015].
+
+\bibitem{WCA1}
+WCA.
+\newblock Wca regulations atricle 12: Notation.
+\newblock
+  \url{https://www.worldcubeassociation.org/regulations/#article-12-notation},
+  April 2014.
+\newblock [Accessed 3 April 2015].
 
 \end{thebibliography}

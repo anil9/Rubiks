@@ -3,44 +3,51 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rubiks.aux
 The style file: plain.bst
 Database file #1: references.bib
-You've used 1 entry,
+Warning--entry type for "Lar5" isn't style-file defined
+--line 12 of file references.bib
+Warning--entry type for "WCA1" isn't style-file defined
+--line 22 of file references.bib
+Warning--entry type for "WCA2" isn't style-file defined
+--line 32 of file references.bib
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            504 strings with 4092 characters,
-and the built_in function-call counts, 239 in all, are:
-= -- 22
-> -- 7
+            519 strings with 4453 characters,
+and the built_in function-call counts, 890 in all, are:
+= -- 87
+> -- 28
 < -- 0
-+ -- 3
-- -- 2
-* -- 10
-:= -- 46
-add.period$ -- 4
-call.type$ -- 1
-change.case$ -- 4
++ -- 12
+- -- 8
+* -- 31
+:= -- 156
+add.period$ -- 16
+call.type$ -- 4
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 49
+cite$ -- 4
+duplicate$ -- 28
+empty$ -- 89
+format.name$ -- 8
+if$ -- 192
 int.to.chr$ -- 0
-int.to.str$ -- 1
+int.to.str$ -- 4
 missing$ -- 0
-newline$ -- 9
-num.names$ -- 2
-pop$ -- 8
+newline$ -- 27
+num.names$ -- 8
+pop$ -- 34
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 12
 quote$ -- 0
-skip$ -- 6
+skip$ -- 23
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 20
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 16
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 14
+while$ -- 8
+width$ -- 5
+write$ -- 49
+(There were 3 warnings)

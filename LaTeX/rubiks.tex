@@ -71,27 +71,51 @@ The cube was originally called magic cube and was licensed to be sold by the ame
 
 
 \section{Problem Definition}
-This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes. Both based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem [2]. To find the most effective for speedcubing and least amount of moves we will evaluate both methods operation variance, number of operations and time.\\
+This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes. Both based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate both methods operation variance, number of operations and time to solve,  to find the most time-efficient and move-efficient of them both.\\
 
-During the literature study there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them.
+During the literature study there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them..
 
 \section{Problem Statement}
 Which of the beginner algorithms would be more effective for speedcubing?\\
 Which of the beginner algorithms solves the cube with the least amount of moves?\\
 Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?\\
 \section{Purpose}
+The purpose is to test two methods for solving rubik’s cube to find out which uses the least amount of moves and if the same method is less time-consuming than the other. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
 The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
 The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.   
 
 
 \chapter{Background}
+Providing the reader with information of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
 \section{Competitions}
+There are two types of competitions regarding the cube.
 \subsection{Speedcubing}
+When competing in an official event regulated by the World Cube Association (WCA), the competitor has at maximum 15 seconds of inspection time of the cube before the solve begins.\cite{WCA2} The time stops when the competitor have reached the unique solution. 
 \subsection{Fewest moves}
+The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
 \section{Rubik's Cube}
+Explanation of how the cube is constructed and the different notations for the operations.
 \subsection{Description}
+The cube consists of 26 cubies with three,two or one visible sides depending on the type of cubie. There is one core piece consisting of three axes which holds the center pieces together \cite{MadeHow}. 
+  The corner and edge pieces (fig \ref{fig_3})  are the cubies that are movable to different edge and corner positions, the center pieces (fig \ref{fig_3}) can only be moved according to the axis.  
 \subsection{Notation}
+The notation describes the different move operations on the cube. This thesis uses the notation used by WCA. Explained below:\\
+Clockwise 90 degrees:\\
+F - Front face\\
+B - Back face\\
+R - Right face\\
+L - Left face\\
+U - Upper face\\
+D - Bottom face\\
+To denote the anti-clockwise 90 degrees rotation just put a single citation mark (‘) after the letter. For example F’ - move front face anti-clockwise 90 degrees.\cite{WCA1}
+To denote clockwise 180 degrees rotation just put (2) after the letters described above. 
+\begin{figure}[b]
+	\centering
+	\includegraphics[width= 0.5\textwidth]{figs/representation.png}
+	\caption{Cubie types}
+	\label{fig_3}
+\end{figure}
 \section{Algorithms}
 \subsection{Lbl using daisy method}
 \subsubsection{White cross}
