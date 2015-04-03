@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  3 APR 2015 11:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  3 APR 2015 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,21 +1072,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] (./rubiks.toc [5
 
 ]) [6]
-<scramble.jpg, id=31, 400.49625pt x 314.17375pt>
-File: scramble.jpg Graphic file (type jpg)
- <use scramble.jpg>
-Package pdftex.def Info: scramble.jpg used on input line 53.
+<figs/scramble.jpg, id=31, 400.49625pt x 314.17375pt>
+File: figs/scramble.jpg Graphic file (type jpg)
+ <use figs/scramble.jpg>
+Package pdftex.def Info: figs/scramble.jpg used on input line 53.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<DONE.png, id=32, 300.3722pt x 235.63031pt>
-File: DONE.png Graphic file (type png)
- <use DONE.png>
-Package pdftex.def Info: DONE.png used on input line 57.
+<figs/DONE.png, id=32, 300.3722pt x 235.63031pt>
+File: figs/DONE.png Graphic file (type png)
+ <use figs/DONE.png>
+Package pdftex.def Info: figs/DONE.png used on input line 57.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
  [1
 
 
- <./scramble.jpg> <./DONE.png>]
+ <./figs/scramble.jpg> <./figs/DONE.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
@@ -1130,8 +1130,8 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
  (./rubiks.aux) ) 
 Here is how much of TeX's memory you used:
- 8731 strings out of 493308
- 123690 string characters out of 6140091
+ 8732 strings out of 493308
+ 123735 string characters out of 6140091
  223074 words of memory out of 5000000
  12016 multiletter control sequences out of 15000+600000
  56118 words of font info for 42 fonts, out of 8000000 for 9000
