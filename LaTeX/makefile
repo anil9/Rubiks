@@ -1,8 +1,8 @@
-dvi:
+all:
 	latex rubiks.tex
+	bibtex rubiks.aux
+	latex rubiks.tex
+	latex rubiks.tex
+	dvipdf rubiks.dvi
 
-ps:
-	dvips rubiks.dvi
 
-pdf:
-	ps2pdf rubiks.ps 
