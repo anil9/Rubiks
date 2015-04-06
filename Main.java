@@ -88,7 +88,7 @@ public class Main {
 				pw.println(moves[i] + " moves");
 				moves_avg += moves[i];
 			}
-			pw.println("avarage " + moves_avg/moves.length);
+			pw.println("average " + moves_avg/moves.length);
 			for(Entry<String, Double> entry : num_moves_op.entrySet()){
 				pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
 			}
