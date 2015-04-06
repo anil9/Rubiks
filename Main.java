@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.HashMap;
+import java.io.*;
 
 public class Main {
-	public static final int ALGO_RUNS = 2;	// increase this to a good value
+	public static final int ALGO_RUNS = 5;	// increase this to a good value
 	public static final int CUBE_SCRAMBLE = 10;
 	Cube cube;
 	Cube solvedCube;
@@ -11,6 +12,7 @@ public class Main {
 	Lbl lbl;
 	ArrayList<Cube> cubes_to_solve = new ArrayList<Cube>();
 	HashMap<String, Double> num_moves_op = new HashMap<String, Double>();
+	int numAlgo = 0;
 
 	public Main() {
 		
@@ -18,10 +20,12 @@ public class Main {
 
 		lbl = new Lbl();
 		System.out.println("LBL:");	
+		numAlgo++;
 		measure(lbl);		
 		System.out.println("\ndedmore:");
 		num_moves_op = new HashMap<String, Double>();
 		dedmore = new Dedmore();
+		numAlgo++;
 		measure(dedmore);
 	}
 
@@ -65,23 +69,32 @@ public class Main {
 			//System.out.println("done");
 		}
 		// write results to file in some nice format.
-		printResult(moves, result);
+		printResult(numAlgo, moves, result);
 		
 
 
 
 	}
 
-	private void printResult(int[] moves, double[] results) {
-		int moves_avg = 0; 
-		for (int i = 0; i < ALGO_RUNS; i++) {
-			//System.out.println(results[i] + " ms");	// ms
-			//System.out.println(moves[i] + " moves");
-			moves_avg += moves[i];
-		}
-		System.out.println(moves_avg/moves.length);
-		for(Entry<String, Double> entry : num_moves_op.entrySet()){
-			System.out.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
+	private void printResult(int numAlgo, int[] moves, double[] results) {
+		try{
+
+			File resultfile = new File("resultsAlgo"+numAlgo+".txt");
+			PrintWriter pw = new PrintWriter(resultfile);
+			pw.println("----------------------");
+			int moves_avg = 0; 
+			for (int i = 0; i < ALGO_RUNS; i++) {
+				pw.println(results[i] + " ms");	// ms
+				pw.println(moves[i] + " moves");
+				moves_avg += moves[i];
+			}
+			pw.println("avarage " + moves_avg/moves.length);
+			for(Entry<String, Double> entry : num_moves_op.entrySet()){
+				pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
+			}
+			pw.close();
+		}catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 
