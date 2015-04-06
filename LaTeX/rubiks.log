@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 13:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,72 +1183,67 @@ File: figs/rubiks-4-corners.jpg Graphic file (type jpg)
 Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 193.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+ []
+
 <figs/rubiks-top-edges.jpg, id=74, 300.3722pt x 235.63031pt>
 File: figs/rubiks-top-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-top-edges.jpg>
-Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 202.
+Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 215.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/rubiks-bottom-edges.jpg, id=75, 300.3722pt x 235.63031pt>
 File: figs/rubiks-bottom-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-bottom-edges.jpg>
-Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 207.
+Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 220.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/last-edge-correct.jpg, id=76, 300.3722pt x 235.63031pt>
 File: figs/last-edge-correct.jpg Graphic file (type jpg)
 
 <use figs/last-edge-correct.jpg>
-Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 212.
+Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 225.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 213--213
+Underfull \hbox (badness 4132) in paragraph at lines 226--226
 []\T1/lmr/m/n/10 (c) |One edges cor-rectly
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/rub
-iks-4-corners.jpg> <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges.jp
-g> <./figs/last-edge-correct.jpg>]
-<figs/fish-pattern.jpg, id=81, 300.3722pt x 235.63031pt>
+<figs/fish-pattern.jpg, id=77, 300.3722pt x 235.63031pt>
 File: figs/fish-pattern.jpg Graphic file (type jpg)
 
 <use figs/fish-pattern.jpg>
-Package pdftex.def Info: figs/fish-pattern.jpg used on input line 233.
+Package pdftex.def Info: figs/fish-pattern.jpg used on input line 234.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/H-pattern.jpg, id=82, 300.3722pt x 235.63031pt>
+<figs/H-pattern.jpg, id=78, 300.3722pt x 235.63031pt>
 File: figs/H-pattern.jpg Graphic file (type jpg)
  <use figs/H-pattern.jpg>
-Package pdftex.def Info: figs/H-pattern.jpg used on input line 238.
+Package pdftex.def Info: figs/H-pattern.jpg used on input line 239.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--244
+Underfull \hbox (badness 10000) in paragraph at lines 210--245
 
  []
 
-[8 <./figs/fish-pattern.jpg> <./figs/H-pattern.jpg>] [9
+[7 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/rubi
+ks-4-corners.jpg>] [8 <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges
+.jpg> <./figs/last-edge-correct.jpg> <./figs/fish-pattern.jpg> <./figs/H-patter
+n.jpg>] [9
 
 ] [10
 
 ] [11] [12
 
-]
-[13] [14
+] [13] [14
 
 ] [15] [16
 
@@ -1286,7 +1281,7 @@ otation$\T1/lmr/m/n/10.95 , April
 ) [19] [20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
@@ -1298,7 +1293,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
 Here is how much of TeX's memory you used:
  8869 strings out of 493308
  126145 string characters out of 6140091
- 224176 words of memory out of 5000000
+ 225176 words of memory out of 5000000
  12131 multiletter control sequences out of 15000+600000
  72496 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1313,7 +1308,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 /lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (27 pages, 498864 bytes).
+Output written on rubiks.pdf (27 pages, 498842 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

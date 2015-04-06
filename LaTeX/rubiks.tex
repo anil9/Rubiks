@@ -177,7 +177,7 @@ Now when the corners of the last layer are in position so that the top is all ye
 \end{figure}
 \newpage
 \subsection{Dedmore algorithm}
-\begin{figure}[t]
+\begin{figure}[b]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/rubiks-frst-corner.jpg}
@@ -196,7 +196,20 @@ Now when the corners of the last layer are in position so that the top is all ye
 	\end{subfigure}
 	\caption{}
 \end{figure}
-\begin{figure}[b]
+
+\subsubsection{1. Top corners (the X)}
+Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving your corner. When this is done, rotate the whole cube to obtain the corner in your top left on the front side, as in the fig \ref{fig_9}.\\\\
+Next you’ll search for the next corner that should be positioned in the top right front side. Depending on the position on this corner, you will use different operation sequences to get it in position like the fig \ref{fig_10}.\\\\
+Simply rotate the cube and continue on. The goal of this step is to form an ‘X’ top the top face (fig \ref{fig_11}).
+\subsubsection{2. Top edges}
+The goal of this step is to simply get the edges in place. Get them in place one by one. When this step is finished the cube looks like fig \ref{fig_12}.
+\subsubsection{3. Middle layer}
+\subsubsection{4. Bottom corners}
+Here the cube is turned upside down and the goal here is again to build a (green) X with the corners(fig \ref{fig_13}).
+\subsubsection{5. Bottom edges}
+In this step, at least one edge is already in the correct place (the color might be switched as in fig \ref{fig_14}). Find that edge and put it on the front side. Then position every other edge correctly by using a series of operations.\\\\
+When every edge are correctly positioned, there are 2 possible states left. Each requires a different sequence of operations to solve. The ‘fish’ pattern (fig \ref{fig_15}) and the ‘H’ pattern (fig \ref{fig_16}). Execute the sequence for the pattern and you’ll then have solved the cube.
+\begin{figure}[bh]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/rubiks-top-edges.jpg}
@@ -215,19 +228,7 @@ Now when the corners of the last layer are in position so that the top is all ye
 	\end{subfigure}
 	\caption{}
 \end{figure}
-\subsubsection{1. Top corners (the X)}
-Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving your corner. When this is done, rotate the whole cube to obtain the corner in your top left on the front side, as in the fig \ref{fig_9}.\\\\
-Next you’ll search for the next corner that should be positioned in the top right front side. Depending on the position on this corner, you will use different operation sequences to get it in position like the fig \ref{fig_10}.\\\\
-Simply rotate the cube and continue on. The goal of this step is to form an ‘X’ top the top face (fig \ref{fig_11}).
-\subsubsection{2. Top edges}
-The goal of this step is to simply get the edges in place. Get them in place one by one. When this step is finished the cube looks like fig \ref{fig_12}.
-\subsubsection{3. Middle layer}
-\subsubsection{4. Bottom corners}
-Here the cube is turned upside down and the goal here is again to build a (green) X with the corners(fig \ref{fig_13}).
-\subsubsection{5. Bottom edges}
-In this step, at least one edge is already in the correct place (the color might be switched as in fig \ref{fig_14}). Find that edge and put it on the front side. Then position every other edge correctly by using a series of operations.\\\\
-When every edge are correctly positioned, there are 2 possible states left. Each requires a different sequence of operations to solve. The ‘fish’ pattern (fig \ref{fig_15}) and the ‘H’ pattern (fig \ref{fig_16}). Execute the sequence for the pattern and you’ll then have solved the cube.
-\begin{figure}[b]
+\begin{figure}[bh]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/fish-pattern.jpg}
