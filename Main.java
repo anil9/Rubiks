@@ -81,24 +81,46 @@ public class Main {
 		DecimalFormat numberFormat = new DecimalFormat("0.00000");
 		try{
 
-			File resultfile = new File("resultsAlgo"+numAlgo+".txt");
-			PrintWriter pw = new PrintWriter(resultfile);
-			pw.println("----------------------");
+			File resultFile = new File("algo"+numAlgo+"_results.txt");
+			File timesFile = new File("algo"+numAlgo+"_times_ms.txt");
+			File movesFile = new File("algo"+numAlgo+"_moves.txt");
+			File countOfEachOperationFile = new File("algo"+numAlgo+"_countOfEachOperation.txt");
+			PrintWriter result_pw = new PrintWriter(resultFile);
+			PrintWriter times_pw = new PrintWriter(timesFile);
+			PrintWriter moves_pw = new PrintWriter(movesFile);
+			PrintWriter opCount_pw = new PrintWriter(countOfEachOperationFile);
+			result_pw.println("----------------------");
 			int moves_avg = 0;
 			double time_avg = 0; 
 			for (int i = 0; i < ALGO_RUNS; i++) {
-				pw.println(time[i] + " ms");	// ms
-				pw.println(moves[i] + " moves");
+				// result print
+				result_pw.println(time[i] + " ms");	// ms
+				result_pw.println(moves[i] + " moves");
+
+				// times print
+				times_pw.println(time[i]);
+
+				// moves print
+				moves_pw.println(moves[i]);
+
+				// append avg
 				moves_avg += moves[i];
 				time_avg += time[i];
 			}
-			pw.println("--------------");
-			pw.println("average moves " + moves_avg/moves.length);
-			pw.println("average time " + numberFormat.format(time_avg/moves.length) + " ms");
+			result_pw.println("--------------");
+			result_pw.println("average moves " + moves_avg/moves.length);
+			result_pw.println("average time " + numberFormat.format(time_avg/moves.length) + " ms");
 			for(Entry<String, Double> entry : num_moves_op.entrySet()){
-				pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
+				// result print
+				result_pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
+
+				//operations print
+				opCount_pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
 			}
-			pw.close();
+			result_pw.close();
+			times_pw.close();
+			moves_pw.close();
+			opCount_pw.close();
 		}catch(Exception e){
 			e.printStackTrace();
 		}
