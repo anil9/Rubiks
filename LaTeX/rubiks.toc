@@ -29,7 +29,7 @@
 \contentsline {subsubsection}{2. Top edges}{7}
 \contentsline {subsubsection}{3. Middle layer}{7}
 \contentsline {subsubsection}{4. Bottom corners}{7}
-\contentsline {subsubsection}{5. Bottom edges}{7}
+\contentsline {subsubsection}{5. Bottom edges}{8}
 \contentsline {chapter}{\chapternumberline {3}Method}{9}
 \contentsline {section}{\numberline {3.1}Literature study}{9}
 \contentsline {section}{\numberline {3.2}Implementation and data collection}{9}
