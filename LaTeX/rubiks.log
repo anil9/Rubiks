@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 14:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1241,11 +1241,18 @@ n.jpg>] [9
 
 ] [10
 
-] [11] [12
+] <figs/cubeorder.jpg, id=92, 602.25pt x 451.6875pt>
+File: figs/cubeorder.jpg Graphic file (type jpg)
 
-] [13] [14
+<use figs/cubeorder.jpg>
+Package pdftex.def Info: figs/cubeorder.jpg used on input line 261.
+(pdftex.def)             Requested size: 277.19879pt x 207.90282pt.
+ [11 <./figs/cubeorder.jpg>] [12] [13
 
-] [15] [16
+] [14
+
+] [15]
+[16
 
 ] (./rubiks.bbl [17] [18
 
@@ -1286,10 +1293,10 @@ otation$\T1/lmr/m/n/10.95 , April
 
  (./rubiks.aux) ) 
 Here is how much of TeX's memory you used:
- 8869 strings out of 493308
- 126147 string characters out of 6140091
- 225013 words of memory out of 5000000
- 12131 multiletter control sequences out of 15000+600000
+ 8875 strings out of 493308
+ 126259 string characters out of 6140091
+ 225041 words of memory out of 5000000
+ 12136 multiletter control sequences out of 15000+600000
  72496 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,11n,40p,1015b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1303,9 +1310,9 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 /lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (27 pages, 522001 bytes).
+Output written on rubiks.pdf (27 pages, 574161 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
+ 169 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

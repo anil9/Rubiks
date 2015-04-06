@@ -36,9 +36,9 @@
 \contentsline {section}{\numberline {3.3}Analyze and representation}{9}
 \contentsline {chapter}{\chapternumberline {4}Implementation}{11}
 \contentsline {section}{\numberline {4.1}Cube representation}{11}
-\contentsline {section}{\numberline {4.2}Algorithms}{11}
-\contentsline {section}{\numberline {4.3}Scramble}{11}
-\contentsline {section}{\numberline {4.4}Difficulty}{11}
+\contentsline {section}{\numberline {4.2}Algorithms}{12}
+\contentsline {section}{\numberline {4.3}Scramble}{12}
+\contentsline {section}{\numberline {4.4}Difficulty}{12}
 \contentsline {chapter}{\chapternumberline {5}Results and Analyze}{13}
 \contentsline {section}{\numberline {5.1}Data}{13}
 \contentsline {section}{\numberline {5.2}Comparison}{13}
