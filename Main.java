@@ -3,8 +3,8 @@ import java.util.Map.Entry;
 import java.util.HashMap;
 
 public class Main {
-	public static final int ALGO_RUNS = 100;	// increase this to a good value
-	public static final int CUBE_SCRAMBLE = 1000;
+	public static final int ALGO_RUNS = 1;	// increase this to a good value
+	public static final int CUBE_SCRAMBLE = 10;
 	Cube cube;
 	Cube solvedCube;
 	Dedmore dedmore;

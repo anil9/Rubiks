@@ -112,10 +112,11 @@ public class Cube {
 	public void scramble(int operations) {
 		int numberOfOperations = 20;
 		Random random = new Random();
+		random.setSeed(1337); // Gets the same random number fron run to run. 
 
 		for (int i = 0; i < operations; i++) {
 			int op = random.nextInt(numberOfOperations);		// generates 0 <= random int < numberOfOperations
-
+			System.out.println(op);
 			switch (op) {
 			case 0:
 				F();
