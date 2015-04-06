@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.HashMap;
+import java.text.DecimalFormat;
 import java.io.*;
 
 public class Main {
@@ -40,7 +41,7 @@ public class Main {
 
 
 	private void measure(Algorithm algo) {
-		double[] result = new double[ALGO_RUNS];
+		double[] time = new double[ALGO_RUNS];
 		int[] moves = new int[ALGO_RUNS];
 
 		for (int i = 0; i < ALGO_RUNS; i++) {
@@ -55,7 +56,7 @@ public class Main {
 				System.exit(1);
 			}
 			
-			result[i] = stopTime;
+			time[i] = stopTime;
 			moves[i] = cube.move_counter;
 			for(Entry<String, Double> entry : cube.num_moves_per_op.entrySet()){
 				if(!num_moves_op.containsKey(entry.getKey())){
@@ -68,27 +69,32 @@ public class Main {
 
 			//System.out.println("done");
 		}
-		// write results to file in some nice format.
-		printResult(numAlgo, moves, result);
+		// write times to file in some nice format.
+		printResult(numAlgo, moves, time);
 		
 
 
 
 	}
 
-	private void printResult(int numAlgo, int[] moves, double[] results) {
+	private void printResult(int numAlgo, int[] moves, double[] time) {
+		DecimalFormat numberFormat = new DecimalFormat("0.00000");
 		try{
 
 			File resultfile = new File("resultsAlgo"+numAlgo+".txt");
 			PrintWriter pw = new PrintWriter(resultfile);
 			pw.println("----------------------");
-			int moves_avg = 0; 
+			int moves_avg = 0;
+			double time_avg = 0; 
 			for (int i = 0; i < ALGO_RUNS; i++) {
-				pw.println(results[i] + " ms");	// ms
+				pw.println(time[i] + " ms");	// ms
 				pw.println(moves[i] + " moves");
 				moves_avg += moves[i];
+				time_avg += time[i];
 			}
-			pw.println("average " + moves_avg/moves.length);
+			pw.println("--------------");
+			pw.println("average moves " + moves_avg/moves.length);
+			pw.println("average time " + numberFormat.format(time_avg/moves.length) + " ms");
 			for(Entry<String, Double> entry : num_moves_op.entrySet()){
 				pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
 			}
