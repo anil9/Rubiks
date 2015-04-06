@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  3 APR 2015 14:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,11 +1112,61 @@ File: figs/representation.png Graphic file (type png)
 Package pdftex.def Info: figs/representation.png used on input line 115.
 (pdftex.def)             Requested size: 198.0pt x 155.32951pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<figs/step1.png, id=50, 300.3722pt x 235.63031pt>
+File: figs/step1.png Graphic file (type png)
+ <use figs/step1.png>
+Package pdftex.def Info: figs/step1.png used on input line 125.
+(pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
- [4 <./figs/representation.png>] [5] [6
+<figs/step2.png, id=51, 300.3722pt x 235.63031pt>
+File: figs/step2.png Graphic file (type png)
+ <use figs/step2.png>
+Package pdftex.def Info: figs/step2.png used on input line 130.
+(pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-] [7] [8
+Underfull \vbox (badness 7704) has occurred while \output is active []
+
+ [4 <./figs/representation.png>]
+
+Package caption Warning: \label without proper \caption on input line 170.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig_9' on page 5 undefined on input line 144.
+
+[5 <./figs/step1.png> <./figs/step2.png>]
+<figs/step32.png, id=61, 300.3722pt x 235.63031pt>
+File: figs/step32.png Graphic file (type png)
+ <use figs/step32.png>
+Package pdftex.def Info: figs/step32.png used on input line 153.
+(pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
+
+<figs/step31.png, id=62, 300.3722pt x 235.63031pt>
+File: figs/step31.png Graphic file (type png)
+ <use figs/step31.png>
+Package pdftex.def Info: figs/step31.png used on input line 158.
+(pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
+
+<figs/step41.png, id=63, 173.89969pt x 164.86594pt>
+File: figs/step41.png Graphic file (type png)
+ <use figs/step41.png>
+Package pdftex.def Info: figs/step41.png used on input line 165.
+(pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
+
+<figs/step42.png, id=64, 173.89969pt x 164.86594pt>
+File: figs/step42.png Graphic file (type png)
+ <use figs/step42.png>
+Package pdftex.def Info: figs/step42.png used on input line 169.
+(pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
+
+<figs/step43.png, id=65, 173.89969pt x 164.86594pt>
+File: figs/step43.png Graphic file (type png)
+ <use figs/step43.png>
+Package pdftex.def Info: figs/step43.png used on input line 173.
+(pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
+
+[6 <./figs/step32.png> <./figs/step31.png> <./figs/step41.png> <./figs/step42.p
+ng> <./figs/step43.png>] [7] [8
 
 ] [9] [10
 
@@ -1124,8 +1174,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] [13] [14
 
+] [15] [16
+
 ]
-(./rubiks.bbl [15] [16
+(./rubiks.bbl [17] [18
 
 ]
 bibitemlist
@@ -1133,56 +1185,66 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 4266) in paragraph at lines 16--21
+Underfull \hbox (badness 2126) in paragraph at lines 10--14
+[]\T1/lmr/m/n/10.95 Herbert Ko-ciemba.  The two-phase-algorithm.  $\T1/lmtt/m/n
+/10.95 http : / / kociemba . org /
+ []
+
+
+Underfull \hbox (badness 4266) in paragraph at lines 40--45
 []\T1/lmr/m/n/10.95 WCA.  Wca reg-u-la-tions ar-ti-cle a: Speed cub-ing.  $\T1/
 lmtt/m/n/10.95 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--29
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
 []\T1/lmr/m/n/10.95 WCA.  Wca reg-u-la-tions atri-cle 12: No-ta-tion.  $\T1/lmt
 t/m/n/10.95 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--29
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
 \T1/lmtt/m/n/10.95 worldcubeassociation . org / regulations / #article-[]12-[]n
 otation$\T1/lmr/m/n/10.95 , April
  []
 
-) [17] [18
+) [19] [20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-[19]
+[21]
 \tf@toc=\write4
 \openout4 = `rubiks.toc'.
 
- (./rubiks.aux) ) 
+ (./rubiks.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8765 strings out of 493308
- 124162 string characters out of 6140091
- 223263 words of memory out of 5000000
- 12042 multiletter control sequences out of 15000+600000
+ 8818 strings out of 493308
+ 124939 string characters out of 6140091
+ 223878 words of memory out of 5000000
+ 12088 multiletter control sequences out of 15000+600000
  72496 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,11n,40p,1015b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.
-enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/
-type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (25 pages, 281676 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on rubiks.pdf (27 pages, 304734 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

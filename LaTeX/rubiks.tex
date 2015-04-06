@@ -61,13 +61,13 @@
 	\end{subfigure}
 \end{figure}
 The Rubik’s cube is an 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow.\\
-You start with a scrambled cube, meaning that the colored miniature cubes (also known as cubies) are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
-The goal is to obtain each side of the cube covered with only one colour per side, which is the unique solution (fig \ref{fig_2}). 
-Different methods have been developed with series of notation to solve subproblems, one at the time to reach the unique solution. The general idea which many methods are based on is to solve it one layer at the time.\\
-If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime because of all the possible permutations of the cube. There are $4.3 * 10^(19)$ (or 43 quintillion) [8] different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\
+You start with a scrambled cube, meaning that the colored miniature cubes (cubies) are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
+The goal is to obtain the unique solution where each side of the cube are covered with only one colour per side (fig \ref{fig_2}). 
+Different methods have been developed with series of notation to solve subproblems one at the time to reach the unique solution. The general idea which many methods are based on is to solve it one layer at the time.\\
+If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime because of all the possible permutations of the cube. There are $4.3 * 10^(19)$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 The cube was invented by the professor of architecture Ernő Rubik as a teaching tool to help his student understand 3D objects. It was not until he scrambled his new cube and tried to restore it, that he realize that his creation was a puzzle.\\ 
-The cube was originally called magic cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. [13].
+The cube was originally called magic cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. \cite{Rubiks}.
 
 
 \section{Problem Definition}
@@ -117,19 +117,71 @@ To denote clockwise 180 degrees rotation just put (2) after the letters describe
 	\label{fig_3}
 \end{figure}
 \section{Algorithms}
-\subsection{Lbl using daisy method}
-\subsubsection{White cross}
-\subsubsection{White corners}
-\subsubsection{Middle layer edges}
-\subsubsection{Yellow cross}
-\subsubsection{Yellow corners}
-\subsubsection{Last layer permutation}
+The algorithms are physically methods for solving the cube by hand but matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of simulates several moves ahead to find the optimal move\cite{Kociemba}), these algorithms can with little effort be taught to humans.
+\subsection{Layer-by-layer using daisy method}
+\begin{figure}
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step1.png}
+		\caption{The white cross done}
+		\label{fig_4}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step2.png}
+		\caption{First layer complete}
+		\label{fig_5}
+	\end{subfigure}
+\end{figure}
+The layer-by-layer  (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
+The daisy method is to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges, completing the white cross in the bottom \cite{Shellie}.
+\subsubsection{1. White cross}
+The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}. This is done by first making a cross on the top with the yellow center-piece and then flip the edges over to the bottom one at the time using notation, to make sure the edge-pieces on the vertical sides are aligned with the center-pieces.
+\subsubsection{2. White corners}
+With the white cross done the next step is to complete the first layer by positioning the white corner-pieces correct between the cross edges (fig \ref{fig_5}). This is achieved with three different operation-combinations depending on the colour positions, all focusing on the upper-front-left corner of the cube.
+\subsubsection{3. Middle layer edges}
+The next step is to solve the middle layer by moving down a cubie from the middle of the third layer to the correct position on the second layer (fig \ref{fig_6}). 
+\subsubsection{4. Yellow cross}
+With the second layer complete (fig \ref{fig_7}) it is time to work on the yellow cross and this is achieved by applying one of two operation-combinations or both depending on how many white pieces that are correct positioned (fig \ref{fig_9}).  
+\subsubsection{5. Yellow corners}
+Positioning the yellow corners by applying different operations to move the edges depending och how many corners that are in position already. 
+\subsubsection{6. Last layer permutation}
+Now when the corners of the last layer are in position so that the top is all yellow, the only thing left to do is to positioning the pieces of the last layer so they match with the colours of the vertical sides. 
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step32.png}
+		\caption{Technique for each side}
+		\label{fig_6}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step31.png}
+		\caption{Middle layer complete}
+		\label{fig_7}
+	\end{subfigure}
+\end{figure}\begin{figure}[b]
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step41.png}
+		\label{fig_8}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step42.png}
+		\label{fig_9}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/step43.png}
+		\label{fig_10}
+	\end{subfigure}
+	\caption{Different states to achive the yellow cross}
+\end{figure}
+\newpage
 \subsection{Dedmore algorithm}
-\subsubsection{Top corners (the X)}
-\subsubsection{Top edges}
-\subsubsection{Middle layer}
-\subsubsection{Bottom corners}
-\subsubsection{Bottom edges}
+\subsubsection{1. Top corners (the X)}
+\subsubsection{2. Top edges}
+\subsubsection{3. Middle layer}
+\subsubsection{4. Bottom corners}
+\subsubsection{5. Bottom edges}
 
 \chapter{Method}
 

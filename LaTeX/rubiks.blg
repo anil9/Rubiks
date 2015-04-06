@@ -4,50 +4,54 @@ The top-level auxiliary file: rubiks.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--entry type for "Lar5" isn't style-file defined
---line 12 of file references.bib
+--line 31 of file references.bib
 Warning--entry type for "WCA1" isn't style-file defined
---line 22 of file references.bib
+--line 41 of file references.bib
 Warning--entry type for "WCA2" isn't style-file defined
---line 32 of file references.bib
-You've used 4 entries,
+--line 51 of file references.bib
+Warning--entry type for "Kociemba" isn't style-file defined
+--line 61 of file references.bib
+Warning--entry type for "Shellie" isn't style-file defined
+--line 70 of file references.bib
+You've used 8 entries,
             2118 wiz_defined-function locations,
-            519 strings with 4453 characters,
-and the built_in function-call counts, 890 in all, are:
-= -- 87
-> -- 28
+            539 strings with 4886 characters,
+and the built_in function-call counts, 1754 in all, are:
+= -- 173
+> -- 56
 < -- 0
-+ -- 12
-- -- 8
-* -- 31
-:= -- 156
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 16
++ -- 26
+- -- 16
+* -- 53
+:= -- 302
+add.period$ -- 32
+call.type$ -- 8
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 28
-empty$ -- 89
-format.name$ -- 8
-if$ -- 192
+cite$ -- 8
+duplicate$ -- 56
+empty$ -- 177
+format.name$ -- 16
+if$ -- 382
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 8
 missing$ -- 0
-newline$ -- 27
-num.names$ -- 8
-pop$ -- 34
+newline$ -- 51
+num.names$ -- 16
+pop$ -- 70
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 24
 quote$ -- 0
-skip$ -- 23
+skip$ -- 45
 stack$ -- 0
-substring$ -- 20
-swap$ -- 4
+substring$ -- 42
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
+type$ -- 32
 warning$ -- 0
-while$ -- 8
-width$ -- 5
-write$ -- 49
-(There were 3 warnings)
+while$ -- 16
+width$ -- 9
+write$ -- 95
+(There were 5 warnings)
