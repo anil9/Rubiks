@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 14:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 APR 2015 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,13 +1133,13 @@ Underfull \vbox (badness 7704) has occurred while \output is active []
 <figs/step32.png, id=61, 300.3722pt x 235.63031pt>
 File: figs/step32.png Graphic file (type png)
  <use figs/step32.png>
-Package pdftex.def Info: figs/step32.png used on input line 155.
+Package pdftex.def Info: figs/step32.png used on input line 154.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step31.png, id=62, 300.3722pt x 235.63031pt>
 File: figs/step31.png Graphic file (type png)
  <use figs/step31.png>
-Package pdftex.def Info: figs/step31.png used on input line 160.
+Package pdftex.def Info: figs/step31.png used on input line 159.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step41.png, id=63, 173.89969pt x 164.86594pt>
@@ -1308,7 +1308,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 /lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (27 pages, 498842 bytes).
+Output written on rubiks.pdf (27 pages, 498846 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
