@@ -26,10 +26,10 @@
 \contentsline {subsubsection}{6. Last layer permutation}{6}
 \contentsline {subsection}{\numberline {2.3.2}Dedmore algorithm}{7}
 \contentsline {subsubsection}{1. Top corners (the X)}{7}
-\contentsline {subsubsection}{2. Top edges}{7}
-\contentsline {subsubsection}{3. Middle layer}{7}
-\contentsline {subsubsection}{4. Bottom corners}{7}
-\contentsline {subsubsection}{5. Bottom edges}{7}
+\contentsline {subsubsection}{2. Top edges}{8}
+\contentsline {subsubsection}{3. Middle layer}{8}
+\contentsline {subsubsection}{4. Bottom corners}{8}
+\contentsline {subsubsection}{5. Bottom edges}{8}
 \contentsline {chapter}{\chapternumberline {3}Method}{9}
 \contentsline {section}{\numberline {3.1}Literature study}{9}
 \contentsline {section}{\numberline {3.2}Implementation and data collection}{9}
