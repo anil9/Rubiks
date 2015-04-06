@@ -59,6 +59,7 @@
 		\caption{Solved cube}
 		\label{fig_2}
 	\end{subfigure}
+	\caption{}
 \end{figure}
 The Rubik’s cube is an 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow.\\
 You start with a scrambled cube, meaning that the colored miniature cubes (cubies) are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
@@ -131,6 +132,7 @@ The algorithms are physically methods for solving the cube by hand but matches t
 		\caption{First layer complete}
 		\label{fig_5}
 	\end{subfigure}
+	\caption{}
 \end{figure}
 The layer-by-layer  (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
 The daisy method is to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges, completing the white cross in the bottom \cite{Shellie}.
@@ -141,13 +143,12 @@ With the white cross done the next step is to complete the first layer by positi
 \subsubsection{3. Middle layer edges}
 The next step is to solve the middle layer by moving down a cubie from the middle of the third layer to the correct position on the second layer (fig \ref{fig_6}). 
 \subsubsection{4. Yellow cross}
-With the second layer complete (fig \ref{fig_7}) it is time to work on the yellow cross and this is achieved by applying one of two operation-combinations or both depending on how many white pieces that are correct positioned (fig \ref{fig_9}).  
+With the second layer complete (fig \ref{fig_7}) it is time to work on the yellow cross. This is achieved by applying one of two operation-combinations or both depending on how many white pieces that are correct positioned (fig \ref{fig_8}).  
 \subsubsection{5. Yellow corners}
 Positioning the yellow corners by applying different operations to move the edges depending och how many corners that are in position already. 
 \subsubsection{6. Last layer permutation}
 Now when the corners of the last layer are in position so that the top is all yellow, the only thing left to do is to positioning the pieces of the last layer so they match with the colours of the vertical sides. 
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/step32.png}
@@ -158,30 +159,89 @@ Now when the corners of the last layer are in position so that the top is all ye
 		\includegraphics[width=\textwidth]{figs/step31.png}
 		\caption{Middle layer complete}
 		\label{fig_7}
-	\end{subfigure}
-\end{figure}\begin{figure}[b]
+	\end{subfigure}\caption{}
+\end{figure}
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/step41.png}
-		\label{fig_8}
 	\end{subfigure}
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/step42.png}
-		\label{fig_9}
 	\end{subfigure}
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/step43.png}
-		\label{fig_10}
 	\end{subfigure}
 	\caption{Different states to achive the yellow cross}
+	\label{fig_8}
 \end{figure}
 \newpage
 \subsection{Dedmore algorithm}
+\begin{figure}[b]
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/rubiks-frst-corner.jpg}
+		\caption{First corner in position}
+		\label{fig_9}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/rubiks-scnd-corner.jpg}
+		\caption{Second corner in position}
+		\label{fig_10}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/rubiks-4-corners.jpg}
+		\caption{Top edges in position}
+		\label{fig_11}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
 \subsubsection{1. Top corners (the X)}
+Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving your corner. When this is done, rotate the whole cube to obtain the corner in your top left on the front side, as in the fig \ref{fig_9}.\\\\
+Next you’ll search for the next corner that should be positioned in the top right front side. Depending on the position on this corner, you will use different operation sequences to get it in position like the fig \ref{fig_10}.\\\\
+Simply rotate the cube and continue on. The goal of this step is to form an ‘X’ top the top face (fig \ref{fig_11}).
 \subsubsection{2. Top edges}
+The goal of this step is to simply get the edges in place. Get them in place one by one. When this step is finished the cube looks like fig \ref{fig_12}.
 \subsubsection{3. Middle layer}
 \subsubsection{4. Bottom corners}
+Here the cube is turned upside down and the goal here is again to build a (green) X with the corners(fig \ref{fig_13}).
 \subsubsection{5. Bottom edges}
+In this step, at least one edge is already in the correct place (the color might be switched as in fig \ref{fig_14}). Find that edge and put it on the front side. Then position every other edge correctly by using a series of operations.\\\\
+When every edge are correctly positioned, there are 2 possible states left. Each requires a different sequence of operations to solve. The ‘fish’ pattern (fig \ref{fig_15}) and the ‘H’ pattern (fig \ref{fig_16}). Execute the sequence for the pattern and you’ll then have solved the cube.
+\begin{figure}[bh]
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/rubiks-top-edges.jpg}
+		\caption{Top edges in position}
+		\label{fig_12}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/rubiks-bottom-edges.jpg}
+		\caption{The green X}
+		\label{fig_13}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/last-edge-correct.jpg}
+		\caption{One edges correctly placed}
+		\label{fig_14}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+\begin{figure}[bh]
+	\centering
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/fish-pattern.jpg}
+		\caption{Fish pattern}
+		\label{fig_15}
+	\end{subfigure}
+	\begin{subfigure}[!b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{figs/H-pattern.jpg}
+		\caption{H pattern}
+		\label{fig_16}
+	\end{subfigure}
+	\caption{}
+\end{figure}
 
 \chapter{Method}
 
