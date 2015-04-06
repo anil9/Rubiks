@@ -33,12 +33,18 @@ public class Dedmore implements Algorithm {
 		left = cube.left;
 		right = cube.right;
 		back = cube.back;
+		if(cube.solved()){return;}
 		setColorToTop(cube.BLUE);
+		if(cube.solved()){return;}
 		topCorners();
+		if(cube.solved()){return;}
 		topEdges();
+		if(cube.solved()){return;}
 		middleLayer();
+		if(cube.solved()){return;}
 		//cube.printWholeCube();
 		lastCorners();
+		if(cube.solved()){return;}
 		lastEdges();
 
 
