@@ -116,7 +116,7 @@ public class Cube {
 
 		for (int i = 0; i < operations; i++) {
 			int op = random.nextInt(numberOfOperations);		// generates 0 <= random int < numberOfOperations
-			System.out.println(op);
+			//System.out.println(op);
 			switch (op) {
 			case 0:
 				F();

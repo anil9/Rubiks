@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.io.*;
 
 public class Main {
-	public static final int ALGO_RUNS = 5;	// increase this to a good value
-	public static final int CUBE_SCRAMBLE = 10;
+	public static final int ALGO_RUNS = 10000;	// increase this to a good value
+	public static final int CUBE_SCRAMBLE = 50;
 	Cube cube;
 	Cube solvedCube;
 	Dedmore dedmore;
@@ -88,7 +88,7 @@ public class Main {
 				pw.println(moves[i] + " moves");
 				moves_avg += moves[i];
 			}
-			pw.println("avarage " + moves_avg/moves.length);
+			pw.println("average " + moves_avg/moves.length);
 			for(Entry<String, Double> entry : num_moves_op.entrySet()){
 				pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
 			}
