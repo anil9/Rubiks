@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.io.*;
 
 public class Main {
-	public static final int ALGO_RUNS = 5;	// increase this to a good value
-	public static final int CUBE_SCRAMBLE = 10;
+	public static final int ALGO_RUNS = 10000;	// increase this to a good value
+	public static final int CUBE_SCRAMBLE = 50;
 	Cube cube;
 	Cube solvedCube;
 	Dedmore dedmore;
