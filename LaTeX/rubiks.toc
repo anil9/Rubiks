@@ -49,4 +49,4 @@
 \contentsline {chapter}{References}{19}
 \contentsline {chapter}{Bilagor}{19}
 \contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{21}
-\contentsline {appendix}{\chapternumberline {B}Graphs}{23}
+\contentsline {appendix}{\chapternumberline {B}Data}{23}
