@@ -14,6 +14,8 @@ public class Main {
 	ArrayList<Cube> cubes_to_solve = new ArrayList<Cube>();
 	HashMap<String, Double> num_moves_op = new HashMap<String, Double>();
 	int numAlgo = 0;
+	int[] algo1_moves;
+	int[] algo2_moves;
 
 	public Main() {
 		
@@ -28,6 +30,8 @@ public class Main {
 		dedmore = new Dedmore();
 		numAlgo++;
 		measure(dedmore);
+
+		compare(algo1_moves, algo2_moves);
 	}
 
 	private void createCubes(){
@@ -70,6 +74,11 @@ public class Main {
 			//System.out.println("done");
 		}
 		// write times to file in some nice format.
+		if(numAlgo ==1){
+			algo1_moves = moves;
+		} else {
+			algo2_moves = moves;
+		}
 		printResult(numAlgo, moves, time);
 		
 
@@ -124,6 +133,23 @@ public class Main {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+
+	private void compare(int[] a1, int[] a2){
+		int countA1Wins = 0;
+		int countA2Wins = 0;
+		int equals = 0;
+		for(int i = 0; i < ALGO_RUNS; i++){
+			if(a1[i] < a2[i]) {
+				countA1Wins++;
+			} 
+			else if(a1[i] == a2[i]){
+				equals++;
+			} else {
+				countA2Wins++;
+			}
+		}
+		System.out.println("A1 wins: " + countA1Wins + " A2 wins: "+ countA2Wins + " equals:" + equals);
 	}
 
 
