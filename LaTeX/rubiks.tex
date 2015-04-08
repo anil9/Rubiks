@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[swedish,english]{babel}
 \usepackage{modifications}
+\usepackage{algorithm2e}
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{url}
@@ -65,30 +66,30 @@ The Rubik’s cube is an 3-D combination puzzle, where each side of the cube is 
 You start with a scrambled cube, meaning that the colored miniature cubes (cubies) are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
 The goal is to obtain the unique solution where each side of the cube are covered with only one colour per side (fig \ref{fig_2}). 
 Different methods have been developed with series of notation to solve subproblems one at the time to reach the unique solution. The general idea which many methods are based on is to solve it one layer at the time.\\
-If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime because of all the possible permutations of the cube. There are $4.3 * 10^(19)$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\
+If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 The cube was invented by the professor of architecture Ernő Rubik as a teaching tool to help his student understand 3D objects. It was not until he scrambled his new cube and tried to restore it, that he realize that his creation was a puzzle.\\ 
 The cube was originally called magic cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. \cite{Rubiks}.
 
 
 \section{Problem Definition}
-This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes. Both based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate both methods operation variance, number of operations and time to solve,  to find the most time-efficient and move-efficient of them both.\\
+This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes to find the differences. Both methods are based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate both methods operation variance, number of operations and time to solve,  to find the most time-efficient and move-efficient of them both.\\
 
-During the literature study there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them..
+During the literature study there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them.
 
 \section{Problem Statement}
 Which of the beginner algorithms would be more effective for speedcubing?\\
 Which of the beginner algorithms solves the cube with the least amount of moves?\\
 Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?\\
 \section{Purpose}
-The purpose is to test two methods for solving rubik’s cube to find out which uses the least amount of moves and if the same method is less time-consuming than the other. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
+The purpose of testing the methods is to find out which uses the least amount of moves and if the same method is less time-consuming than the other. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
 The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
 The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.   
 
 
 \chapter{Background}
-Providing the reader with information of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
+Providing the reader with knowledge of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
 \section{Competitions}
 There are two types of competitions regarding the cube.
 \subsection{Speedcubing}
@@ -134,7 +135,7 @@ The algorithms are physically methods for solving the cube by hand but matches t
 	\end{subfigure}
 	\caption{}
 \end{figure}
-The layer-by-layer  (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
+The layer-by-layer (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
 The daisy method is to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges, completing the white cross in the bottom \cite{Shellie}.
 \subsubsection{1. White cross}
 The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}. This is done by first making a cross on the top with the yellow center-piece and then flip the edges over to the bottom one at the time using an operation, to make sure the edge-pieces on the vertical sides are aligned with the center-pieces.
@@ -177,6 +178,7 @@ Now when the corners of the last layer are in position so that the top is all ye
 \end{figure}
 \newpage
 \subsection{Dedmore algorithm}
+Någon introducerade text OBS!!!!!!!!!!!!!!!!\\
 \begin{figure}[b]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
@@ -271,6 +273,11 @@ Instead with the side-representation we only have to move the colours to the cor
 Each side consists of nine positions each of which has a color. There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors.
   A disadvantage with the side-representation is that the only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
 \section{Algorithms}
+	\RestyleAlgo{boxed}
+	\begin{algorithm}[H]
+	\KwIn{Indata}
+	\KwOut{Utdata}
+	\end{algorithm}
 
 \section{Scramble}
 The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence. The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.
@@ -279,25 +286,26 @@ The idea of the scrambler is to always start with a solved cube. The scramble ar
 \chapter{Results and Analyze}
 Containing average amount of moves, operation usage statistics and times to finish. 
 \section{Data}
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphone.png}
 	\caption{Graph 1}
 	\label{fig_18}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphtwo.png}
 	\caption{Graph 2}
 	\label{fig_19}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphthree.png}
 	\caption{Graph 3}
 	\label{fig_20}
 \end{figure}
 \section{Comparison}
+As shown in fig \ref{fig_18} 
 
 \chapter{Discussion}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  7 APR 2015 10:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  8 APR 2015 09:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,7 +869,57 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 (./modifications.sty
 Package: modifications 2005/10/21
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count165
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (cfiorio@um2.fr)
+********************************************************
+\skiptotal=\skip185
+\skiplinenumber=\skip186
+\skiprule=\skip187
+\skiphlne=\skip188
+\skiptext=\skip189
+\skiplength=\skip190
+\algomargin=\skip191
+\skipalgocfslide=\skip192
+\algowidth=\dimen149
+\inoutsize=\dimen150
+\inoutindent=\dimen151
+\interspacetitleruled=\dimen152
+\interspacealgoruled=\dimen153
+\interspacetitleboxruled=\dimen154
+\algocf@inoutbox=\box29
+\algocf@inputbox=\box30
+\AlCapSkip=\skip193
+\AlCapHSkip=\skip194
+\algoskipindent=\skip195
+\algocf@nlbox=\box31
+\algocf@hangingbox=\box32
+\algocf@untilbox=\box33
+\algocf@skipuntil=\skip196
+\algocf@capbox=\box34
+\algoheightruledefault=\skip197
+\algoheightrule=\skip198
+\algotitleheightruledefault=\skip199
+\algotitleheightrule=\skip200
+\c@algocfline=\count166
+\c@algocfproc=\count167
+\c@algocf=\count168
+\algocf@algoframe=\box35
+\algocf@algobox=\box36
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
@@ -892,10 +942,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count165
+\Gread@gobject=\count169
 ))
-\Gin@req@height=\dimen149
-\Gin@req@width=\dimen150
+\Gin@req@height=\dimen155
+\Gin@req@width=\dimen156
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
@@ -912,18 +962,18 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen151
-\captionmargin@=\dimen152
-\captionwidth=\dimen153
-\caption@tempdima=\dimen154
-\caption@indent=\dimen155
-\caption@parindent=\dimen156
-\caption@hangindent=\dimen157
+\captionmargin=\dimen157
+\captionmargin@=\dimen158
+\captionwidth=\dimen159
+\caption@tempdima=\dimen160
+\caption@indent=\dimen161
+\caption@parindent=\dimen162
+\caption@hangindent=\dimen163
 )
-\c@ContinuedFloat=\count166
+\c@ContinuedFloat=\count170
 )
-\c@subfigure=\count167
-\c@subtable=\count168
+\c@subfigure=\count171
+\c@subtable=\count172
 )
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
@@ -931,42 +981,42 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (./rubiks.aux)
 \openout1 = `rubiks.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 25.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 26.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count169
-\scratchdimen=\dimen158
-\scratchbox=\box29
-\nofMPsegments=\count170
-\nofMParguments=\count171
+\scratchcounter=\count173
+\scratchdimen=\dimen164
+\scratchbox=\box37
+\nofMPsegments=\count174
+\nofMParguments=\count175
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count172
-\MPscratchDim=\dimen159
-\MPnumerator=\count173
-\makeMPintoPDFobject=\count174
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen165
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -1009,7 +1059,7 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 29.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 30.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1023,7 +1073,7 @@ Package epstopdf Info: Source file: <kth_svv_comp_science_comm.eps>
 (epstopdf)                    size: 48292 bytes
 (epstopdf)             Command: <repstopdf --outfile=kth_svv_comp_science_comm-
 eps-converted-to.pdf kth_svv_comp_science_comm.eps>
-(epstopdf)             \includegraphics on input line 29.
+(epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
 <kth_svv_comp_science_comm-eps-converted-to.pdf, id=1, 410.53375pt x 468.75125p
@@ -1031,7 +1081,7 @@ t>
 File: kth_svv_comp_science_comm-eps-converted-to.pdf Graphic file (type pdf)
  <use kth_svv_comp_science_comm-eps-converted-to.pdf>
 Package pdftex.def Info: kth_svv_comp_science_comm-eps-converted-to.pdf used on
- input line 29.
+ input line 30.
 (pdftex.def)             Requested size: 410.53275pt x 468.75009pt.
  [1
 
@@ -1040,40 +1090,40 @@ Package pdftex.def Info: kth_svv_comp_science_comm-eps-converted-to.pdf used on
 m-eps-converted-to.pdf>] [2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 31.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 32.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 31.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 32.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 31.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 31.
+(Font)              <10.95> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 31.
+(Font)              <8> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 31.
+(Font)              <6> on input line 32.
  [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 39.
+(Font)              <10> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 39.
+(Font)              <7> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 39.
+(Font)              <5> on input line 40.
  [4
 
 ] (./rubiks.toc [5
@@ -1082,13 +1132,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <figs/scramble.jpg, id=31, 400.49625pt x 314.17375pt>
 File: figs/scramble.jpg Graphic file (type jpg)
  <use figs/scramble.jpg>
-Package pdftex.def Info: figs/scramble.jpg used on input line 53.
+Package pdftex.def Info: figs/scramble.jpg used on input line 54.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/DONE.png, id=32, 300.3722pt x 235.63031pt>
 File: figs/DONE.png Graphic file (type png)
  <use figs/DONE.png>
-Package pdftex.def Info: figs/DONE.png used on input line 58.
+Package pdftex.def Info: figs/DONE.png used on input line 59.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 Underfull \vbox (badness 1117) has occurred while \output is active []
@@ -1097,190 +1147,194 @@ Underfull \vbox (badness 1117) has occurred while \output is active []
 
 
  <./figs/scramble.jpg> <./figs/DONE.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
  []
 
-[2] [3
+[2] [3] [4
 
-] <figs/representation.png, id=49, 300.3722pt x 235.63031pt>
+] [5] <figs/representation.png, id=55, 300.3722pt x 235.63031pt>
 File: figs/representation.png Graphic file (type png)
 
 <use figs/representation.png>
-Package pdftex.def Info: figs/representation.png used on input line 116.
+Package pdftex.def Info: figs/representation.png used on input line 117.
 (pdftex.def)             Requested size: 198.0pt x 155.32951pt.
 
-<figs/step1.png, id=50, 300.3722pt x 235.63031pt>
+<figs/step1.png, id=56, 300.3722pt x 235.63031pt>
 File: figs/step1.png Graphic file (type png)
  <use figs/step1.png>
-Package pdftex.def Info: figs/step1.png used on input line 126.
+Package pdftex.def Info: figs/step1.png used on input line 127.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/step2.png, id=51, 300.3722pt x 235.63031pt>
+<figs/step2.png, id=57, 300.3722pt x 235.63031pt>
 File: figs/step2.png Graphic file (type png)
  <use figs/step2.png>
-Package pdftex.def Info: figs/step2.png used on input line 131.
+Package pdftex.def Info: figs/step2.png used on input line 132.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 Underfull \vbox (badness 7704) has occurred while \output is active []
 
- [4 <./figs/representation.png>] [5 <./figs/step1.png> <./figs/step2.png>]
-<figs/step32.png, id=61, 300.3722pt x 235.63031pt>
+ [6 <./figs/representation.png>] [7 <./figs/step1.png> <./figs/step2.png>]
+<figs/step32.png, id=68, 300.3722pt x 235.63031pt>
 File: figs/step32.png Graphic file (type png)
  <use figs/step32.png>
-Package pdftex.def Info: figs/step32.png used on input line 154.
+Package pdftex.def Info: figs/step32.png used on input line 155.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/step31.png, id=62, 300.3722pt x 235.63031pt>
+<figs/step31.png, id=69, 300.3722pt x 235.63031pt>
 File: figs/step31.png Graphic file (type png)
  <use figs/step31.png>
-Package pdftex.def Info: figs/step31.png used on input line 159.
+Package pdftex.def Info: figs/step31.png used on input line 160.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/step41.png, id=63, 173.89969pt x 164.86594pt>
+<figs/step41.png, id=70, 173.89969pt x 164.86594pt>
 File: figs/step41.png Graphic file (type png)
  <use figs/step41.png>
-Package pdftex.def Info: figs/step41.png used on input line 167.
+Package pdftex.def Info: figs/step41.png used on input line 168.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
-<figs/step42.png, id=64, 173.89969pt x 164.86594pt>
+<figs/step42.png, id=71, 173.89969pt x 164.86594pt>
 File: figs/step42.png Graphic file (type png)
  <use figs/step42.png>
-Package pdftex.def Info: figs/step42.png used on input line 170.
+Package pdftex.def Info: figs/step42.png used on input line 171.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
-<figs/step43.png, id=65, 173.89969pt x 164.86594pt>
+<figs/step43.png, id=72, 173.89969pt x 164.86594pt>
 File: figs/step43.png Graphic file (type png)
  <use figs/step43.png>
-Package pdftex.def Info: figs/step43.png used on input line 173.
+Package pdftex.def Info: figs/step43.png used on input line 174.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
-[6 <./figs/step32.png> <./figs/step31.png> <./figs/step41.png> <./figs/step42.p
+[8 <./figs/step32.png> <./figs/step31.png> <./figs/step41.png> <./figs/step42.p
 ng> <./figs/step43.png>]
-<figs/rubiks-frst-corner.jpg, id=71, 300.3722pt x 235.63031pt>
+<figs/rubiks-frst-corner.jpg, id=78, 300.3722pt x 235.63031pt>
 File: figs/rubiks-frst-corner.jpg Graphic file (type jpg)
 
 <use figs/rubiks-frst-corner.jpg>
-Package pdftex.def Info: figs/rubiks-frst-corner.jpg used on input line 183.
+Package pdftex.def Info: figs/rubiks-frst-corner.jpg used on input line 185.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/rubiks-scnd-corner.jpg, id=72, 300.3722pt x 235.63031pt>
+<figs/rubiks-scnd-corner.jpg, id=79, 300.3722pt x 235.63031pt>
 File: figs/rubiks-scnd-corner.jpg Graphic file (type jpg)
 
 <use figs/rubiks-scnd-corner.jpg>
-Package pdftex.def Info: figs/rubiks-scnd-corner.jpg used on input line 188.
+Package pdftex.def Info: figs/rubiks-scnd-corner.jpg used on input line 190.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/rubiks-4-corners.jpg, id=73, 300.3722pt x 235.63031pt>
+<figs/rubiks-4-corners.jpg, id=80, 300.3722pt x 235.63031pt>
 File: figs/rubiks-4-corners.jpg Graphic file (type jpg)
 
 <use figs/rubiks-4-corners.jpg>
-Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 193.
+Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 195.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
 
  []
 
-<figs/rubiks-top-edges.jpg, id=74, 300.3722pt x 235.63031pt>
+
+Underfull \vbox (badness 2150) has occurred while \output is active []
+
+ [9 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/rub
+iks-4-corners.jpg>] <figs/rubiks-top-edges.jpg, id=84, 300.3722pt x 235.63031pt
+>
 File: figs/rubiks-top-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-top-edges.jpg>
-Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 217.
+Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 219.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/rubiks-bottom-edges.jpg, id=75, 300.3722pt x 235.63031pt>
+<figs/rubiks-bottom-edges.jpg, id=85, 300.3722pt x 235.63031pt>
 File: figs/rubiks-bottom-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-bottom-edges.jpg>
-Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 222.
+Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 224.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/last-edge-correct.jpg, id=76, 300.3722pt x 235.63031pt>
+<figs/last-edge-correct.jpg, id=86, 300.3722pt x 235.63031pt>
 File: figs/last-edge-correct.jpg Graphic file (type jpg)
 
 <use figs/last-edge-correct.jpg>
-Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 227.
+Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 229.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 228--228
+Underfull \hbox (badness 4132) in paragraph at lines 230--230
 []\T1/lmr/m/n/10 (c) |One edges cor-rectly
  []
 
-<figs/fish-pattern.jpg, id=77, 300.3722pt x 235.63031pt>
+<figs/fish-pattern.jpg, id=87, 300.3722pt x 235.63031pt>
 File: figs/fish-pattern.jpg Graphic file (type jpg)
 
 <use figs/fish-pattern.jpg>
-Package pdftex.def Info: figs/fish-pattern.jpg used on input line 236.
+Package pdftex.def Info: figs/fish-pattern.jpg used on input line 238.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-<figs/H-pattern.jpg, id=78, 300.3722pt x 235.63031pt>
+<figs/H-pattern.jpg, id=88, 300.3722pt x 235.63031pt>
 File: figs/H-pattern.jpg Graphic file (type jpg)
  <use figs/H-pattern.jpg>
-Package pdftex.def Info: figs/H-pattern.jpg used on input line 241.
+Package pdftex.def Info: figs/H-pattern.jpg used on input line 243.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--247
+Underfull \hbox (badness 10000) in paragraph at lines 214--249
 
  []
 
-[7 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/rubi
-ks-4-corners.jpg>] [8 <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges
-.jpg> <./figs/last-edge-correct.jpg> <./figs/fish-pattern.jpg> <./figs/H-patter
-n.jpg>] [9
+[10 <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges.jpg> <./figs/last
+-edge-correct.jpg> <./figs/fish-pattern.jpg> <./figs/H-pattern.jpg>] [11
 
-] [10
+]
+[12
 
-] <figs/cubeorder.jpg, id=92, 602.25pt x 451.6875pt>
+] <figs/cubeorder.jpg, id=98, 602.25pt x 451.6875pt>
 File: figs/cubeorder.jpg Graphic file (type jpg)
 
 <use figs/cubeorder.jpg>
-Package pdftex.def Info: figs/cubeorder.jpg used on input line 263.
+Package pdftex.def Info: figs/cubeorder.jpg used on input line 265.
 (pdftex.def)             Requested size: 277.19879pt x 207.90282pt.
- [11 <./figs/cubeorder.jpg>] [12]
-<figs/graphone.png, id=99, 602.25pt x 372.39125pt>
+ [13 <./figs/cubeorder.jpg>] [14]
+<figs/graphone.png, id=106, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)
  <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 284.
+Package pdftex.def Info: figs/graphone.png used on input line 291.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-<figs/graphtwo.png, id=100, 602.25pt x 372.39125pt>
+<figs/graphtwo.png, id=107, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
  <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 290.
+Package pdftex.def Info: figs/graphtwo.png used on input line 297.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/graphthree.png, id=101, 602.25pt x 372.39125pt>
+<figs/graphthree.png, id=108, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 296.
+Package pdftex.def Info: figs/graphthree.png used on input line 303.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13
-
- <./figs/graphone.png>] [14 <./figs/graphtwo.png> <./figs/graphthree.png>]
 [15
 
-] [16
+ <./figs/graphone.png>] [16 <./figs/graphtwo.png> <./figs/graphthree.png>]
+[17
 
-] (./rubiks.bbl [17] [18
+] [18
+
+] (./rubiks.bbl [19] [20
 
 ]
 bibitemlist
@@ -1311,25 +1365,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--53
 otation$\T1/lmr/m/n/10.95 , April
  []
 
-) [19] [20
+) [21] [22
 
-] [21] [22
+] [23] [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 326--348
+Underfull \hbox (badness 10000) in paragraph at lines 334--356
 
  []
 
-[23]
+[25]
 \tf@toc=\write4
 \openout4 = `rubiks.toc'.
 
  (./rubiks.aux) ) 
 Here is how much of TeX's memory you used:
- 8894 strings out of 493308
- 126605 string characters out of 6140091
- 225163 words of memory out of 5000000
- 12152 multiletter control sequences out of 15000+600000
+ 10249 strings out of 493308
+ 145876 string characters out of 6140091
+ 266968 words of memory out of 5000000
+ 13496 multiletter control sequences out of 15000+600000
  72496 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,11n,40p,1015b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1343,9 +1397,9 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 /lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (29 pages, 606369 bytes).
+Output written on rubiks.pdf (31 pages, 607578 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
