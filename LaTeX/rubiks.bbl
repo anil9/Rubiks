@@ -1,10 +1,24 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Ijsat}
+Poonam~Tyagi Ashutosh~Tyagi.
+\newblock Gen-r: Genetic algorithm based model for rubik's cube solution
+  generator.
+\newblock \url{http://www.ijsat.com/admin/download/[11-01-07-007].pdf},
+  September 2011.
+\newblock [Accessed 9 April 2015].
 
 \bibitem{Shellie}
 Shelley Chang.
 \newblock How to solve the rubik's cube.
 \newblock \url{http://shellie.nfshost.com/cube/}, 2008.
 \newblock [Accessed 6 April 2015].
+
+\bibitem{Dedmore}
+Denny Dedmore.
+\newblock Rubik's cube solutions.
+\newblock \url{www.helm.lu/cube/solutions/rubikscube/}, March 1997.
+\newblock [Accessed 9 April 2015].
 
 \bibitem{Kociemba}
 Herbert Kociemba.
@@ -53,7 +67,7 @@ WCA.
 
 \bibitem{Wolfram}
 Wolfram??
-\newblock Wolfram aplha.
+\newblock Wolfram alpha.
 \newblock
   \url{http://www.wolframalpha.com/input/?i=4.3*10%5E18+seconds+to+years},
   2015.
