@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  9 APR 2015 12:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  9 APR 2015 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1300,32 +1300,37 @@ File: figs/cubeorder.jpg Graphic file (type jpg)
 
 <use figs/cubeorder.jpg>
 Package pdftex.def Info: figs/cubeorder.jpg used on input line 265.
-(pdftex.def)             Requested size: 277.19879pt x 207.90282pt.
- [13 <./figs/cubeorder.jpg>] [14]
-<figs/graphone.png, id=107, 602.25pt x 372.39125pt>
+(pdftex.def)             Requested size: 316.80121pt x 237.60815pt.
+ [13 <./figs/cubeorder.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
+
+ []
+
+[14] <figs/graphone.png, id=107, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)
- <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 295.
+
+<use figs/graphone.png>
+Package pdftex.def Info: figs/graphone.png used on input line 297.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 295--296
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 297--298
  [][] 
  []
 
-<figs/graphtwo.png, id=108, 602.25pt x 372.39125pt>
-File: figs/graphtwo.png Graphic file (type png)
- <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 301.
-(pdftex.def)             Requested size: 396.0pt x 244.86983pt.
-
-<figs/graphthree.png, id=109, 602.25pt x 372.39125pt>
+<figs/graphthree.png, id=108, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 307.
+Package pdftex.def Info: figs/graphthree.png used on input line 303.
+(pdftex.def)             Requested size: 396.0pt x 244.86983pt.
+ <figs/graphtwo.png, id=109, 602.25pt x 372.39125pt>
+File: figs/graphtwo.png Graphic file (type png)
+
+<use figs/graphtwo.png>
+Package pdftex.def Info: figs/graphtwo.png used on input line 309.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
 
  []
 
@@ -1338,7 +1343,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (16.1829pt too high) has occurred while \output is active []
 
 
-[16 <./figs/graphtwo.png> <./figs/graphthree.png>] [17] [18
+[16 <./figs/graphthree.png> <./figs/graphtwo.png>] [17] [18
 
 ] [19] [20
 
@@ -1379,7 +1384,7 @@ otation$\T1/lmr/m/n/10.95 , April
 ] [25] [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 339--361
+Underfull \hbox (badness 10000) in paragraph at lines 341--363
 
  []
 
@@ -1391,7 +1396,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--361
 Here is how much of TeX's memory you used:
  10251 strings out of 493308
  145902 string characters out of 6140091
- 266968 words of memory out of 5000000
+ 266976 words of memory out of 5000000
  13497 multiletter control sequences out of 15000+600000
  76759 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1407,7 +1412,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (33 pages, 624345 bytes).
+Output written on rubiks.pdf (33 pages, 624655 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

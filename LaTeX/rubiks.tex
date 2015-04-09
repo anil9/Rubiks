@@ -73,7 +73,7 @@ The cube was originally called magic cube and was licensed to be sold by the ame
 
 
 \section{Problem Definition}
-This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes to find the differences. Both methods are based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate both methods operation variance, number of operations and time to solve,  to find the most time-efficient and move-efficient of them both.\\
+This thesis will explore two commonly known beginner methods for human solving of rubik’s cubes to find the differences. Both methods are based on the idea to solve the cube one layer at the time which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate both methods operation variance, number of operations to solve, to find the most move-efficient of them both.\\
 
 During the literature study there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them.
 
@@ -82,7 +82,7 @@ Which of the beginner algorithms would be more effective for speedcubing?\\
 Which of the beginner algorithms solves the cube with the least amount of moves?\\
 Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?\\
 \section{Purpose}
-The purpose of testing the methods is to find out which uses the least amount of moves and if the same method is less time-consuming than the other. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
+The purpose of testing the methods is to find out which uses the least amount of moves and to find out which method suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the method is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
 The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
 The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.   
@@ -256,20 +256,19 @@ To get an understanding of the area, to be able to exclude suggestions of proble
 Both of the algorithms are implemented in the same language and with the same built-in functions and data structures as much as possible, to rule out differences to obtain a realistic comparison in the end.
 We need to run the algorithms a number of times to obtain a good set of data for the comparison. 
 \section{Analyze and representation}
-Based on the test data we will be able to evaluate each methods use of different operations number of operations used and average time to solve. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the difficulty of the operations. 
+Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the difficulty of the operations. 
 
 
 \chapter{Implementation}
 \begin{figure}[b]
 	\centering
-	\includegraphics[width= 0.7\textwidth]{figs/cubeorder.jpg}
-	\caption{Side orders}
+	\includegraphics[width= 0.8\textwidth]{figs/cubeorder.jpg}
+	\caption{Side numberings}
 	\label{fig_17}
 \end{figure}
-Explanations of how the algorithms where implemented with pseudocode as well as how  how the cube was represented.
+Explanations of how the algorithms where implemented with pseudocode as well as how the cube was represented.
 \section{Cube representation}
-Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side. A pro for this first idea was that the colors of a cubie had an relation, the only thing keeping the colours correct now is the operations implemented.  
-Instead with the side-representation we only have to move the colours to the correct side and location when an operation is performed.  
+ The cube is represented with a side-representation, only have to move the colours to the correct side and location when an operation is performed.  
 Each side consists of nine positions each of which has a color. There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors.
   A disadvantage with the side-representation is that the only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
 \section{Algorithms}
@@ -286,30 +285,33 @@ Each side consists of nine positions each of which has a color. There exists no 
 \section{Scramble}
 The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.
 \section{Difficulty}
+Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this first idea was that the colors of a cubie had an relation, the only thing keeping the colours correct now is the operations implemented.\\\\
+Translating the methods for physical sovling of the cube to code was not always easy. Because of how intuative some of the steps are when solving by hand, this made it difficult implement in a good way.
+
 
 \chapter{Results and Analyze}
-Containing average amount of moves, operation usage statistics and times to finish. 
+Containing average amount of moves and operation usage statistics. 
 \section{Data}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.1\textwidth]{figs/graphone.png}
-	\caption{Graph 1}
+	\caption{}
 	\label{fig_18}
 \end{figure}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width= 1.0\textwidth]{figs/graphtwo.png}
-	\caption{Graph 2}
+	\includegraphics[width= 1.0\textwidth]{figs/graphthree.png}
+	\caption{}
 	\label{fig_19}
 \end{figure}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width= 1.0\textwidth]{figs/graphthree.png}
-	\caption{Graph 3}
+	\includegraphics[width= 1.0\textwidth]{figs/graphtwo.png}
+	\caption{Avarage use of operations}
 	\label{fig_20}
 \end{figure}
 \section{Comparison}
-As shown in fig \ref{fig_18} we see that the Lbl with daisy method had all of the runs in a lower avarage (170) of moves than the dedmore method (188). It can be easier to spot this by looking at fig \ref{fig_20} that shows the number of times the methods used a lower amount of moves than the other method. This shows that the Lbl with daisy method had least amount of moves more than twice as manye times as the dedmore method. \\\\
+As shown in fig \ref{fig_18} we see that the Lbl with daisy method had all of the runs in a lower avarage (170) of moves than the dedmore method (188). It can be easier to spot this by looking at fig \ref{fig_20} that shows the number of times the methods used a lower amount of moves than the other method. This shows that the Lbl with daisy method had least amount of moves more than twice as many times as the dedmore method. \\\\
 Fig \ref{fig_19} shows the usage of the different operations for both methods, in more detail see [Appendix B].
 
 \chapter{Discussion}
@@ -359,7 +361,7 @@ $4.3*10^19*0.1=4.3*10^{18}$ \\
 		\end{tabular}
 		\\
 		
-		Times the algorithmes had least amount of moves.\\
+		Number of times the algorithms had least amount of moves.\\
 		\begin{tabular}{|l|l|l|}
 		\hline
 		Lbl & Dedmore & Equals \\ \hline
