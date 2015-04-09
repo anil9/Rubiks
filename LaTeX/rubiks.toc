@@ -41,12 +41,12 @@
 \contentsline {section}{\numberline {4.4}Difficulty}{14}
 \contentsline {chapter}{\chapternumberline {5}Results and Analyze}{15}
 \contentsline {section}{\numberline {5.1}Data}{15}
-\contentsline {section}{\numberline {5.2}Comparison}{15}
-\contentsline {chapter}{\chapternumberline {6}Discussion}{17}
-\contentsline {section}{\numberline {6.1}Comparison}{17}
-\contentsline {section}{\numberline {6.2}Errors}{17}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{19}
-\contentsline {chapter}{References}{21}
-\contentsline {chapter}{Bilagor}{21}
-\contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{23}
-\contentsline {appendix}{\chapternumberline {B}Data}{25}
+\contentsline {section}{\numberline {5.2}Comparison}{16}
+\contentsline {chapter}{\chapternumberline {6}Discussion}{19}
+\contentsline {section}{\numberline {6.1}Comparison}{19}
+\contentsline {section}{\numberline {6.2}Errors}{19}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{21}
+\contentsline {chapter}{References}{23}
+\contentsline {chapter}{Bilagor}{23}
+\contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{25}
+\contentsline {appendix}{\chapternumberline {B}Data}{27}

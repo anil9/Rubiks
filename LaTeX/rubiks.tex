@@ -275,12 +275,16 @@ Each side consists of nine positions each of which has a color. There exists no 
 \section{Algorithms}
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
-	\KwIn{Indata}
-	\KwOut{Utdata}
+	\caption{Scramble}
+	\KwIn{A cube, Number of operations to be made}
+	\KwOut{A scrambled cube}
+	Let rand be a Random object.\\
+	\For{Number of operations}{int op = rand.nextInt(Tot num of op)\\ Switch(op)\{\\ All operations have a number, performce the operation with the number op\\\}}
+
 	\end{algorithm}
 
 \section{Scramble}
-The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence. The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.
+The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.
 \section{Difficulty}
 
 \chapter{Results and Analyze}
@@ -288,24 +292,25 @@ Containing average amount of moves, operation usage statistics and times to fini
 \section{Data}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width= 1.0\textwidth]{figs/graphone.png}
+	\includegraphics[width= 1.1\textwidth]{figs/graphone.png}
 	\caption{Graph 1}
 	\label{fig_18}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphtwo.png}
 	\caption{Graph 2}
 	\label{fig_19}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphthree.png}
 	\caption{Graph 3}
 	\label{fig_20}
 \end{figure}
 \section{Comparison}
-As shown in fig \ref{fig_18} 
+As shown in fig \ref{fig_18} we see that the Lbl with daisy method had all of the runs in a lower avarage (170) of moves than the dedmore method (188). It can be easier to spot this by looking at fig \ref{fig_20} that shows the number of times the methods used a lower amount of moves than the other method. This shows that the Lbl with daisy method had least amount of moves more than twice as manye times as the dedmore method. \\\\
+Fig \ref{fig_19} shows the usage of the different operations for both methods, in more detail see [Appendix B].
 
 \chapter{Discussion}
 
