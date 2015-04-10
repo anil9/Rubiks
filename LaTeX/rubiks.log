@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  10 APR 2015 11:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  10 APR 2015 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1142,17 +1142,17 @@ File: figs/DONE.png Graphic file (type png)
 Package pdftex.def Info: figs/DONE.png used on input line 59.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
@@ -1160,11 +1160,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
 
  <./figs/scramble.jpg> <./figs/DONE.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 76.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 77.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [2] [3] [4
@@ -1174,19 +1174,19 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: figs/representation.png Graphic file (type png)
 
 <use figs/representation.png>
-Package pdftex.def Info: figs/representation.png used on input line 113.
+Package pdftex.def Info: figs/representation.png used on input line 121.
 (pdftex.def)             Requested size: 198.0pt x 155.32951pt.
 
 <figs/step1.png, id=58, 300.3722pt x 235.63031pt>
 File: figs/step1.png Graphic file (type png)
  <use figs/step1.png>
-Package pdftex.def Info: figs/step1.png used on input line 123.
+Package pdftex.def Info: figs/step1.png used on input line 131.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step2.png, id=59, 300.3722pt x 235.63031pt>
 File: figs/step2.png Graphic file (type png)
  <use figs/step2.png>
-Package pdftex.def Info: figs/step2.png used on input line 128.
+Package pdftex.def Info: figs/step2.png used on input line 136.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 Underfull \vbox (badness 7704) has occurred while \output is active []
@@ -1195,31 +1195,31 @@ Underfull \vbox (badness 7704) has occurred while \output is active []
 <figs/step32.png, id=70, 300.3722pt x 235.63031pt>
 File: figs/step32.png Graphic file (type png)
  <use figs/step32.png>
-Package pdftex.def Info: figs/step32.png used on input line 151.
+Package pdftex.def Info: figs/step32.png used on input line 159.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step31.png, id=71, 300.3722pt x 235.63031pt>
 File: figs/step31.png Graphic file (type png)
  <use figs/step31.png>
-Package pdftex.def Info: figs/step31.png used on input line 156.
+Package pdftex.def Info: figs/step31.png used on input line 164.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step41.png, id=72, 173.89969pt x 164.86594pt>
 File: figs/step41.png Graphic file (type png)
  <use figs/step41.png>
-Package pdftex.def Info: figs/step41.png used on input line 164.
+Package pdftex.def Info: figs/step41.png used on input line 172.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
 <figs/step42.png, id=73, 173.89969pt x 164.86594pt>
 File: figs/step42.png Graphic file (type png)
  <use figs/step42.png>
-Package pdftex.def Info: figs/step42.png used on input line 167.
+Package pdftex.def Info: figs/step42.png used on input line 175.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
 <figs/step43.png, id=74, 173.89969pt x 164.86594pt>
 File: figs/step43.png Graphic file (type png)
  <use figs/step43.png>
-Package pdftex.def Info: figs/step43.png used on input line 170.
+Package pdftex.def Info: figs/step43.png used on input line 178.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
 
 [8 <./figs/step32.png> <./figs/step31.png> <./figs/step41.png> <./figs/step42.p
@@ -1228,29 +1228,29 @@ ng> <./figs/step43.png>]
 File: figs/rubiks-frst-corner.jpg Graphic file (type jpg)
 
 <use figs/rubiks-frst-corner.jpg>
-Package pdftex.def Info: figs/rubiks-frst-corner.jpg used on input line 181.
+Package pdftex.def Info: figs/rubiks-frst-corner.jpg used on input line 189.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/rubiks-scnd-corner.jpg, id=81, 300.3722pt x 235.63031pt>
 File: figs/rubiks-scnd-corner.jpg Graphic file (type jpg)
 
 <use figs/rubiks-scnd-corner.jpg>
-Package pdftex.def Info: figs/rubiks-scnd-corner.jpg used on input line 186.
+Package pdftex.def Info: figs/rubiks-scnd-corner.jpg used on input line 194.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/rubiks-4-corners.jpg, id=82, 300.3722pt x 235.63031pt>
 File: figs/rubiks-4-corners.jpg Graphic file (type jpg)
 
 <use figs/rubiks-4-corners.jpg>
-Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 191.
+Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 199.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--202
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--202
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
@@ -1260,24 +1260,24 @@ ks-4-corners.jpg>]
 File: figs/rubiks-top-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-top-edges.jpg>
-Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 215.
+Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 223.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/rubiks-bottom-edges.jpg, id=87, 300.3722pt x 235.63031pt>
 File: figs/rubiks-bottom-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-bottom-edges.jpg>
-Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 220.
+Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 228.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/last-edge-correct.jpg, id=88, 300.3722pt x 235.63031pt>
 File: figs/last-edge-correct.jpg Graphic file (type jpg)
 
 <use figs/last-edge-correct.jpg>
-Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 225.
+Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 233.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 226--226
+Underfull \hbox (badness 4132) in paragraph at lines 234--234
 []\T1/lmr/m/n/10 (c) |One edges cor-rectly
  []
 
@@ -1285,16 +1285,16 @@ Underfull \hbox (badness 4132) in paragraph at lines 226--226
 File: figs/fish-pattern.jpg Graphic file (type jpg)
 
 <use figs/fish-pattern.jpg>
-Package pdftex.def Info: figs/fish-pattern.jpg used on input line 234.
+Package pdftex.def Info: figs/fish-pattern.jpg used on input line 242.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/H-pattern.jpg, id=90, 300.3722pt x 235.63031pt>
 File: figs/H-pattern.jpg Graphic file (type jpg)
  <use figs/H-pattern.jpg>
-Package pdftex.def Info: figs/H-pattern.jpg used on input line 239.
+Package pdftex.def Info: figs/H-pattern.jpg used on input line 247.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--245
+Underfull \hbox (badness 10000) in paragraph at lines 218--253
 
  []
 
@@ -1308,10 +1308,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--245
 File: figs/cubeorder.jpg Graphic file (type jpg)
 
 <use figs/cubeorder.jpg>
-Package pdftex.def Info: figs/cubeorder.jpg used on input line 261.
+Package pdftex.def Info: figs/cubeorder.jpg used on input line 266.
 (pdftex.def)             Requested size: 316.80121pt x 237.60815pt.
  [13 <./figs/cubeorder.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
 
  []
 
@@ -1319,10 +1319,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--286
 File: figs/graphone.png Graphic file (type png)
 
 <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 293.
+Package pdftex.def Info: figs/graphone.png used on input line 298.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 293--294
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
@@ -1330,16 +1330,16 @@ Overfull \hbox (39.60242pt too wide) in paragraph at lines 293--294
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 299.
+Package pdftex.def Info: figs/graphthree.png used on input line 304.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
  <figs/graphtwo.png, id=111, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
 
 <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 305.
+Package pdftex.def Info: figs/graphtwo.png used on input line 310.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
+Underfull \hbox (badness 10000) in paragraph at lines 315--317
 
  []
 
@@ -1393,7 +1393,7 @@ otation$\T1/lmr/m/n/10.95 , April
 ] [25] [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 337--359
+Underfull \hbox (badness 10000) in paragraph at lines 342--364
 
  []
 
@@ -1422,7 +1422,7 @@ onts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.p
 fb>
-Output written on rubiks.pdf (33 pages, 606718 bytes).
+Output written on rubiks.pdf (33 pages, 607737 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  123 compressed objects within 2 object streams
