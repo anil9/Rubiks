@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{MadeHow}
+Advameg.
+\newblock How products are made, volume 7 - rubik's cube.
+\newblock \url{http://www.madehow.com/Volume-7/Rubik-s-Cube.html}, 2015.
+\newblock [Accessed 3 April 2015].
+
+\bibitem{Wolfram}
+Anon.
+\newblock Wolfram alpha.
+\newblock
+  \url{http://www.wolframalpha.com/input/?i=4.3*10%5E18+seconds+to+years},
+  2015.
+\newblock [Accessed 6 April 2015].
+
 \bibitem{Ijsat}
 Poonam~Tyagi Ashutosh~Tyagi.
 \newblock Gen-r: Genetic algorithm based model for rubik's cube solution
@@ -20,6 +34,13 @@ Denny Dedmore.
 \newblock \url{www.helm.lu/cube/solutions/rubikscube/}, March 1997.
 \newblock [Accessed 9 April 2015].
 
+\bibitem{Rubiks}
+Rubik's~The home~of Rubik's~Cube.
+\newblock The history of the rubik's cube.
+\newblock \url{http://eu.rubiks.com/about/the-history-of-the-rubiks-cube},
+  2015.
+\newblock [Accessed 6 April 2015].
+
 \bibitem{Kociemba}
 Herbert Kociemba.
 \newblock The two-phase-algorithm.
@@ -38,18 +59,6 @@ Lars Petrus.
 \newblock \url{http://lar5.com/cube/}, May 1997.
 \newblock [Accessed 3 April 2015].
 
-\bibitem{Rubiks}
-Unknown.
-\newblock The history of the rubik's cube.
-\newblock \url{http://eu.rubiks.com/about/the-history-of-the-rubiks-cube}.
-\newblock [Accessed 6 April 2015].
-
-\bibitem{MadeHow}
-Unknown.
-\newblock How products are made, volume 7 - rubik's cube.
-\newblock \url{http://www.madehow.com/Volume-7/Rubik-s-Cube.html}.
-\newblock [Accessed 3 April 2015].
-
 \bibitem{WCA2}
 WCA.
 \newblock Wca regulations article a: Speed cubing.
@@ -64,13 +73,5 @@ WCA.
   \url{https://www.worldcubeassociation.org/regulations/#article-12-notation},
   April 2014.
 \newblock [Accessed 3 April 2015].
-
-\bibitem{Wolfram}
-Wolfram??
-\newblock Wolfram alpha.
-\newblock
-  \url{http://www.wolframalpha.com/input/?i=4.3*10%5E18+seconds+to+years},
-  2015.
-\newblock [Accessed 6 April 2015].
 
 \end{thebibliography}
