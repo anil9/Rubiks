@@ -63,7 +63,7 @@
 	\caption{}
 \end{figure}
 The Rubik’s cube is an 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow.\\
-You start with a scrambled cube, meaning that the colored miniature cubes (cubies) are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
+You start with a scrambled cube, meaning that the colored miniature cubes are randomly positioned by using random operations on the cube ( fig \ref{fig_1}) . \\
 The goal is to obtain the unique solution where each side of the cube are covered with only one colour per side (fig \ref{fig_2}). 
 Different methods have been developed with series of notation to solve subproblems one at the time to reach the unique solution. The general idea which many methods are based on is to solve it one layer at the time.\\
 If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\
@@ -85,8 +85,15 @@ Which beginner algorithm is easiest to learn and execute to someone inexperience
 The purpose of testing the methods is to find out which uses the least amount of moves and to find out which method suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the method is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
 The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
-The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.   
-
+The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.  
+\section{Terminology} 
+	\begin{description}
+		\item[Cubie] a miniature cube
+		\item[Scramble] perfoming a amount of random operations on a solved cube to reach a non-solved state.
+		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
+		\item[Operation] Rotating one layer of the cube
+		\item[Notation] a character that is a abbreviation of the operation-name.
+	\end{description}
 
 \chapter{Background}
 Providing the reader with knowledge of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
@@ -148,7 +155,7 @@ With the second layer complete (fig \ref{fig_7}) it is time to work on the yello
 \subsubsection{5. Yellow corners}
 Positioning the yellow corners by applying different operations to move the edges depending och how many corners that are in position already. 
 \subsubsection{6. Last layer permutation}
-Now when the corners of the last layer are in position so that the top is all yellow, the only thing left to do is to positioning the pieces of the last layer so they match with the colours of the vertical sides. 
+Now when the corners of the last layer are in position so that the top is all yellow, the only thing left to do is to positioning the pieces of the last layer so they match with the colours of the vertical sides. This is achived by applying three different operation-combinations depending on if its edges or corners that should switch places. 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
@@ -249,12 +256,9 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 
 \chapter{Method}
 For this thesis there was two major methods used.
-\section{Literature study}
-The study included both comparisons made by other authors and the structure of different methods for solving a rubik’s cube. 
-To get an understanding of the area, to be able to exclude suggestions of problems to examine in the chosen area, we did not want to try to solve the same problem as someone before us already had. Both methods are tested by us to make sure that they work as expected before the implementation begins.
 \section{Implementation and data collection}
-Both of the algorithms are implemented in the same language and with the same built-in functions and data structures as much as possible, to rule out differences to obtain a realistic comparison in the end.
-We need to run the algorithms a number of times to obtain a good set of data for the comparison. 
+Both of the algorithms are implemented in the same language and with the same built-in functions and data structures for as long as possible, to rule out differences to obtain a realistic comparison in the end.
+We need to run the algorithms a number of times to obtain a good set of data for the comparison. The data will be obtained during the runs by saving informations about the runs on files.  
 \section{Analyze and representation}
 Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the difficulty of the operations. 
 
