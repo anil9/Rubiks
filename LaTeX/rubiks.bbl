@@ -47,17 +47,18 @@ Herbert Kociemba.
 \newblock \url{http://kociemba.org/twophase.htm}, 2014.
 \newblock [Accessed 6 April 2015].
 
-\bibitem{Faculty}
-kommer inte in~i pp:n.
-\newblock Adde kolla på det.
-\newblock \url{http://faculty.mc3.edu/cvaughen/rubikscube/cube_counting.ppt}.
-\newblock [Accessed 6 April 2015].
-
 \bibitem{Lar5}
 Lars Petrus.
 \newblock Solving rubik's cube for speed.
 \newblock \url{http://lar5.com/cube/}, May 1997.
 \newblock [Accessed 3 April 2015].
+
+\bibitem{Faculty}
+Scott Vaughen.
+\newblock Counting the permutations of the rubik's cube.
+\newblock \url{http://faculty.mc3.edu/cvaughen/rubikscube/cube_counting.ppt},
+  no date.
+\newblock [Accessed 6 April 2015].
 
 \bibitem{WCA2}
 WCA.

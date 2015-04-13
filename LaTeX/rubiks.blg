@@ -17,15 +17,15 @@ Warning--entry type for "Wolfram" isn't style-file defined
 --line 80 of file references.bib
 You've used 11 entries,
             2118 wiz_defined-function locations,
-            558 strings with 5314 characters,
-and the built_in function-call counts, 2419 in all, are:
-= -- 241
+            559 strings with 5340 characters,
+and the built_in function-call counts, 2423 in all, are:
+= -- 242
 > -- 77
 < -- 0
 + -- 35
 - -- 22
-* -- 77
-:= -- 417
+* -- 78
+:= -- 418
 add.period$ -- 44
 call.type$ -- 11
 change.case$ -- 44
@@ -34,17 +34,17 @@ cite$ -- 11
 duplicate$ -- 77
 empty$ -- 243
 format.name$ -- 22
-if$ -- 528
+if$ -- 529
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 0
 newline$ -- 69
 num.names$ -- 22
-pop$ -- 90
+pop$ -- 88
 preamble$ -- 1
 purify$ -- 33
 quote$ -- 0
-skip$ -- 64
+skip$ -- 65
 stack$ -- 0
 substring$ -- 57
 swap$ -- 11
@@ -55,5 +55,5 @@ type$ -- 44
 warning$ -- 0
 while$ -- 22
 width$ -- 13
-write$ -- 133
+write$ -- 134
 (There were 6 warnings)
