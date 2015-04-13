@@ -77,15 +77,13 @@ When solving the cube the idea is to start with a scrambled cube, meaning that t
 If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime, because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\\\
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 
-\section{Problem Definition}
+\section{Problem}
 This thesis will explore two commonly known beginner methods for human solving of Rubik’s cubes to find the differences. Both methods are based on the idea to solve the cube one layer at the time, which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate the methods operation variance and the number of operations to reach a solved state, to find the most move-efficient of them both.\\\\
-During the search for related work there was no such comparison of solving-methods for 3x3x3 cube found. The information found about solving-methods for 3x3x3 cubes was tutorials of how to use them.
-
-\section{Problem Statement}
+The problem was stated as follows:
 \begin{itemize}
-\item Which of the beginner algorithms would be more effective for speedcubing?
-\item Which of the beginner algorithms solves the cube with the least amount of moves?
-\item Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?
+\item[] Which of the beginner algorithms would be more effective for speedcubing?
+\item[] Which of the beginner algorithms solves the cube with the least amount of moves?
+\item[] Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?
 \end{itemize}
 \section{Purpose}
 The purpose of testing the methods is to find out which uses the least amount of moves and to find out which method suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the method is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
@@ -267,9 +265,32 @@ Based on the test data we will be able to evaluate each methods use of different
 \end{figure}
 
 \section{Cube representation}
- The cube will be represented with a side-representation, meaning that an object for each side of the cube will hold nine colours. This will conduce to that the operations only have to move the colours to the correct side and location when an operation is performed.  
-With this representation will there be no relation between positions in different sides unlike the physical cube, where for example an edge cubie has two colors. \\\\
-For instance if operation F is performed on the cube all of the colours on the front-side of the cube except the center-colour (position 5) will move two steps clockwise (see fig \ref{fig_17} for positions). The colours on the top,right,bot and left side that are adjecent to the front side will all move three steps clockwise. Making the three colours of the right side that are adjacent to the front side move to the bot side, the three colours on the bot side moves to the left side and so on.
+ The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in \ref{fig_17} would result in these internal assignments:
+ \begin{verbatim}
+		Side tempTop = new Side(top);
+		Side tempFront = new Side(front);
+		top.c7 = left.c9;
+		top.c8 = left.c6;
+		top.c9 = left.c3;
+		left.c3 = bot.c1;
+		left.c6 = bot.c2;
+		left.c9 = bot.c3;
+		bot.c1 = right.c7;
+		bot.c2 = right.c4;
+		bot.c3 = right.c1;
+		right.c1 = tempTop.c7;
+		right.c4 = tempTop.c8;
+		right.c7 = tempTop.c9;
+		front.c1 = tempFront.c7;
+		front.c2 = tempFront.c4;
+		front.c3 = tempFront.c1;
+		front.c4 = tempFront.c8;
+		front.c6 = tempFront.c2;
+		front.c7 = tempFront.c9;
+		front.c8 = tempFront.c6;
+		front.c9 = tempFront.c3;
+\end{verbatim}
   
 \section{Scramble}
 The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.\\\\
@@ -282,7 +303,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble ar
 	\For{Number of operations}{int op = rand.nextInt(Tot num of op)\\ \Switch{op}{ All operations have a number, performce the operation with the number op}}
 
 	\end{algorithm}
-
+	
 \chapter{Results and Analyze}
 Containing visualisation of the data collected from the executions in form of graphs and description of what the graphs shows.\\\\ 
 
