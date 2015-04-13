@@ -285,7 +285,12 @@ Based on the test data we will be able to evaluate each methods use of different
 		front.c8 = tempFront.c6;
 		front.c9 = tempFront.c3;
 \end{verbatim}
-  
+\begin{figure}[b]
+	\centering
+	\includegraphics[width= 0.9\textwidth]{figs/cubeorder.jpg}
+	\caption{Side numberings}
+	\label{fig_17}
+\end{figure}  
 \section{Scramble}
 The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.\\\\
 \RestyleAlgo{boxed}
@@ -297,12 +302,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble ar
 	\For{Number of operations}{int op = rand.nextInt(Tot num of op)\\ \Switch{op}{ All operations have a number, performce the operation with the number op}}
 
 	\end{algorithm}
-\begin{figure}[b]
-	\centering
-	\includegraphics[width= 1.0\textwidth]{figs/cubeorder.jpg}
-	\caption{Side numberings}
-	\label{fig_17}
-\end{figure}
+
 	
 \chapter{Results and Analyze}
 Containing visualisation of the data collected from the executions in form of graphs and description of what the graphs shows.\\\\ 
