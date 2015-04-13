@@ -303,6 +303,15 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 
 	\end{algorithm}
 
+	\RestyleAlgo{boxed}
+	\begin{algorithm}[H]
+	\caption{Method steps general idea}
+	\KwIn{A cube}
+	\KwOut{A cube that has a subproblem solved}
+		\If{stepIsDone(cube)}{return cube}
+		\While{not(stepIsDone(cube))}{\If{readyForOperations(cube)}{Perform the operations necessary to complete the step}\Else{\While{not(readyForOperations(cube))}{Operations to get the cube in a state to be able to perform the steps operations}}}
+	\end{algorithm}
+
 	
 \chapter{Results and Analyze}
 Containing visualisation of the data collected from the executions in form of graphs and description of what the graphs shows.\\\\ 
