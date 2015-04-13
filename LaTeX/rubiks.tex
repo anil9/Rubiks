@@ -267,9 +267,7 @@ Based on the test data we will be able to evaluate each methods use of different
 \end{figure}
 Explanations of how the algorithms where implemented with pseudocode as well as how the cube was represented.
 \section{Cube representation}
- The cube is represented with a side-representation, only have to move the colours to the correct side and location when an operation is performed.  
-Each side consists of nine positions each of which has a color. There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors.
-  A disadvantage with the side-representation is that the only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
+ The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
 \section{Algorithms}
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
