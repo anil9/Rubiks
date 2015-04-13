@@ -267,7 +267,33 @@ Based on the test data we will be able to evaluate each methods use of different
 \end{figure}
 Explanations of how the algorithms where implemented with pseudocode as well as how the cube was represented.
 \section{Cube representation}
- The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
+ The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in \ref{fig_17} would result in these internal assignments:
+ \begin{verbatim}
+		Side tempTop = new Side(top);
+		Side tempFront = new Side(front);
+		top.c7 = left.c9;
+		top.c8 = left.c6;
+		top.c9 = left.c3;
+		left.c3 = bot.c1;
+		left.c6 = bot.c2;
+		left.c9 = bot.c3;
+		bot.c1 = right.c7;
+		bot.c2 = right.c4;
+		bot.c3 = right.c1;
+		right.c1 = tempTop.c7;
+		right.c4 = tempTop.c8;
+		right.c7 = tempTop.c9;
+		front.c1 = tempFront.c7;
+		front.c2 = tempFront.c4;
+		front.c3 = tempFront.c1;
+		front.c4 = tempFront.c8;
+		front.c6 = tempFront.c2;
+		front.c7 = tempFront.c9;
+		front.c8 = tempFront.c6;
+		front.c9 = tempFront.c3;
+\end{verbatim}
+
 \section{Algorithms}
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
