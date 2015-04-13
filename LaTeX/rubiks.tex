@@ -252,7 +252,7 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 \end{figure}
 
 \chapter{Method}
-For this thesis the two major methods used where implementation of methods and analyzis of the datarepresentation.
+For this thesis the two major methods used where implementation of methods and analyzis of the data representation.
 Both of the algorithms will be implemented in the same language and with the same built-in functions and data structures to rule out unnecessary differences, to obtain a realistic comparison in the end.
 The algorithms needs to be executed a number of times to obtain a good set of data for the comparison. The data will be obtained during the executions by saving informations as number of moves used, statistics of moves used and number of times the method used least amount of moves to files.  
 Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the usage of operations that are time-consuming for physical solving of the cube. 
@@ -336,10 +336,14 @@ Fig \ref{fig_20} represents the average use of operations for both methods over 
 \chapter{Discussion}
 
 \section{Comparison}
+As we can see in the results fig \ref{fig_19}, Lbl with daisy method has the lowest amount of moves the majority of the time. The description of the methods often assumed the correct cubies to be on a certain side (in reality this simply means rotating the cube to desired position). The implemented versions prioritized execution of operations instead to get the cube into position, which led to an increase in the total operations. This might explain the frequent uses of a few operations, shown in fig \ref{fig_20}.
 
+
+ %To get a more clear understanding of why this is the case we observe fig \ref{fig_20}...?!?!?-.-
 \section{Difficulty}
-Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this first idea was that the colors of a cubie had a relation which kept the colours to the correct cubie through all the operations, the only thing keeping the colours correct now is the operations implemented. But a pro with the representation now is that the operations only need to move colours around according to the different operations (as described in cube representation) and does not need to rotate individual cubies to get the colour in the right position. \\\\
-Translating the methods for physical solving of the cube to code was problematic with the intuative steps forsolving by hand, this made it difficult implement in a good way.
+Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this idea was that the colors of a cubie had a relation which kept the colours to the correct cubie through all the operations.\\\\
+Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods has led to an extra amount of operations on the cubes. This have had an impact on the final result.
+
 
 \section{Errors}
 
