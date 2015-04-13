@@ -259,7 +259,7 @@ Based on the test data we will be able to evaluate each methods use of different
 
 
 \section{Cube representation}
- The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
  For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in \ref{fig_17} would result in these internal assignments:
  \begin{verbatim}
 		Side tempTop = new Side(top);
@@ -292,14 +292,14 @@ Based on the test data we will be able to evaluate each methods use of different
 	\label{fig_17}
 \end{figure}  
 \section{Scramble}
-The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.\\\\
+The idea of the scrambler is to always start with a solved cube. The scramble is simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.\\\\
 \RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{Scramble}
 	\KwIn{A cube, Number of operations to be made}
 	\KwOut{A scrambled cube}
-	Let rand be a Random object.\\
-	\For{Number of operations}{int op = rand.nextInt(Tot num of op)\\ \Switch{op}{ All operations have a number, performce the operation with the number op}}
+	Let rand be a psuedo-random generator.\\
+	\For{Number of op to be made}{int opNr = rand.nextInt(Tot num of op)\\ \Switch{opNr}{ All operations represented by a number, perform the operation with the number opNr}}
 
 	\end{algorithm}
 
@@ -311,7 +311,7 @@ Fig \ref{fig_18} represents the sum of executions that used the same amount of m
 As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (188). Turning the whole cube in any direction was not counted for as a move.\\\\
 Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
 This shows that over ten thousand Scrambled cubes the Lbl with daisy method won 69\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 30\% of the time.\\\\
-Fig \ref{fig_20} represents the avarage use of operations for both methods over all executions with the x-axis as the avarage number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be seen in Appendix B.\\\\ 
+Fig \ref{fig_20} represents the average use of operations for both methods over all executions with the x-axis as the average number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be seen in Appendix B.\\\\ 
 
 \begin{figure}[h!]
 	\centering
@@ -328,7 +328,7 @@ Fig \ref{fig_20} represents the avarage use of operations for both methods over 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width= 1.0\textwidth]{figs/graphtwo.png}
-	\caption{Avarage use of operations}
+	\caption{Average use of operations}
 	\label{fig_20}
 \end{figure}
 
@@ -339,7 +339,7 @@ Fig \ref{fig_20} represents the avarage use of operations for both methods over 
 
 \section{Difficulty}
 Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this first idea was that the colors of a cubie had a relation which kept the colours to the correct cubie through all the operations, the only thing keeping the colours correct now is the operations implemented. But a pro with the representation now is that the operations only need to move colours around according to the different operations (as described in cube representation) and does not need to rotate individual cubies to get the colour in the right position. \\\\
-Translating the methods for physical sovling of the cube to code was problematic with the intuative steps forsolving by hand, this made it difficult implement in a good way.
+Translating the methods for physical solving of the cube to code was problematic with the intuative steps forsolving by hand, this made it difficult implement in a good way.
 
 \section{Errors}
 
@@ -362,7 +362,7 @@ $4.3*10^19*0.1=4.3*10^{18}$ \\
 \label{App:AppendixB}
 \chapter{Data}
 	
-		Avarage use of operations.\\
+		Average use of operations.\\
 		\begin{tabular}{|l|l|l|}
 		\hline
 		Operations & Lbl & Dedmore \\ \hline
