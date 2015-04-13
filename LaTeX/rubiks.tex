@@ -46,6 +46,15 @@
 \clearpage
 \tableofcontents*
 \mainmatter
+\section{Terminology} 
+	\begin{description}
+		\item[Cubie] a miniature cube
+		\item[Scramble] perfoming a amount of random operations on a solved cube to reach a non-solved state.
+		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
+		\item[Operation] Rotating one layer of the cube
+		\item[Notation] a character that is a abbreviation of the operation-name.
+	\end{description}
+
 \pagestyle{newchap}
 \chapter{Introduction}
 \begin{figure}
@@ -83,29 +92,22 @@ The purpose of testing the methods is to find out which uses the least amount of
 \section{Structure}
 The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
 The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.  
-\section{Terminology} 
-	\begin{description}
-		\item[Cubie] a miniature cube
-		\item[Scramble] perfoming a amount of random operations on a solved cube to reach a non-solved state.
-		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
-		\item[Operation] Rotating one layer of the cube
-		\item[Notation] a character that is a abbreviation of the operation-name.
-	\end{description}
+
 
 \chapter{Background}
 Providing the reader with knowledge of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
 \section{Competitions}
 There are two types of competitions regarding the cube.
-\subsection{Speedcubing}
+\paragraph{Speedcubing}
 When competing in an official event regulated by the World Cube Association (WCA), the competitor has at maximum 15 seconds of inspection time of the cube before the solve begins.\cite{WCA2} The time stops when the competitor have reached the unique solution. 
-\subsection{Fewest moves}
+\paragraph{Fewest moves}
 The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
 \section{Rubik's Cube}
 Explanation of how the cube is constructed and the different notations for the operations.
-\subsection{Description}
+\paragraph{Description}
 The cube consists of 26 cubies with three,two or one visible sides depending on the type of cubie. There is one core piece consisting of three axes which holds the center pieces together \cite{MadeHow}. 
   The corner and edge pieces (fig \ref{fig_3})  are the cubies that are movable to different edge and corner positions, the center pieces (fig \ref{fig_3}) can only be moved according to the axis.  
-\subsection{Notation}
+\paragraph{Notation}
 The notation describes the different move operations on the cube. This thesis uses the notation used by WCA. Explained below:\\
 Clockwise 90 degrees:\\
 F - Front face\\
@@ -124,7 +126,7 @@ To denote clockwise 180 degrees rotation just put (2) after the letters describe
 \end{figure}
 \section{Algorithms}
 The algorithms are physically methods for solving the cube by hand but matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of simulates several moves ahead to find the optimal move\cite{Kociemba}), these algorithms can with little effort be taught to humans.
-\subsection{Layer-by-layer using daisy method}
+\paragraph{Layer-by-layer using daisy method}
 \begin{figure}
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
@@ -181,7 +183,7 @@ Now when the corners of the last layer are in position so that the top is all ye
 	\label{fig_8}
 \end{figure}
 \newpage
-\subsection{Dedmore algorithm}
+\paragraph{Dedmore algorithm}
 The dedmore algorithm is also solving the cube layer-by-layer, but focusing on a corners-first solution\cite{Dedmore}. It was one of the first solution guides to the Rubik's cube\cite{Ijsat}. \\
 \begin{figure}[b]
 	\centering
@@ -252,28 +254,26 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 \end{figure}
 
 \chapter{Method}
-For this thesis there was two major methods used.
-\section{Implementation and data collection}
-Both of the algorithms are implemented in the same language and with the same built-in functions and data structures for as long as possible, to rule out differences to obtain a realistic comparison in the end.
-We need to run the algorithms a number of times to obtain a good set of data for the comparison. The data will be obtained during the runs by saving informations about the runs on files.  
-\section{Analyze and representation}
-Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the difficulty of the operations. 
+For this thesis the two major methods used where implementation of methods and analyzis of the datarepresentation.
+Both of the algorithms will be implemented in the same language and with the same built-in functions and data structures to rule out unnecessary differences, to obtain a realistic comparison in the end.
+The algorithms needs to be executed a number of times to obtain a good set of data for the comparison. The data will be obtained during the executions by saving informations as number of moves used, statistics of moves used and number of times the method used least amount of moves to files.  
+Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the usage of operations that are time-consuming for physical solving of the cube. 
 
-
-\chapter{Implementation}
 \begin{figure}[b]
 	\centering
 	\includegraphics[width= 0.8\textwidth]{figs/cubeorder.jpg}
 	\caption{Side numberings}
 	\label{fig_17}
 \end{figure}
-Explanations of how the algorithms where implemented with pseudocode as well as how the cube was represented.
+
 \section{Cube representation}
- The cube is represented with a side-representation, only have to move the colours to the correct side and location when an operation is performed.  
-Each side consists of nine positions each of which has a color. There exists no relation between positions in different sides unlike the physical cube, where for example an edge has two colors.
-  A disadvantage with the side-representation is that the only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations. 
-\section{Algorithms}
-	\RestyleAlgo{boxed}
+ The cube will be represented with a side-representation, meaning that an object for each side of the cube will hold nine colours. This will conduce to that the operations only have to move the colours to the correct side and location when an operation is performed.  
+With this representation will there be no relation between positions in different sides unlike the physical cube, where for example an edge cubie has two colors. \\\\
+For instance if operation F is performed on the cube all of the colours on the front-side of the cube except the center-colour (position 5) will move two steps clockwise (see fig \ref{fig_17} for positions). The colours on the top,right,bot and left side that are adjecent to the front side will all move three steps clockwise. Making the three colours of the right side that are adjacent to the front side move to the bot side, the three colours on the bot side moves to the left side and so on.
+  
+\section{Scramble}
+The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.\\\\
+\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{Scramble}
 	\KwIn{A cube, Number of operations to be made}
@@ -283,16 +283,15 @@ Each side consists of nine positions each of which has a color. There exists no 
 
 	\end{algorithm}
 
-\section{Scramble}
-The idea of the scrambler is to always start with a solved cube. The scramble are then simulated by making a large amount of operations in pseudo-random sequence (Algorithm 1). The scrambled cube is saved to a list awaiting the two solvers to pick and solve it.
-\section{Difficulty}
-Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this first idea was that the colors of a cubie had an relation, the only thing keeping the colours correct now is the operations implemented.\\\\
-Translating the methods for physical sovling of the cube to code was not always easy. Because of how intuative some of the steps are when solving by hand, this made it difficult implement in a good way.
-
-
 \chapter{Results and Analyze}
-Containing average amount of moves and operation usage statistics. 
-\section{Data}
+Containing visualisation of the data collected from the executions in form of graphs and description of what the graphs shows.\\\\ 
+
+Fig \ref{fig_18} represents the sum of executions that used the same amount of moves, where the x-axis is amount of moves and the y-axis number of executions. 
+As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (188). Turning the whole cube in any direction was not counted for as a move.\\\\
+Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
+This shows that over ten thousand Scrambled cubes the Lbl with daisy method won 69\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 30\% of the time.\\\\
+Fig \ref{fig_20} represents the avarage use of operations for both methods over all executions with the x-axis as the avarage number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be seen in Appendix B.\\\\ 
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.1\textwidth]{figs/graphone.png}
@@ -311,13 +310,16 @@ Containing average amount of moves and operation usage statistics.
 	\caption{Avarage use of operations}
 	\label{fig_20}
 \end{figure}
-\section{Comparison}
-As shown in fig \ref{fig_18} we see that the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (188). Turning the whole cube in any direction was not counted for as a move.\\\\
-In the graph in fig \ref{fig_19} we compared the algorithms against each other on every cube. The algorithm which solved the cube in the least amount of moves got its counter incremented. This shows that over ten thousand scrambled cubes the Lbl with daisy method won 69\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 30\% of the time.
+
 
 \chapter{Discussion}
 
 \section{Comparison}
+
+\section{Difficulty}
+Our first idea was to represent the cube by 26 cubies in a layer-by-layer system, but this was problematic due to which colour-representation of the cubies should face which side when different operations where performed. A pro for this first idea was that the colors of a cubie had a relation which kept the colours to the correct cubie through all the operations, the only thing keeping the colours correct now is the operations implemented. But a pro with the representation now is that the operations only need to move colours around according to the different operations (as described in cube representation) and does not need to rotate individual cubies to get the colour in the right position. \\\\
+Translating the methods for physical sovling of the cube to code was problematic with the intuative steps forsolving by hand, this made it difficult implement in a good way.
+
 \section{Errors}
 
 \chapter{Conclusion}
@@ -349,11 +351,11 @@ $4.3*10^19*0.1=4.3*10^{18}$ \\
 		B & 3.2228 & 0.0718 \\ \hline
 		Ri & 15.1558 & 16.7828 \\ \hline
 		L & 2.8949 & 8.8148 \\ \hline
-		M & 0 &	6.1479 \\ \hline
+		M & 0.000 &	6.1479 \\ \hline
 		Ui & 18.122 & 37.7467 \\ \hline
 		U & 36.0845 & 24.2097 \\ \hline
 		Bi & 3.2228 & 0.0955 \\ \hline
-		Mi & 0 & 6.1479 \\ \hline
+		Mi & 0.000 & 6.1479 \\ \hline
 		Li & 2.8949 & 8.7691 \\ \hline
 		R & 25.2278 & 12.7341 \\ \hline
 		Ei & 4.5369 & 13.2933 \\ \hline
