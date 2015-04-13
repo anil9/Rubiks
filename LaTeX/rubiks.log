@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  13 APR 2015 15:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  13 APR 2015 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1297,28 +1297,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--253
 
 [12 <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges.jpg> <./figs/last
 -edge-correct.jpg> <./figs/fish-pattern.jpg> <./figs/H-pattern.jpg>]
-<figs/cubeorder.jpg, id=98, 602.25pt x 451.6875pt>
-File: figs/cubeorder.jpg Graphic file (type jpg)
- <use figs/cubeorder.jpg>
-Package pdftex.def Info: figs/cubeorder.jpg used on input line 262.
-(pdftex.def)             Requested size: 316.80121pt x 237.60815pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 270.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 264.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 296--305
+Underfull \hbox (badness 10000) in paragraph at lines 290--299
 
  []
 
-[14 <./figs/cubeorder.jpg>] [15] [16
+<figs/cubeorder.jpg, id=103, 602.25pt x 451.6875pt>
+File: figs/cubeorder.jpg Graphic file (type jpg)
+ <use figs/cubeorder.jpg>
+Package pdftex.def Info: figs/cubeorder.jpg used on input line 302.
+(pdftex.def)             Requested size: 396.0pt x 297.01192pt.
+
+[14] [15 <./figs/cubeorder.jpg>] [16
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
@@ -1454,7 +1454,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 626863 bytes).
+Output written on rubiks.pdf (35 pages, 626817 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
