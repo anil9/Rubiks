@@ -86,13 +86,13 @@ public class Main {
 			PrintWriter moves_per_op_pw = new PrintWriter(movesPerOpFile);
 			if(numAlgo == 1){
 					for(int i = 0; i< ((Lbl)algo).moves_per_operation.size();i++){
-						moves_per_op_pw.println("step " + (i+1) + " " + ((Lbl)algo).moves_per_operation.get(i)/ALGO_RUNS);	
+						moves_per_op_pw.println("step " + (i+1) + " " + ((Lbl)algo).moves_per_operation.get(i)/(double)ALGO_RUNS);	
 					}
 					
 			}
 			if(numAlgo == 2){
 					for(int i = 0; i< ((Dedmore)algo).moves_per_operation.size();i++){
-						moves_per_op_pw.println("step " + (i+1) + " " + ((Dedmore)algo).moves_per_operation.get(i)/ALGO_RUNS);	
+						moves_per_op_pw.println("step " + (i+1) + " " + ((Dedmore)algo).moves_per_operation.get(i)/(double)ALGO_RUNS);	
 					}
 					
 			}

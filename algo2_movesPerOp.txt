@@ -1,6 +1,6 @@
-step 1 0
-step 2 25
-step 3 35
-step 4 51
-step 5 42
-step 6 34
+step 1 0.0
+step 2 25.4784
+step 3 35.4526
+step 4 51.5609
+step 5 42.0808
+step 6 34.7134
