@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  14 APR 2015 13:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  14 APR 2015 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1330,37 +1330,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--315
 [15] [16
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 319--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 319--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
+Underfull \hbox (badness 10000) in paragraph at lines 319--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--327
+Underfull \hbox (badness 10000) in paragraph at lines 319--326
 
  []
 
 <figs/graphone.png, id=115, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)
  <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 330.
+Package pdftex.def Info: figs/graphone.png used on input line 329.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 330--331
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 329--330
  [][] 
  []
 
@@ -1370,28 +1365,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figs/graphtwo.png, id=116, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
  <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 336.
+Package pdftex.def Info: figs/graphtwo.png used on input line 335.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/graphthree.png, id=117, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 342.
+Package pdftex.def Info: figs/graphthree.png used on input line 341.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/lbldaisysteps.png, id=118, 602.25pt x 372.39125pt>
 File: figs/lbldaisysteps.png Graphic file (type png)
 
 <use figs/lbldaisysteps.png>
-Package pdftex.def Info: figs/lbldaisysteps.png used on input line 348.
+Package pdftex.def Info: figs/lbldaisysteps.png used on input line 347.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/dedmoresteps.png, id=119, 602.25pt x 372.39125pt>
 File: figs/dedmoresteps.png Graphic file (type png)
 
 <use figs/dedmoresteps.png>
-Package pdftex.def Info: figs/dedmoresteps.png used on input line 354.
+Package pdftex.def Info: figs/dedmoresteps.png used on input line 353.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
  [17]
 
@@ -1403,7 +1398,7 @@ Overfull \vbox (2.62976pt too high) has occurred while \output is active []
 
 [18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png> <.
 /figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
@@ -1444,12 +1439,12 @@ otation$\T1/lmr/m/n/10.95 , April
 ] [27] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 396--433
+Underfull \hbox (badness 10000) in paragraph at lines 395--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--433
+Underfull \hbox (badness 10000) in paragraph at lines 395--432
 
  []
 
@@ -1477,7 +1472,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 637008 bytes).
+Output written on rubiks.pdf (35 pages, 636936 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
