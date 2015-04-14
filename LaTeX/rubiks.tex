@@ -319,9 +319,9 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 Containing visualisation of the data collected from the executions in form of graphs and description of what the graphs shows.\\\\ 
 
 Fig \ref{fig_18} represents the sum of executions that used the same amount of moves, where the x-axis is amount of moves and the y-axis number of executions. 
-As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (188). Turning the whole cube in any direction was not counted for as a move.\\\\
+As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (189). Turning the whole cube in any direction was not counted for as a move.\\\\
 Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
-This shows that over ten thousand Scrambled cubes the Lbl with daisy method won 69\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 30\% of the time.\\\\
+This shows that over ten thousand Scrambled cubes the Lbl with daisy method won 71\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 28\% of the time.\\\\
 Fig \ref{fig_20} represents the average use of operations for both methods over all executions with the x-axis as the average number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be seen in Appendix B.\\\\ 
 Fig \ref{fig_21} and fig \ref{fig_22} represents the moves used in each step for both methods. 
 
@@ -359,7 +359,7 @@ Fig \ref{fig_21} and fig \ref{fig_22} represents the moves used in each step for
 \chapter{Discussion}
 
 \section{Comparison}
-As we can see in the results fig \ref{fig_18}, Lbl with daisy method has the lowest amount of moves the majority of the time. Lbl with daisy method also has the lowest minimum and maximum amount of moves with 95 and 253 respectively. The corresponding values for the Dedmore method are 96 and 292 REF TO DATA. This shows that Lbl wins in average, best case and worst case and the result of this is shown in fig \ref{fig_19}.\\\\
+As we can see in the results fig \ref{fig_18}, Lbl with daisy method has the lowest amount of moves the majority of the time. Lbl with daisy method also has the lowest minimum and maximum amount of moves with 95 and 253 respectively. The corresponding values for the Dedmore method are 96 and 292 as can be seen in fig \ref{fig_18} and in Appendix B. This shows that Lbl wins in average, best case and worst case and the result of this is shown in fig \ref{fig_19}.\\\\
 The methods often assumed the correct cubies to be on a certain side (in reality this simply means rotating the cube to desired position). The implemented versions prioritized execution of operations instead, to get the cube into position, which led to an increase in the total operations. This might explain the frequent uses of a few operations, for example U, Ui and F, shown in fig \ref{fig_20}.
 
 
@@ -427,6 +427,7 @@ $4.3*10^19*0.1=4.3*10^{18}$ \\
 		\begin{tabular}{|l|l|l|}
 		\hline
 		 & Lbl with daisy method & Dedmore \\ \hline
+		Average amount of moves & 170 & 189 \\ \hline 
 		Min amount of moves & 95 & 96 \\ \hline
 		Max amount of moves & 253 & 292 \\ \hline
 		\end{tabular}		
