@@ -7,7 +7,7 @@ public class Lbl implements Algorithm{
 	private HashMap<Integer, Integer> moves = new HashMap<Integer, Integer>();
 	private final int MAX_ROTATIONS_IN_LAP = 3;
 	private HashMap<String, Boolean> rotated = new HashMap<String, Boolean>();
-	ArrayList<Integer> moves_per_operation = new ArrayList<Integer>();
+	HashMap<Integer, Integer> moves_per_operation = new HashMap<Integer, Integer>();
 
 	
 	public Lbl(){
@@ -22,10 +22,10 @@ public class Lbl implements Algorithm{
 		int recent_count = 0; 
 		int count_to_add = 0;
 			cube = findYellowCenter(cube);
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+cube.move_counter);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+cube.move_counter);
 			}else{
-				moves_per_operation.add(i, cube.move_counter);
+				moves_per_operation.put(i, cube.move_counter);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -34,10 +34,10 @@ public class Lbl implements Algorithm{
 			}
 			cube = whiteCross(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -46,10 +46,10 @@ public class Lbl implements Algorithm{
 			}
 			cube = whiteCorners(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -58,10 +58,10 @@ public class Lbl implements Algorithm{
 			}
 			cube = secondLayer(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -70,10 +70,10 @@ public class Lbl implements Algorithm{
 			}
 			cube = yellowCross(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -82,10 +82,10 @@ public class Lbl implements Algorithm{
 			}
 			cube = yellowEdges(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
@@ -95,13 +95,14 @@ public class Lbl implements Algorithm{
 			//cube.printWholeCube();
 			cube = orientLastLayer(cube);
 			count_to_add = cube.move_counter - recent_count;
-			if(moves_per_operation.size()>i){
-				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
 			}else{
-				moves_per_operation.add(i, count_to_add);
+				moves_per_operation.put(i, count_to_add);
 			}
 			recent_count = cube.move_counter;
 			i++;
+
 			/*if(!(cubeDone(cube))){
 				System.out.println("ej korrekt");
 				break;
