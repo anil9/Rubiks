@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  14 APR 2015 13:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  14 APR 2015 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1339,32 +1339,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 321--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 321--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--326
+Underfull \hbox (badness 10000) in paragraph at lines 321--327
 
  []
 
 <figs/graphone.png, id=114, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)
  <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 329.
+Package pdftex.def Info: figs/graphone.png used on input line 330.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 329--330
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 330--331
  [][] 
  []
 
@@ -1374,14 +1369,28 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figs/graphtwo.png, id=115, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
  <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 335.
+Package pdftex.def Info: figs/graphtwo.png used on input line 336.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/graphthree.png, id=116, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 341.
+Package pdftex.def Info: figs/graphthree.png used on input line 342.
+(pdftex.def)             Requested size: 396.0pt x 244.86983pt.
+
+<figs/lbldaisysteps.png, id=117, 602.25pt x 372.39125pt>
+File: figs/lbldaisysteps.png Graphic file (type png)
+
+<use figs/lbldaisysteps.png>
+Package pdftex.def Info: figs/lbldaisysteps.png used on input line 348.
+(pdftex.def)             Requested size: 396.0pt x 244.86983pt.
+
+<figs/dedmoresteps.png, id=118, 602.25pt x 372.39125pt>
+File: figs/dedmoresteps.png Graphic file (type png)
+
+<use figs/dedmoresteps.png>
+Package pdftex.def Info: figs/dedmoresteps.png used on input line 354.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
  [17]
 
@@ -1391,15 +1400,15 @@ LaTeX Warning: Text page 18 contains only floats.
 Overfull \vbox (2.62976pt too high) has occurred while \output is active []
 
 
-[18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png>]
-[20
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 350--352
+[18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png> <.
+/figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
 
  []
 
-[21] [22
+[21
+
+] [22
 
 ] (./rubiks.bbl [23] [24
 
@@ -1434,7 +1443,7 @@ otation$\T1/lmr/m/n/10.95 , April
 ] [27] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 384--406
+Underfull \hbox (badness 10000) in paragraph at lines 396--418
 
  []
 
@@ -1444,10 +1453,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--406
 
  (./rubiks.aux) ) 
 Here is how much of TeX's memory you used:
- 10252 strings out of 493308
- 145902 string characters out of 6140091
- 265998 words of memory out of 5000000
- 13498 multiletter control sequences out of 15000+600000
+ 10264 strings out of 493308
+ 146161 string characters out of 6140091
+ 266082 words of memory out of 5000000
+ 13508 multiletter control sequences out of 15000+600000
  73991 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,15n,40p,1015b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1462,9 +1471,9 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 630354 bytes).
+Output written on rubiks.pdf (35 pages, 656234 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
+ 208 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
