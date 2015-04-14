@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Lbl implements Algorithm{
 
@@ -6,6 +7,7 @@ public class Lbl implements Algorithm{
 	private HashMap<Integer, Integer> moves = new HashMap<Integer, Integer>();
 	private final int MAX_ROTATIONS_IN_LAP = 3;
 	private HashMap<String, Boolean> rotated = new HashMap<String, Boolean>();
+	ArrayList<Integer> moves_per_operation = new ArrayList<Integer>();
 
 	
 	public Lbl(){
@@ -16,33 +18,90 @@ public class Lbl implements Algorithm{
 			
 		//for(int i = 0; i<100; i++){
 			//cube.scramble(1000);
+		int i = 0; 
+		int recent_count = 0; 
+		int count_to_add = 0;
 			cube = findYellowCenter(cube);
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+cube.move_counter);
+			}else{
+				moves_per_operation.add(i, cube.move_counter);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			cube = whiteCross(cube);
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			cube = whiteCorners(cube);
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			cube = secondLayer(cube);
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			cube = yellowCross(cube);
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			cube = yellowEdges(cube);
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			if(cube.solved()){
 				return;
 			}
 			//cube.printWholeCube();
 			cube = orientLastLayer(cube);
-			
+			count_to_add = cube.move_counter - recent_count;
+			if(moves_per_operation.size()>i){
+				moves_per_operation.add(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.add(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 			/*if(!(cubeDone(cube))){
 				System.out.println("ej korrekt");
 				break;
@@ -59,6 +118,7 @@ public class Lbl implements Algorithm{
 
 	/*
 	*	Step 1
+	* 
 	*/
 	private Cube whiteCross(Cube cube){
 		if(!crossDone(cube)){

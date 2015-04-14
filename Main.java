@@ -81,7 +81,20 @@ public class Main {
 		}
 		printResult(numAlgo, moves, time);
 		
+		try{
+			File movesPerOpFile = new File("algo" + numAlgo + "_movesPerOp.txt");
+			PrintWriter moves_per_op_pw = new PrintWriter(movesPerOpFile);
+			if(numAlgo == 1){
+					for(int i = 0; i< ((Lbl)algo).moves_per_operation.size();i++){
+						moves_per_op_pw.println("step " + (i+1) + " " + ((Lbl)algo).moves_per_operation.get(i));	
+					}
+					
+			}
+			moves_per_op_pw.close();
 
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 
 
 	}
@@ -93,10 +106,12 @@ public class Main {
 			File resultFile = new File("algo"+numAlgo+"_results.txt");
 			File timesFile = new File("algo"+numAlgo+"_times_ms.txt");
 			File movesFile = new File("algo"+numAlgo+"_moves.txt");
+			
 			File countOfEachOperationFile = new File("algo"+numAlgo+"_countOfEachOperation.txt");
 			PrintWriter result_pw = new PrintWriter(resultFile);
 			PrintWriter times_pw = new PrintWriter(timesFile);
 			PrintWriter moves_pw = new PrintWriter(movesFile);
+			
 			PrintWriter opCount_pw = new PrintWriter(countOfEachOperationFile);
 			result_pw.println("----------------------");
 			int moves_avg = 0;
@@ -126,6 +141,7 @@ public class Main {
 				//operations print
 				opCount_pw.println(entry.getKey() + "	" + entry.getValue()/ALGO_RUNS);
 			}
+			
 			result_pw.close();
 			times_pw.close();
 			moves_pw.close();
