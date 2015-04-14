@@ -13,6 +13,7 @@ public class Dedmore implements Algorithm {
 	String primeCornerColor2;
 
 	HashMap<String, String> oppositeColor = new HashMap();
+	HashMap<Integer, Integer> moves_per_operation = new HashMap<Integer, Integer>();
 
 	public Dedmore() {
 		oppositeColor.put("red", "orange");
@@ -26,6 +27,10 @@ public class Dedmore implements Algorithm {
 
 
 	public void runAlg(Cube cube) {
+		int i = 0; 
+		int recent_count = 0; 
+		int count_to_add = 0;
+
 		this.cube = cube;
 		top = cube.top;
 		bot = cube.bot;
@@ -35,17 +40,64 @@ public class Dedmore implements Algorithm {
 		back = cube.back;
 		if(cube.solved()){return;}
 		setColorToTop(cube.BLUE);
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+cube.move_counter);
+		}else{
+				moves_per_operation.put(i, cube.move_counter);
+		}
+		recent_count = cube.move_counter;
+		i++;
 		if(cube.solved()){return;}
 		topCorners();
+		count_to_add = cube.move_counter - recent_count;
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.put(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 		if(cube.solved()){return;}
 		topEdges();
+		count_to_add = cube.move_counter - recent_count;
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.put(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 		if(cube.solved()){return;}
 		middleLayer();
+		count_to_add = cube.move_counter - recent_count;
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.put(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 		if(cube.solved()){return;}
 		//cube.printWholeCube();
 		lastCorners();
+		count_to_add = cube.move_counter - recent_count;
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.put(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 		if(cube.solved()){return;}
 		lastEdges();
+		count_to_add = cube.move_counter - recent_count;
+		if(moves_per_operation.containsKey(i)){
+				moves_per_operation.put(i, moves_per_operation.get(i)+count_to_add);
+			}else{
+				moves_per_operation.put(i, count_to_add);
+			}
+			recent_count = cube.move_counter;
+			i++;
 
 
 
