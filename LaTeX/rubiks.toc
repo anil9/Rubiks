@@ -37,8 +37,7 @@
 \contentsline {chapter}{\chapternumberline {4}Results and Analyze}{17}
 \contentsline {chapter}{\chapternumberline {5}Discussion}{21}
 \contentsline {section}{\numberline {5.1}Comparison}{21}
-\contentsline {section}{\numberline {5.2}Difficulty}{21}
-\contentsline {section}{\numberline {5.3}Errors}{21}
+\contentsline {section}{\numberline {5.2}Errors}{22}
 \contentsline {chapter}{\chapternumberline {6}Conclusion}{23}
 \contentsline {chapter}{References}{25}
 \contentsline {chapter}{Bilagor}{25}
