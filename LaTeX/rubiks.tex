@@ -88,8 +88,7 @@ The problem was stated as follows:
 \section{Purpose}
 The purpose of testing the methods is to find out which uses the least amount of moves and to find out which method suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the method is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
-The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis. The fourth sections will explain the implementations made in detail and the difficulties.\\
-The fifth section will be for presenting the results and the sixth section for discussion regarding the results. After that will there be a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and graphs.  
+The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the methods used in this thesis together with explanations of the representation and implementation of the cube. The fourth section will be presenting the results and the fifth section contains a discussion regarding the results. Following is a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and data.  
 
 
 \chapter{Background}
@@ -182,7 +181,7 @@ Now when the corners of the last layer are in position so that the top is all ye
 \end{figure}
 \newpage
 \paragraph{Dedmore algorithm}
-The dedmore algorithm is also solving the cube layer-by-layer, but focusing on a corners-first solution\cite{Dedmore}. It was one of the first solution guides to the Rubik's cube\cite{Ijsat}. \\
+The dedmore algorithm is solving the cube layer-by-layer, focusing on a corners-first solution\cite{Dedmore}. It was one of the first solution guides to the Rubik's cube\cite{Ijsat}. \\
 \begin{figure}[b]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
@@ -253,8 +252,8 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 
 \chapter{Method}
 For this thesis the two major methods used where implementation of methods and analyzis of the data representation.
-Both of the algorithms will be implemented in the same language and with the same built-in functions and data structures to rule out unnecessary differences, to obtain a realistic comparison in the end.
-The algorithms needs to be executed a number of times to obtain a good set of data for the comparison. The data will be obtained during the executions by saving informations as number of moves used, statistics of moves used and number of times the method used least amount of moves to files.  
+Both of the algorithms will be implemented in the same programming language and with the same built-in functions and data structures to rule out unnecessary differences, to obtain a realistic comparison in the end.
+The algorithms needs to be executed a number of times on different cubes to obtain a good set of data for the comparison. The data will be obtained during the executions by gathering information as: number of moves used, statistics of moves used and number of times the method used least amount of moves.  
 Based on the test data we will be able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations will provide information to evaluate if the times to solve are realistic for human solving. This depends on the usage of operations that are time-consuming for physical solving of the cube. 
 
 
@@ -304,7 +303,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 	\end{algorithm}
 
 \section{Method implementation}
-	Both methods contains several steps and all of them uses the same structure. First look if the step already is done, else while it is not done perform operations given by the methods on the cube until the main operations of the step can be performed [Algorithm 2]. \\\\
+	Both methods contains several steps and all of them uses the same structure. First look if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method [Algorithm 2]. \\\\
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{Method steps general idea}
@@ -322,8 +321,7 @@ As shown by the highest pillars for both methods, the Lbl with daisy method had 
 Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
 This shows that over ten thousand scrambled cubes the Lbl with daisy method won 71\% of the time, they got equal amount of moves 1\% of the time and dedmore method had the fewest 28\% of the time.\\\\
 Fig \ref{fig_20} represents the average use of operations for both methods over all executions with the x-axis as the average number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be seen in Appendix B.\\\\ 
-Fig \ref{fig_21} and fig \ref{fig_22} represents the moves used in each step for both methods. This shows the differences in amount of moves used for the different steps. Where the biggest differences are between  
-
+Fig \ref{fig_21} and fig \ref{fig_22} represents the amount of moves used in each step for both methods. By comparing fig \ref{fig_21} and \ref{fig_22} it is clear that the biggest difference in amount of moves are between the middle layer step and the last step of the two methods.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width= 1.1\textwidth]{figs/graphone.png}
@@ -371,6 +369,7 @@ Dedmores bottom corner step on the other hand works with two corners at the time
 Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods has led to an extra amount of operations on the cubes. This have had an impact on the final result.
 
 \chapter{Conclusion}
+From the methods we measured Lbl with daisy method solved the cube with the least amount of moves in more than 70\% of the time and also had both the lowest moves in minima and the maxima on the tested cubes.
 \cite{MadeHow}
 \renewcommand{\bibname}{References}
 \bibliographystyle{plain}
