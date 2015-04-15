@@ -49,10 +49,10 @@
 \section{Terminology} 
 	\begin{description}
 		\item[Cubie] a miniature cube
-		\item[Scramble] perfoming a amount of random operations on a solved cube to reach a non-solved state.
+		\item[Scramble] perfoming an amount of random operations on a solved cube to reach a non-solved state.
 		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
 		\item[Operation] Rotating one layer of the cube
-		\item[Notation] a character that is a abbreviation of the operation-name.
+		\item[Notation] a character that is an abbreviation of the operation-name.
 	\end{description}
 
 \pagestyle{newchap}
@@ -72,9 +72,9 @@
 	\caption{}
 \end{figure}
 
-The Rubik’s cube is an 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow. It was invented by the professor of architecture Ernő Rubik as a teaching tool to help his students to understand 3D objects. It was not until he scrambled his new cube and tried to restore it, that he realize that his creation was a puzzle. Originally the Rubik's cube was called the Magic Cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. \cite{Rubiks}.\\\\
+The Rubik’s cube is a 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow. It was invented by the professor of architecture Ernő Rubik as a teaching tool to help his students to understand 3D objects. It was not until he scrambled his new cube and tried to restore it, that he realize that his creation was a puzzle. Originally the Rubik's cube was called the Magic Cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. \cite{Rubiks}.\\\\
 When solving the cube the idea is to start with a scrambled cube, meaning that the colored miniature cubes (cubies) are randomly positioned by executing random operations on the cube (fig \ref{fig_1}). The goal is to obtain the unique solution where each side of the cube are covered with only one colour per side (fig \ref{fig_2}). Different methods have been developed to solve subproblems one at the time with a series of operations to reach the unique solution. Many methods are based on the idea to solve it one layer at the time.\\\\
-If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime, because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\\\
+If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime, because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to an unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [appendix A].\\\\
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 
 \section{Problem}
@@ -205,7 +205,7 @@ The dedmore algorithm is solving the cube layer-by-layer, focusing on a corners-
 \subsubsection{1. Top corners (the X)}
 Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving your corner. When this is done, rotate the whole cube to obtain the corner in your top left on the front side, as in the fig \ref{fig_9}.\\\\
 Next you’ll search for the next corner that should be positioned in the top right front side. Depending on the position on this corner, you will use different operation sequences to get it in position like the fig \ref{fig_10}.\\\\
-Simply rotate the cube and continue on. The goal of this step is to form an ‘X’ on the top face as in fig \ref{fig_11}.
+Simply rotate the cube and continue on. The goal of this step is to form a ‘X’ on the top face as in fig \ref{fig_11}.
 \subsubsection{2. Top edges}
 The goal of this step is to simply get the edges in place. Get them in place one by one. When this step is finished the cube looks like fig \ref{fig_12}.
 \subsubsection{3. Middle layer}
@@ -315,7 +315,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 
 	
 \chapter{Results and Analyze}
-The data collected during the executions are here visualised in graphs and described.\\\\ 
+In this section the results are displayed as a comparison between number of times an amount of moves where used for the both method. Results are also displayed as number of times the methods used less amount of moves than the other method and an average usage of each operation for both methods.\\\\ 
 Fig \ref{fig_18} represents the sum of executions that used the same amount of moves, where the x-axis is amount of moves and the y-axis number of executions. 
 As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (189). Turning the whole cube in any direction was not counted for as a move.\\\\
 Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
@@ -354,7 +354,7 @@ Fig \ref{fig_21} and fig \ref{fig_22} represents the amount of moves used in eac
 \end{figure}
 
 \chapter{Discussion}
-
+In this section the results in form of comparisons are discussed to find answers to why these results where given. Also discussion concerning any error that could have had an impact on the final results.
 \section{Comparison}
 As we can see in the results fig \ref{fig_18}, Lbl with daisy method has the lowest amount of moves the majority of the time. Lbl with daisy method also has the lowest minimum and maximum amount of moves with 95 and 253 respectively. The corresponding values for the Dedmore method are 96 and 292 as can be seen in fig \ref{fig_18} and in Appendix B. This shows that Lbl wins in average, best case and worst case and the result of this is shown in fig \ref{fig_19}.\\\\
 The methods often assumed the correct cubies to be on a certain side (in reality this simply means rotating the cube to desired position). The implemented versions prioritized execution of operations instead, to get the cube into position, which led to an increase in the total operations. This might explain the frequent uses of a few operations, for example U, Ui and F, shown in fig \ref{fig_20}.\\\\
@@ -370,7 +370,7 @@ Converting the methods effeciently from description of physical solving of the c
 
 \chapter{Conclusion}
 From the methods we measured Lbl with daisy method solved the cube with the least amount of moves in more than 70\% of the time and also had both the lowest moves in minima and the maxima on the tested cubes.
-\cite{MadeHow}
+
 \renewcommand{\bibname}{References}
 \bibliographystyle{plain}
 \bibliography{references}
