@@ -94,20 +94,14 @@ The second section will introduce the reader to concepts necessary to understand
 
 
 \chapter{Background}
-Providing the reader with knowledge of how the cube works and operations that you can perform on it as well as the algorithms that are in focus for this thesis.
-\section{Competitions}
-There are two types of competitions regarding the cube.
-\paragraph{Speedcubing}
-When competing in an official event regulated by the World Cube Association (WCA), the competitor has at maximum 15 seconds of inspection time of the cube before the solve begins.\cite{WCA2} The time stops when the competitor have reached the unique solution. 
-\paragraph{Fewest moves}
-The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
+This section provides the reader with knowledge of: how the cube works, move operations, competitions and the algorithms that are in focus for this thesis.
 \section{Rubik's Cube}
 Explanation of how the cube is constructed and the different notations for the operations.
 \paragraph{Description}
-The cube consists of 26 cubies with three,two or one visible sides depending on the type of cubie. There is one core piece consisting of three axes which holds the center pieces together \cite{MadeHow}. 
+The cube consists of 26 cubies with three, two or one visible side depending on the type of cubie. There is one core piece consisting of three axes which holds the center pieces together \cite{MadeHow}. 
   The corner and edge pieces (fig \ref{fig_3})  are the cubies that are movable to different edge and corner positions, the center pieces (fig \ref{fig_3}) can only be moved according to the axis.  
-\paragraph{Notation}
-The notation describes the different move operations on the cube. This thesis uses the notation used by WCA. Explained below:\\
+\paragraph{Operations}
+An operation is a movement of a layer on the cube and is communicated by notations in the Rubik's community. The notation describes the different move operations. This thesis uses the notation used by the World Cube Association (WCA) \cite{WCA1} explained below:\\
 Clockwise 90 degrees:\\
 F - Front face\\
 B - Back face\\
@@ -115,18 +109,29 @@ R - Right face\\
 L - Left face\\
 U - Upper face\\
 D - Bottom face\\
-To denote the anti-clockwise 90 degrees rotation just put a single citation mark (‘) after the letter. For example F’ - move front face anti-clockwise 90 degrees.\cite{WCA1}
-To denote clockwise 180 degrees rotation just put (2) after the letters described above. 
-\begin{figure}[b]
+The thesis also uses notation for turning the middle layer, defined as follows \cite{Ruwix}:\\
+M - Middle layer vertical, in the same direction as L\\
+E - Middle layer (Equatorial) horizontal, in the same direction as D\\
+To denote the anti-clockwise 90 degrees rotation just put a single citation mark (‘) after the letter. For example F’ - move front face anti-clockwise 90 degrees.
+To denote clockwise 180 degrees rotation just put (2) after the letters described above.\\\\
+
+
+\begin{figure}[t]
 	\centering
 	\includegraphics[width= 0.4\textwidth]{figs/representation.png}
 	\caption{Cubie types}
 	\label{fig_3}
 \end{figure}
+\section{Competitions}
+There are two types of competitions for the cube that are relevant for this thesis.
+\paragraph{Speedcubing}
+When competing in an official event regulated by the WCA, the competitor has at maximum 15 seconds of inspection time of the cube before the solve begins \cite{WCA2}. The time stops when the competitor have reached the unique solution. 
+\paragraph{Fewest moves}
+The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
 \section{Algorithms}
 The algorithms are physically methods for solving the cube by hand but matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of simulates several moves ahead to find the optimal move\cite{Kociemba}), these algorithms can with little effort be taught to humans. The algorithms are like heuristics that guarantees a solution but the number of moves exceeds gods number by far. With the algorithms as heuristics comes alot of different ways to solve each step. It is not necessary always one way to solve a step because of all  possible permutations, but more likely to perform a operation-combination to be able to perform the solving operation-combitation.  
 \paragraph{Layer-by-layer using daisy method}
-\begin{figure}
+\begin{figure}[b]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/step1.png}
