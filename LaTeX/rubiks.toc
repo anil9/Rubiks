@@ -10,19 +10,19 @@
 \contentsline {section}{\numberline {1.2}Purpose}{4}
 \contentsline {section}{\numberline {1.3}Structure}{4}
 \contentsline {chapter}{\chapternumberline {2}Background}{7}
-\contentsline {section}{\numberline {2.1}Competitions}{7}
-\contentsline {paragraph}{Speedcubing}{7}
-\contentsline {paragraph}{Fewest moves}{7}
-\contentsline {section}{\numberline {2.2}Rubik's Cube}{7}
+\contentsline {section}{\numberline {2.1}Rubik's Cube}{7}
 \contentsline {paragraph}{Description}{7}
-\contentsline {paragraph}{Notation}{7}
+\contentsline {paragraph}{Operations}{7}
+\contentsline {section}{\numberline {2.2}Competitions}{8}
+\contentsline {paragraph}{Speedcubing}{8}
+\contentsline {paragraph}{Fewest moves}{8}
 \contentsline {section}{\numberline {2.3}Algorithms}{8}
-\contentsline {paragraph}{Layer-by-layer using daisy method}{8}
+\contentsline {paragraph}{Layer-by-layer using daisy method}{9}
 \contentsline {subsubsection}{1. White cross}{9}
 \contentsline {subsubsection}{2. White corners}{9}
 \contentsline {subsubsection}{3. Middle layer edges}{9}
 \contentsline {subsubsection}{4. Yellow cross}{9}
-\contentsline {subsubsection}{5. Yellow corners}{9}
+\contentsline {subsubsection}{5. Yellow corners}{10}
 \contentsline {subsubsection}{6. Last layer permutation}{10}
 \contentsline {paragraph}{Dedmore algorithm}{11}
 \contentsline {subsubsection}{1. Top corners (the X)}{11}
@@ -40,6 +40,6 @@
 \contentsline {section}{\numberline {5.2}Errors}{22}
 \contentsline {chapter}{\chapternumberline {6}Conclusion}{23}
 \contentsline {chapter}{References}{25}
-\contentsline {chapter}{Bilagor}{25}
+\contentsline {chapter}{Bilagor}{26}
 \contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{27}
 \contentsline {appendix}{\chapternumberline {B}Data}{29}
