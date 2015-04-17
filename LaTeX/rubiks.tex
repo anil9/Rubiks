@@ -53,6 +53,7 @@
 		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
 		\item[Operation] Rotating one layer of the cube
 		\item[Notation] a character that is an abbreviation of the operation-name.
+		\item[Gods number] is the minimum number of turns to solve a Rubik's cube from a random stating position. (http://mathworld.wolfram.com/GodsNumber.html)
 	\end{description}
 
 \pagestyle{newchap}
@@ -117,12 +118,12 @@ To denote the anti-clockwise 90 degrees rotation just put a single citation mark
 To denote clockwise 180 degrees rotation just put (2) after the letters described above. 
 \begin{figure}[b]
 	\centering
-	\includegraphics[width= 0.5\textwidth]{figs/representation.png}
+	\includegraphics[width= 0.4\textwidth]{figs/representation.png}
 	\caption{Cubie types}
 	\label{fig_3}
 \end{figure}
 \section{Algorithms}
-The algorithms are physically methods for solving the cube by hand but matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of simulates several moves ahead to find the optimal move\cite{Kociemba}), these algorithms can with little effort be taught to humans.
+The algorithms are physically methods for solving the cube by hand but matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of simulates several moves ahead to find the optimal move\cite{Kociemba}), these algorithms can with little effort be taught to humans. The algorithms are like heuristics that guarantees a solution but the number of moves exceeds gods number by far. With the algorithms as heuristics comes alot of different ways to solve each step. It is not necessary always one way to solve a step because of all  possible permutations, but more likely to perform a operation-combination to be able to perform the solving operation-combitation.  
 \paragraph{Layer-by-layer using daisy method}
 \begin{figure}
 	\centering
@@ -141,7 +142,7 @@ The algorithms are physically methods for solving the cube by hand but matches t
 The layer-by-layer (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
 The daisy method is to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges, completing the white cross in the bottom \cite{Shellie}.
 \subsubsection{1. White cross}
-The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}. This is done by first making a cross on the top with the yellow center-piece and then flip the edges over to the bottom one at the time using an operation, to make sure the edge-pieces on the vertical sides are aligned with the center-pieces.
+The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}. This is done by first making a cross on the top with the yellow center-piece and then flip the edges over to the bottom, one at the time using an operation to make sure the edge-pieces on the vertical sides are aligned with the center-pieces.
 \subsubsection{2. White corners}
 With the white cross done the next step is to complete the first layer by positioning the white corner-pieces correct between the cross edges (fig \ref{fig_5}). This is achieved with three different operation-combinations depending on the colour positions, all focusing on the upper-front-left corner of the cube.
 \subsubsection{3. Middle layer edges}
@@ -369,7 +370,8 @@ Dedmores bottom corner step on the other hand works with two corners at the time
 Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods has led to an extra amount of operations on the cubes. This have had an impact on the final result.
 
 \chapter{Conclusion}
-From the methods we measured Lbl with daisy method solved the cube with the least amount of moves in more than 70\% of the time and also had both the lowest moves in minima and the maxima on the tested cubes.
+The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10000 executions made. It also shows that the same method had bot the lowest moves in minima and the maxima on the tested cubes.\\ The conclusion is that the Layer-by-layer using daisy method is the better choice of method for beginners considering least amount of moves. 
+
 
 \renewcommand{\bibname}{References}
 \bibliographystyle{plain}

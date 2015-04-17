@@ -18,12 +18,12 @@
 \contentsline {paragraph}{Notation}{5}
 \contentsline {section}{\numberline {2.3}Algorithms}{6}
 \contentsline {paragraph}{Layer-by-layer using daisy method}{6}
-\contentsline {subsubsection}{1. White cross}{6}
+\contentsline {subsubsection}{1. White cross}{7}
 \contentsline {subsubsection}{2. White corners}{7}
 \contentsline {subsubsection}{3. Middle layer edges}{7}
 \contentsline {subsubsection}{4. Yellow cross}{7}
 \contentsline {subsubsection}{5. Yellow corners}{7}
-\contentsline {subsubsection}{6. Last layer permutation}{7}
+\contentsline {subsubsection}{6. Last layer permutation}{8}
 \contentsline {paragraph}{Dedmore algorithm}{9}
 \contentsline {subsubsection}{1. Top corners (the X)}{9}
 \contentsline {subsubsection}{2. Top edges}{9}
