@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  17 APR 2015 16:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  17 APR 2015 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1330,7 +1330,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--310
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1946) has occurred while \output is active []
 
  [14 <./figs/cubeorder.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 313--321
@@ -1409,12 +1409,17 @@ Overfull \vbox (2.62976pt too high) has occurred while \output is active []
 
 [18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png> <.
 /figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 366--373
+Underfull \hbox (badness 10000) in paragraph at lines 366--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--373
+Underfull \hbox (badness 10000) in paragraph at lines 366--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--374
 
  []
 
@@ -1461,12 +1466,12 @@ otation$\T1/lmr/m/n/10.95 , April
 ] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 399--436
+Underfull \hbox (badness 10000) in paragraph at lines 400--437
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--436
+Underfull \hbox (badness 10000) in paragraph at lines 400--437
 
  []
 
@@ -1478,7 +1483,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 399--436
 Here is how much of TeX's memory you used:
  10254 strings out of 494465
  145790 string characters out of 6166361
- 263704 words of memory out of 5000000
+ 264704 words of memory out of 5000000
  13289 multiletter control sequences out of 15000+600000
  73991 words of font info for 53 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
@@ -1494,7 +1499,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 641210 bytes).
+Output written on rubiks.pdf (35 pages, 641966 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
