@@ -265,8 +265,8 @@ Based on the test data where we able to evaluate each methods use of different o
 
 
 \section{Cube representation}
- The cube is represented as six separate sides. Each side consists of nine positions each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
- For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in \ref{fig_17} would result in these internal assignments:
+ The cube is represented as six separate sides. Each side consists of nine positions, each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in fig \ref{fig_17} would result in these internal assignments:
  \begin{verbatim}
 		Side tempTop = new Side(top);
 		Side tempFront = new Side(front);
