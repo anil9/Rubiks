@@ -14,14 +14,6 @@ Anon.
   2015.
 \newblock [Accessed 6 April 2015].
 
-\bibitem{Ijsat}
-Poonam~Tyagi Ashutosh~Tyagi.
-\newblock Gen-r: Genetic algorithm based model for rubik's cube solution
-  generator.
-\newblock \url{http://www.ijsat.com/admin/download/[11-01-07-007].pdf},
-  September 2011.
-\newblock [Accessed 9 April 2015].
-
 \bibitem{Shellie}
 Shelley Chang.
 \newblock How to solve the rubik's cube.
@@ -59,6 +51,22 @@ Lars Petrus.
 \newblock \url{http://lar5.com/cube/}, May 1997.
 \newblock [Accessed 3 April 2015].
 
+\bibitem{cube20}
+Thomas Rokicki, Herbert Kociemba, Morley Davidson, and John Dethridge.
+\newblock The diameter of the rubik's cube group is twenty.
+\newblock
+  \url{http://epubs.siam.org.focus.lib.kth.se/doi/pdf/10.1137/140973499},
+  November 2014.
+\newblock [Accessed 18 April 2015].
+
+\bibitem{Ijsat}
+Ashutosh Tyagi and Poonam Tyagi.
+\newblock Gen-r: Genetic algorithm based model for rubik's cube solution
+  generator.
+\newblock \url{http://www.ijsat.com/admin/download/[11-01-07-007].pdf},
+  September 2011.
+\newblock [Accessed 9 April 2015].
+
 \bibitem{Faculty}
 Scott Vaughen.
 \newblock Counting the permutations of the rubik's cube.
@@ -66,19 +74,19 @@ Scott Vaughen.
   no date.
 \newblock [Accessed 6 April 2015].
 
+\bibitem{WCA1}
+WCA.
+\newblock Wca regulations article 12: Notation.
+\newblock
+  \url{https://www.worldcubeassociation.org/regulations/#article-12-notation},
+  April 2014.
+\newblock [Accessed 3 April 2015].
+
 \bibitem{WCA2}
 WCA.
 \newblock Wca regulations article a: Speed cubing.
 \newblock \url{https://www.worldcubeassociation.org/regulations/#A3a1}, April
   2014.
-\newblock [Accessed 3 April 2015].
-
-\bibitem{WCA1}
-WCA.
-\newblock Wca regulations atricle 12: Notation.
-\newblock
-  \url{https://www.worldcubeassociation.org/regulations/#article-12-notation},
-  April 2014.
 \newblock [Accessed 3 April 2015].
 
 \end{thebibliography}

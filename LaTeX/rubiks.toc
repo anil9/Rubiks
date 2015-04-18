@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{2. White corners}{9}
 \contentsline {subsubsection}{3. Middle layer edges}{9}
 \contentsline {subsubsection}{4. Yellow cross}{9}
-\contentsline {subsubsection}{5. Yellow corners}{10}
+\contentsline {subsubsection}{5. Yellow corners}{9}
 \contentsline {subsubsection}{6. Last layer permutation}{10}
 \contentsline {paragraph}{Dedmore algorithm}{11}
 \contentsline {subsubsection}{1. Top corners (the X)}{11}
