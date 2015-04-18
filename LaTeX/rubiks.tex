@@ -79,7 +79,6 @@ The problem was stated as follows:
 \begin{itemize}
 \item[] Which of the beginner algorithms would be more effective for speedcubing?
 \item[] Which of the beginner algorithms solves the cube with the least amount of moves?
-\item[] Which beginner algorithm is easiest to learn and execute to someone inexperienced with the cube?
 \end{itemize}
 \section{Purpose}
 The purpose of testing the methods is to find out which uses the least amount of moves and to find out which method suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the method is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
@@ -251,9 +250,9 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 
 \chapter{Method}
 For this thesis the two methods used were implementation of methods and analyzis of the data representation. The implementations allowed analyzation and collection of data from multiple runs.
-Both of the algorithms were implemented in the same programming language and with the same built-in functions and data structures to rule out unnecessary differences and obtain a realistic comparison.
-The algorithms were run a number of times on different cubes to obtain a good set of data for the comparison. The data was obtained during the runs by gathering information as: number of moves used, statistics of moves used and number of times the algorithm used least amount of moves.  
-The test data was evaluated for each algorithms use of different operations, number of operations used and if suitable for speedcubing.
+Both of the algorithms were implemented in the same programming language and with the same built-in functions and data structures to rule out differences and obtain a realistic comparison.
+The algorithms were run a number of times on different cubes to obtain a good set of data for the comparison. The data was obtained during the runs by gathering information as: number of moves used, statistics of moves used and number of times one algorithm used less moves than the other.  
+For each algorithm the test data was evaluated by use of different operations, number of operations used and if suitable for speedcubing.
 
 
 \section{Cube representation}
@@ -314,7 +313,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 
 	
 \chapter{Results and Analyze}
-In this section the results are displayed as a comparison between amount of moves used, statistics for operation usage and number of times the method used least amount of moves, for both method. Results are also displayed as number of times the methods used less amount of moves than the other method and an average usage of each operation for both methods.\\\\ 
+In this section the results are displayed as a comparison of the methods amount of moves used, statistics for specific operation usage and number of times the method used least amount of moves. The amount of moves in each step of both methods are also presented.\\\\ 
 Fig \ref{fig_18} represents the sum of executions that used the same amount of moves, where the x-axis is amount of moves and the y-axis number of executions. 
 As shown by the highest pillars for both methods, the Lbl with daisy method had a lower average (170) amount of moves than the dedmore method (189). Turning the whole cube in any direction was not counted for as a move.\\\\
 Fig \ref{fig_19} represents a comparison of the number of executions the methods used least amount of moves, with the y-axis as number of executions. 
@@ -353,7 +352,7 @@ Fig \ref{fig_21} and fig \ref{fig_22} represents the amount of moves used in eac
 \end{figure}
 
 \chapter{Discussion}
-In this section the results in form of comparisons are discussed to find answers to why these results where given. Also discussion concerning any error that could have had an impact on the final results.
+In this section we discuss the results in form of comparisons and reflect on why these results where given. We also discuss any errors that could have had an impact on the final results.
 \section{Comparison}
 As we can see in the results fig \ref{fig_18}, Lbl with daisy method has the lowest amount of moves the majority of the times. Lbl with daisy method also has the lowest minimum and maximum amount of moves with 95 and 253 respectively. The corresponding values for the Dedmore method are 96 and 292 as can be seen in fig \ref{fig_18} and in Appendix B. This shows that Lbl wins in average, best case and worst case and the result of this is shown in fig \ref{fig_19}.\\\\
 The methods often assumed the correct cubies to be on a certain side (in reality this simply means rotating the cube to desired position). The implemented versions prioritized execution of operations instead, to get the cube into position, which led to an increase in the total operations. This might explain the frequent uses of a few operations, for example U, Ui and F, shown in fig \ref{fig_20}.\\\\
@@ -369,7 +368,7 @@ The authors own experience (as novices) of the operations indicates that the ope
 Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods led to an extra amount of operations on the cubes. This had an impact on the final result.
 
 \chapter{Conclusion}
-The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same method had the lowest moves in minima and maxima on the tested cubes.\\ The conclusion is that the Layer-by-layer using daisy method is the better choice of method for beginners considering least amount of moves. 
+The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same method had the lowest moves in minima and maxima on the tested cubes. This concludes that the Layer-by-layer using daisy method is the better choice of method regarding the least amount of moves.\\\\
 According to the assertion built on the authors own experience that some operations are more time consuming than others; Layer-by-layer using daisy method is more suitable for speedcubing than Dedmore. This conclusion is based on the statistics of operation-usage, showing that Dedmore used these time-consuming operations seven times more frequently than Lbl with daisy method.
 
 
