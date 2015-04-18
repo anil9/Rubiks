@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  18 APR 2015 10:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  18 APR 2015 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1250,42 +1250,45 @@ File: figs/rubiks-4-corners.jpg Graphic file (type jpg)
 Package pdftex.def Info: figs/rubiks-4-corners.jpg used on input line 199.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
-
+Overfull \hbox (3.15845pt too wide) in paragraph at lines 207--209
+\T1/lmr/m/n/10.95 Match the po-si-tion of this cor-ner to one of 6 sce-nar-ios 
+and ex-e-cute dif-fer-ent operation-
  []
 
 
-Underfull \vbox (badness 1708) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
- [11 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/ru
-biks-4-corners.jpg>] <figs/rubiks-top-edges.jpg, id=91, 300.3722pt x 235.63031p
-t>
+ []
+
+[11 <./figs/rubiks-frst-corner.jpg> <./figs/rubiks-scnd-corner.jpg> <./figs/rub
+iks-4-corners.jpg>]
+<figs/rubiks-top-edges.jpg, id=91, 300.3722pt x 235.63031pt>
 File: figs/rubiks-top-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-top-edges.jpg>
-Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 223.
+Package pdftex.def Info: figs/rubiks-top-edges.jpg used on input line 221.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/rubiks-bottom-edges.jpg, id=92, 300.3722pt x 235.63031pt>
 File: figs/rubiks-bottom-edges.jpg Graphic file (type jpg)
 
 <use figs/rubiks-bottom-edges.jpg>
-Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 228.
+Package pdftex.def Info: figs/rubiks-bottom-edges.jpg used on input line 226.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/last-edge-correct.jpg, id=93, 300.3722pt x 235.63031pt>
 File: figs/last-edge-correct.jpg Graphic file (type jpg)
 
 <use figs/last-edge-correct.jpg>
-Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 233.
+Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 231.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 234--234
+Underfull \hbox (badness 4132) in paragraph at lines 232--232
 []\T1/lmr/m/n/10 (c) |One edges cor-rectly
  []
 
@@ -1293,138 +1296,139 @@ Underfull \hbox (badness 4132) in paragraph at lines 234--234
 File: figs/fish-pattern.jpg Graphic file (type jpg)
 
 <use figs/fish-pattern.jpg>
-Package pdftex.def Info: figs/fish-pattern.jpg used on input line 242.
+Package pdftex.def Info: figs/fish-pattern.jpg used on input line 240.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/H-pattern.jpg, id=95, 300.3722pt x 235.63031pt>
 File: figs/H-pattern.jpg Graphic file (type jpg)
  <use figs/H-pattern.jpg>
-Package pdftex.def Info: figs/H-pattern.jpg used on input line 247.
+Package pdftex.def Info: figs/H-pattern.jpg used on input line 245.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--253
+Underfull \hbox (badness 10000) in paragraph at lines 216--251
 
  []
 
 [12 <./figs/rubiks-top-edges.jpg> <./figs/rubiks-bottom-edges.jpg> <./figs/last
--edge-correct.jpg> <./figs/fish-pattern.jpg> <./figs/H-pattern.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+-edge-correct.jpg>] [13 <./figs/fish-pattern.jpg> <./figs/H-pattern.jpg>]
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 264.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 262.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13
-
-]
-<figs/cubeorder.jpg, id=104, 602.25pt x 451.6875pt>
+) [15]
+<figs/cubeorder.jpg, id=110, 602.25pt x 451.6875pt>
 File: figs/cubeorder.jpg Graphic file (type jpg)
  <use figs/cubeorder.jpg>
-Package pdftex.def Info: figs/cubeorder.jpg used on input line 290.
+Package pdftex.def Info: figs/cubeorder.jpg used on input line 288.
 (pdftex.def)             Requested size: 356.39758pt x 267.30658pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--304
+Underfull \hbox (badness 10000) in paragraph at lines 293--302
 
  []
 
-[14 <./figs/cubeorder.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 307--315
+[16 <./figs/cubeorder.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 305--313
 
  []
 
-[15] [16
+[17] [18
 
-] <figs/graphone.png, id=115, 602.25pt x 372.39125pt>
+] <figs/graphone.png, id=121, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)
 
 <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 328.
+Package pdftex.def Info: figs/graphone.png used on input line 326.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 328--329
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
-<figs/graphtwo.png, id=116, 602.25pt x 372.39125pt>
+<figs/graphtwo.png, id=122, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
  <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 334.
+Package pdftex.def Info: figs/graphtwo.png used on input line 332.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-<figs/graphthree.png, id=117, 602.25pt x 372.39125pt>
+<figs/graphthree.png, id=123, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 340.
+Package pdftex.def Info: figs/graphthree.png used on input line 338.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-<figs/lbldaisysteps.png, id=118, 602.25pt x 372.39125pt>
+<figs/lbldaisysteps.png, id=124, 602.25pt x 372.39125pt>
 File: figs/lbldaisysteps.png Graphic file (type png)
 
 <use figs/lbldaisysteps.png>
-Package pdftex.def Info: figs/lbldaisysteps.png used on input line 346.
+Package pdftex.def Info: figs/lbldaisysteps.png used on input line 344.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-<figs/dedmoresteps.png, id=119, 602.25pt x 372.39125pt>
+<figs/dedmoresteps.png, id=125, 602.25pt x 372.39125pt>
 File: figs/dedmoresteps.png Graphic file (type png)
 
 <use figs/dedmoresteps.png>
-Package pdftex.def Info: figs/dedmoresteps.png used on input line 352.
+Package pdftex.def Info: figs/dedmoresteps.png used on input line 350.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--356
+Underfull \hbox (badness 10000) in paragraph at lines 317--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--356
+Underfull \hbox (badness 10000) in paragraph at lines 317--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--356
+Underfull \hbox (badness 10000) in paragraph at lines 317--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--356
+Underfull \hbox (badness 10000) in paragraph at lines 317--354
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17]
+[19]
 
-LaTeX Warning: Text page 18 contains only floats.
+LaTeX Warning: Text page 20 contains only floats.
 
 
 Overfull \vbox (2.62976pt too high) has occurred while \output is active []
 
 
-[18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png> <.
-/figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 360--368
+[20 <./figs/graphone.png> <./figs/graphtwo.png>] [21 <./figs/graphthree.png> <.
+/figs/lbldaisysteps.png>] [22 <./figs/dedmoresteps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 358--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--368
+Underfull \hbox (badness 10000) in paragraph at lines 358--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--368
+Underfull \hbox (badness 10000) in paragraph at lines 358--366
 
  []
 
-[21
+[23
 
-] [22] (./rubiks.bbl [23
+] [24] (./rubiks.bbl [25
 
-] [24
+] [26
 
 ]
 bibitemlist
@@ -1452,27 +1456,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--84
 otation$\T1/lmr/m/n/10.95 , April
  []
 
-[25]
+[27]
 Underfull \hbox (badness 3407) in paragraph at lines 86--91
 []\T1/lmr/m/n/10.95 WCA.  Wca reg-u-la-tions ar-ti-cle a: Speed cub-ing.  $\T1/
 lmtt/m/n/10.95 https : / / www .
  []
 
-) [26] [27
+) [28] [29
 
-] [28
+] [30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 395--432
+Underfull \hbox (badness 10000) in paragraph at lines 393--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--432
+Underfull \hbox (badness 10000) in paragraph at lines 393--430
 
  []
 
-[29]
+[31]
 \tf@toc=\write4
 \openout4 = `rubiks.toc'.
 
@@ -1496,10 +1500,10 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 640037 bytes).
+Output written on rubiks.pdf (37 pages, 641297 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
+ 220 PDF objects out of 1000 (max. 8388607)
+ 131 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

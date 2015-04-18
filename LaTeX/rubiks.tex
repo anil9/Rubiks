@@ -47,7 +47,7 @@
 		\item[Scramble] perfoming an amount of random operations on a solved cube to reach a non-solved state.
 		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
 		\item[Operation] Rotating one layer of the cube
-		\item[Notation] a character that is an abbreviation of the operation-name.
+		\item[Notation] an abbreviation of the operation-name.
 	\end{description}
 
 \pagestyle{newchap}
@@ -204,19 +204,17 @@ The dedmore algorithm is solving the cube layer-by-layer, focusing on a corners-
 \end{figure}
 
 \subsubsection{1. Top corners (the X)}
-Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving your corner. When this is done, rotate the whole cube to obtain the corner in your top left on the front side, as in the fig \ref{fig_9}.\\\\
-Next you’ll search for the next corner that should be positioned in the top right front side. Depending on the position on this corner, you will use different operation sequences to get it in position like the fig \ref{fig_10}.\\\\
-Simply rotate the cube and continue on. The goal of this step is to form a ‘X’ on the top face as in fig \ref{fig_11}.
+Start off by finding a starting corner. For example aim to solve the blue top face first. Rotate the cube to obtain the blue side of the corner in top position. Then move the blue center-piece into position without moving the corner. When this is done, rotate the whole cube to put the corner in the top left on the front side, as in the fig \ref{fig_9}.\\\\
+Search for the next corner that should be positioned in the top right front side. Match the position of this corner to one of 6 scenarios and execute different operation-combinations to get it in position like the fig \ref{fig_10}. Rotate the cube and continue with the next corner. The goal of this step is to form a ‘X’ on the top face as in fig \ref{fig_11}.
 \subsubsection{2. Top edges}
-The goal of this step is to simply get the edges in place. Get them in place one by one. When this step is finished the cube looks like fig \ref{fig_12}.
+The goal of this step is to get the edges in place. The strategy is to get them in place one by one, by matching the cube to one of five scenarios and then execute an operation-combination for solving that scenario. When this step is finished the cube looks like fig \ref{fig_12}.
 \subsubsection{3. Middle layer}
 The next step is to solve the middle layer by moving down a cubie from the middle of the third layer to the correct position on the second layer (fig \ref{fig_6}). 
-
 \subsubsection{4. Bottom corners}
-Here the cube is turned upside down and the goal here is again to build a (green) X with the corners(fig \ref{fig_13}).
+Here the cube is turned upside down and the goal is again to build a (green) `X' with the corners(fig \ref{fig_13}). This is done by regarding the 4 corner cubies as 2 pairs and moving each pair into correct position. The correct pair can be either in each other's position, or diagonally from each other. Both requiring different operation-combinations to solve.\\\\When the corner pairs are in position, the next part is to make sure the cubies are facing the correct way. This is done by matching the cube to one of seven different scenarios, and perform an operation-combination. This might have to be repeated up to 3 times for the step to be completed. 
 \subsubsection{5. Bottom edges}
-In this step, at least one edge is already in the correct place (the color might be switched as in fig \ref{fig_14}). Find that edge and put it on the front side. Then position every other edge correctly by using a series of operations.\\\\
-When every edge are correctly positioned, there are 2 possible states left. Each requires a different sequence of operations to solve. The ‘fish’ pattern (fig \ref{fig_15}) and the ‘H’ pattern (fig \ref{fig_16}). Execute the sequence for the pattern and you’ll then have solved the cube.
+In this step, at least one edge is already in the correct place (the color might be switched as in fig \ref{fig_14}). Find that edge and put it on the front side. Then position every other edge correctly by executing an operation-combination up to 2 times.\\\\
+When every edge are correctly positioned, there are 2 possible states left. Each requires a different sequence of operations to solve. The ‘fish’ pattern (fig \ref{fig_15}) and the ‘H’ pattern (fig \ref{fig_16}). Execute the sequence for the pattern and the cube is solved.
 \begin{figure}[bh]
 	\centering
 	\begin{subfigure}[!b]{0.3\textwidth}
@@ -371,7 +369,7 @@ The authors own experience (as novices) of the operations indicates that the ope
 Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods led to an extra amount of operations on the cubes. This had an impact on the final result.
 
 \chapter{Conclusion}
-The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same method had the lowest moves in minima and the maxima on the tested cubes.\\ The conclusion is that the Layer-by-layer using daisy method is the better choice of method for beginners considering least amount of moves. 
+The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same method had the lowest moves in minima and maxima on the tested cubes.\\ The conclusion is that the Layer-by-layer using daisy method is the better choice of method for beginners considering least amount of moves. 
 According to the assertion built on the authors own experience that some operations are more time consuming than others; Layer-by-layer using daisy method is more suitable for speedcubing than Dedmore. This conclusion is based on the statistics of operation-usage, showing that Dedmore used these time-consuming operations seven times more frequently than Lbl with daisy method.
 
 
