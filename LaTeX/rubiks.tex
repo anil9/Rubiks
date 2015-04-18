@@ -258,14 +258,14 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 \end{figure}
 
 \chapter{Method}
-For this thesis the two methods used where implementation of methods and analyzis of the data representation. The motivation for the choice of methods are that with implementations where we able to collect data from executions and the techniqal level that came with the implementation. 
-Both of the algorithms was implemented in the same programming language and with the same built-in functions and data structures to rule out unnecessary differences and obtain a realistic comparison in the end.
-The algorithms needed to be executed a number of times on different cubes to obtain a good set of data for the comparison. The data was be obtained during the executions by gathering information as: number of moves used, statistics of moves used and number of times the method used least amount of moves.  
-Based on the test data where we able to evaluate each methods use of different operations, number of operations used and if suitable for speedcubing. The differences in used operations provided information to evaluate if the times to solve are realistic for human solving. This depends on the usage of operations that are time-consuming for physical solving of the cube. 
+For this thesis the two methods used were implementation of methods and analyzis of the data representation. The implementations allowed analyzing and collection of data from multiple executions.
+Both of the algorithms was implemented in the same programming language and with the same built-in functions and data structures to rule out unnecessary differences and obtain a realistic comparison.
+The algorithms were executed a number of times on different cubes to obtain a good set of data for the comparison. The data was obtained during the executions by gathering information as: number of moves used, statistics of moves used and number of times the algorithm used least amount of moves.  
+The test data was evaluated for each algorithms use of different operations, number of operations used and if suitable for speedcubing.
 
 
 \section{Cube representation}
- The cube is represented as six separate sides. Each side consists of nine positions, each of which has a color (as in \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ The cube is represented as six separate sides. Each side consists of nine positions, each of which has a color (see fig \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
  For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in fig \ref{fig_17} would result in these internal assignments:
  \begin{verbatim}
 		Side tempTop = new Side(top);
