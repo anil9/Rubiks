@@ -17,7 +17,7 @@
 \contentsline {paragraph}{Speedcubing}{8}
 \contentsline {paragraph}{Fewest moves}{8}
 \contentsline {section}{\numberline {2.3}Algorithms}{8}
-\contentsline {paragraph}{Layer-by-layer using daisy method}{9}
+\contentsline {paragraph}{Layer-by-layer using daisy method}{8}
 \contentsline {subsubsection}{1. White cross}{9}
 \contentsline {subsubsection}{2. White corners}{9}
 \contentsline {subsubsection}{3. Middle layer edges}{9}
