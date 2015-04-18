@@ -257,7 +257,7 @@ The test data was evaluated for each algorithms use of different operations, num
 
 
 \section{Cube representation}
- The cube is represented as six separate sides. Each side consists of nine positions, each of which has a color (see fig \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation will need to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) is to enforce them during the operations.\\\\
+ The cube was represented as six separate sides with nine positions per side, each of which has a color (see fig \ref{fig_17}). There exists no relation between positions in different sides; unlike the physical cube, where for example an edge has two colors. This means any correctly performed operation needed to move the colours to the correct side and location. The only way to keep the rules of the physical cube (correct colour-combination of a cubie) were to enforce them during the operations.\\\\
  For example performing the `F' operation (flip the front layer 90 degrees clockwise) on the cube shown in fig \ref{fig_17} would result in these internal assignments:
  \begin{verbatim}
 		Side tempTop = new Side(top);
@@ -302,7 +302,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 	\end{algorithm}
 
 \section{Method implementation}
-	Both methods contains several steps and all of them uses the same structure. First look if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method [Algorithm 2]. \\\\
+	Both methods contains several steps and all of them uses the same structure. Starting of by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method to reach the solution state for the step [Algorithm 2]. \\\\
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{Method steps general idea}
