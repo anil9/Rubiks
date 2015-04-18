@@ -34,6 +34,7 @@
 \contentsline {section}{\numberline {3.1}Cube representation}{15}
 \contentsline {section}{\numberline {3.2}Scramble}{16}
 \contentsline {section}{\numberline {3.3}Method implementation}{17}
+\contentsline {paragraph}{Complexity}{17}
 \contentsline {chapter}{\chapternumberline {4}Results and Analyze}{19}
 \contentsline {chapter}{\chapternumberline {5}Discussion}{23}
 \contentsline {section}{\numberline {5.1}Comparison}{23}

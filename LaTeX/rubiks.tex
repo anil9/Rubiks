@@ -302,7 +302,8 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 	\end{algorithm}
 
 \section{Method implementation}
-	Both methods contains several steps and all of them uses the same structure. Starting of by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method to reach the solution state for the step [Algorithm 2]. \\\\
+	Both methods contains several steps and all of them uses the same structure. Starting of by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method to reach the solution state for the step [Algorithm 2].
+	\paragraph{Complexity} With methods implemented as desired with the same type of data structures as described above . The steps of both methods will use the same general idea with the same datastructures in the implementation [Algorithm 2], this will result in faciliation during the comparison with no big differences in implementations. Both methods runs in linear time even with while-loops that break for example when a step is done. These loops has a constant maximum number of iterations. This is because each step will focus on a finite part of the cube, which results in a finite amount of permutations to try when a permutation not matches a desired state.
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{The general idea of method steps}
@@ -368,8 +369,7 @@ The authors own experience (as novices) of the operations indicates that the ope
 \section{Errors}
 Converting the methods effeciently from description of physical solving of the cube to the code solver proved to be challenging. Ambigous and unfinished description of steps in the methods led to an extra amount of operations on the cubes. This had an impact on the final result.
 
-------------------
-The methods was implemented as desired with the same type of data structures as described in the method section. The steps of both methods used the same general idea with the same datastructures in the implementation [Algorithm 2], this resulted in faciliation during the comparison with no big differences. Both methods runs in linear time even with while-loops that break for example when a step is done. These loops has a constant maximum number of iterations. This is because each step focus on a finite part of the cube, which results in a finite amount of permutations to try when a permutation is not matching a desired state.      
+      
 
 \chapter{Conclusion}
 The measurements shows that the Layer-by-layer using daisy method solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same method had the lowest moves in minima and maxima on the tested cubes.\\ The conclusion is that the Layer-by-layer using daisy method is the better choice of method for beginners considering least amount of moves. 
