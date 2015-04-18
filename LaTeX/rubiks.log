@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  18 APR 2015 09:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  18 APR 2015 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1329,10 +1329,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--310
 
  []
 
-
-Underfull \vbox (badness 1946) has occurred while \output is active []
-
- [14 <./figs/cubeorder.jpg>]
+[14 <./figs/cubeorder.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 313--321
 
  []
@@ -1499,7 +1496,7 @@ public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ssdc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 642008 bytes).
+Output written on rubiks.pdf (35 pages, 641832 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
  124 compressed objects within 2 object streams
