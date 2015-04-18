@@ -76,7 +76,7 @@
 \setulmargins{*}{*}{*}
 \checkandfixthelayout
 \def\subtitle{\gdef\thesubtitle}
-\def\trita{\gdef\thetrita}
+%\def\trita{\gdef\thetrita}
 \def\kthlogo{\gdef\thekthlogo}
 \def\blurb{\gdef\theblurb}
 \let\thesubtitle\relax
@@ -102,7 +102,7 @@
     \theblurb\par
   }
   \vfill
-  \centerline{\thetrita}
+  %\centerline{\thetrita}
   \rmfamily
   \cleardoublepage
   \endgroup
