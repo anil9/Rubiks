@@ -284,7 +284,7 @@ For each algorithm the test data was evaluated by use of different operations, n
 \end{verbatim}
 \begin{figure}[b]
 	\centering
-	\includegraphics[width= 0.9\textwidth]{figs/cubeorder.jpg}
+	\includegraphics[width= 0.8\textwidth]{figs/cubeorder.jpg}
 	\caption{Side numberings}
 	\label{fig_17}
 \end{figure}  
@@ -302,6 +302,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 
 \section{Method implementation}
 	Both methods contains several steps and all of them uses the same structure. Starting of by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the method) desired position and then perform operations in an order given by the method to reach the solution state for the step [Algorithm 2].
+	\raggedbottom
 	\paragraph{Complexity} With methods implemented as desired with the same type of data structures as described above . The steps of both methods will use the same general idea with the same datastructures in the implementation [Algorithm 2], this will result in faciliation during the comparison with no big differences in implementations. Both methods runs in linear time even with while-loops that break for example when a step is done. These loops has a constant maximum number of iterations. This is because each step will focus on a finite part of the cube, which results in a finite amount of permutations to try when a permutation not matches a desired state.
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
