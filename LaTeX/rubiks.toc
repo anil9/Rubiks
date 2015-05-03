@@ -17,7 +17,7 @@
 \contentsline {paragraph}{Speedcubing}{6}
 \contentsline {paragraph}{Fewest moves}{6}
 \contentsline {section}{\numberline {2.3}Algorithms}{6}
-\contentsline {paragraph}{Layer-by-layer using daisy method}{6}
+\contentsline {paragraph}{Layer-by-layer using daisy algorithm}{6}
 \contentsline {subsubsection}{1. White cross}{7}
 \contentsline {subsubsection}{2. White corners}{7}
 \contentsline {subsubsection}{3. Middle layer edges}{7}
@@ -33,7 +33,7 @@
 \contentsline {chapter}{\chapternumberline {3}Method}{13}
 \contentsline {section}{\numberline {3.1}Cube representation}{13}
 \contentsline {section}{\numberline {3.2}Scramble}{14}
-\contentsline {section}{\numberline {3.3}Method implementation}{15}
+\contentsline {section}{\numberline {3.3}Implementation}{15}
 \contentsline {paragraph}{Complexity}{15}
 \contentsline {chapter}{\chapternumberline {4}Results and Analyze}{17}
 \contentsline {chapter}{\chapternumberline {5}Discussion}{21}
