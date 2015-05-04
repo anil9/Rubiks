@@ -373,7 +373,7 @@ The reason why the two steps in Lbl with daisy (total average 19 moves) uses les
 The step Yellow cross has three possible starting positions, which needs two different operation-combinations or both of them combined, and each operation-combination consists of 6 moves.
 The step Yellow corners has the same structure as yellow cross with three cases. Two of these cases are operation-combinations needed to be able to perform the solving case depending on the permutation of the cube. Each case uses at a minimum 8 moves, the solving case can use 16 moves in the worst scenario.\\\\
 Analyzing Dedmores bottom corner step shows that it works with two corners at the time, positioning them by using two cases of operation-combination for the first pair (11 moves each) and one case if needed for the second pair (11 moves). Now in the finishing part of the step the cube can be matched with one of seven possible states and when matched an operation-combination (10 moves) needs to be performed to solve the step. That operation-combination should (according to the description of the step) be performed at a maximum of three times before the step is finished, which turned out to be incorrect. We have found that it is possible that the finishing part of the step needs more than three performed operation-combinations, making the amount of moves go up over 30 in worst case with a top, for just this part. According to the description of the step the max amount of moves should be 52 and least amount of moves should be 21, making the least amount of moves for Dedmore's bottom corner step higher than the average for Lbl with daisys steps.\\\\   
-The data in fig \ref{fig_20} and Appendix B shows that Dedmore used both E, Ei and M, Mi more than Lbl with daisy. With this results in mind we investigate the graph \ref{fig_23} which shows the amount of time-units used by the time-consuming operations compared to the total time. This should according to the assertions made imply that Dedmore uses more time than Lbl with daisy algorithm because of the time-consuming operations used.   		     
+The data in fig \ref{fig_20} and Appendix B shows that Dedmore used both E, Ei and M, Mi more than Lbl with daisy. With this results in mind we investigate the graph \ref{fig_23} which shows the amount of time-units used by the time-consuming operations compared to the total time. This should, according to the assumptions made, imply that Dedmore uses more time than Lbl with daisy algorithm because of the time-consuming operations used.   		     
 
 
 \section{Errors}
@@ -383,9 +383,8 @@ Converting the algorithms effeciently from description of physical solving of th
 
 \chapter{Conclusion}
 The measurements shows that the Layer-by-layer using daisy algorithm solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same algorithm had the lowest moves in minima and maxima on the tested cubes. This concludes that the Layer-by-layer using daisy algorithm is the better choice of algorithm regarding the least amount of moves.\\\\
-
 Time measurements shows that Layer-by-layer using daisy algorithm is more suitable for speedcubing than Dedmore. This conclusion is based on the statistics of operation-usage, showing that Dedmore used these time-consuming operations seven times more frequently than Lbl with daisy algorithm.
-ALso on the assertion made on time-differences between time-consuming operations and normal operation.
+This is also supported by the assumption made on the time-differences between time-consuming and normal operations.
 
 
 \renewcommand{\bibname}{References}
