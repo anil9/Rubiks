@@ -1342,56 +1342,67 @@ Overfull \hbox (29.83905pt too wide) in paragraph at lines 308--316
 File: figs/graphone.png Graphic file (type png)
 
 <use figs/graphone.png>
-Package pdftex.def Info: figs/graphone.png used on input line 330.
+Package pdftex.def Info: figs/graphone.png used on input line 331.
 (pdftex.def)             Requested size: 435.60242pt x 269.36021pt.
 
-Overfull \hbox (39.60242pt too wide) in paragraph at lines 330--331
+Overfull \hbox (39.60242pt too wide) in paragraph at lines 331--332
  [][] 
  []
 
 <figs/graphtwo.png, id=115, 602.25pt x 372.39125pt>
 File: figs/graphtwo.png Graphic file (type png)
  <use figs/graphtwo.png>
-Package pdftex.def Info: figs/graphtwo.png used on input line 336.
+Package pdftex.def Info: figs/graphtwo.png used on input line 337.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/graphthree.png, id=116, 602.25pt x 372.39125pt>
 File: figs/graphthree.png Graphic file (type png)
 
 <use figs/graphthree.png>
-Package pdftex.def Info: figs/graphthree.png used on input line 342.
+Package pdftex.def Info: figs/graphthree.png used on input line 343.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/lbldaisysteps.png, id=117, 602.25pt x 372.39125pt>
 File: figs/lbldaisysteps.png Graphic file (type png)
 
 <use figs/lbldaisysteps.png>
-Package pdftex.def Info: figs/lbldaisysteps.png used on input line 348.
+Package pdftex.def Info: figs/lbldaisysteps.png used on input line 349.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
 <figs/dedmoresteps.png, id=118, 602.25pt x 372.39125pt>
 File: figs/dedmoresteps.png Graphic file (type png)
 
 <use figs/dedmoresteps.png>
-Package pdftex.def Info: figs/dedmoresteps.png used on input line 354.
+Package pdftex.def Info: figs/dedmoresteps.png used on input line 355.
+(pdftex.def)             Requested size: 396.0pt x 244.86983pt.
+ <figs/time.png, id=119, 602.25pt x 372.39125pt>
+File: figs/time.png Graphic file (type png)
+
+<use figs/time.png>
+Package pdftex.def Info: figs/time.png used on input line 361.
 (pdftex.def)             Requested size: 396.0pt x 244.86983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--358
+Underfull \hbox (badness 10000) in paragraph at lines 321--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--358
+Underfull \hbox (badness 10000) in paragraph at lines 321--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--358
+Underfull \hbox (badness 10000) in paragraph at lines 321--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--358
+Underfull \hbox (badness 10000) in paragraph at lines 321--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--365
 
  []
 
@@ -1409,25 +1420,25 @@ Overfull \vbox (2.62976pt too high) has occurred while \output is active []
 
 
 [18 <./figs/graphone.png> <./figs/graphtwo.png>] [19 <./figs/graphthree.png> <.
-/figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 362--370
+/figs/lbldaisysteps.png>] [20 <./figs/dedmoresteps.png> <./figs/time.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 368--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--370
+Underfull \hbox (badness 10000) in paragraph at lines 368--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--370
+Underfull \hbox (badness 10000) in paragraph at lines 368--376
 
  []
 
 [21
 
 ] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 378--380
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
@@ -1472,12 +1483,12 @@ lmtt/m/n/10.95 https : / / www .
 ] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 398--435
+Underfull \hbox (badness 10000) in paragraph at lines 404--441
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--435
+Underfull \hbox (badness 10000) in paragraph at lines 404--441
 
  []
 
@@ -1487,10 +1498,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--435
 
  (./rubiks.aux) ) 
 Here is how much of TeX's memory you used:
- 10250 strings out of 494465
- 145757 string characters out of 6166361
- 264517 words of memory out of 5000000
- 13286 multiletter control sequences out of 15000+600000
+ 10255 strings out of 494465
+ 145840 string characters out of 6166361
+ 263572 words of memory out of 5000000
+ 13291 multiletter control sequences out of 15000+600000
  70999 words of font info for 52 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  45i,15n,40p,1077b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1504,10 +1515,10 @@ re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 628065 bytes).
+Output written on rubiks.pdf (35 pages, 637294 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 209 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
