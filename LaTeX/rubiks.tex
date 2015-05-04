@@ -25,14 +25,16 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
- If you were to randomly rotate the faces of a Rubik's cube in an attempt to solve the cube, there would be almost zero chance of achieving the solved state in your lifetime. This thesis explores two commonly known beginner algorithms for human solving of Rubik’s cubes to find how they differ in solving speed and amount of moves. The algorithms were implemented and run on a large amount of scrambled cubes to collect data. The results showed that Layer-by-layer with daisy algorithm had a lower average amount of moves than the Dedmore algorithm. The main difference in amount of moves lies in the steps that solve the last layer of the cube. The Layer-by-layer with daisy algorithm uses only one-seventh of the time-consuming operations that Dedmore algorithm uses, which concludes that it is more suitable for speedcubing.  
+ Over the years different algorithms have been developed to step-by-step solve parts of the Rubik's cube until finally reaching the unique solution. This thesis explores two commonly known beginner algorithms for solving Rubik’s cube to find how they differ in solving speed and amount of moves. The algorithms were implemented and run on a large amount of scrambled cubes to collect data. The results showed that Layer-by-layer with daisy algorithm had a lower average amount of moves than the Dedmore algorithm. The main difference in amount of moves lies in the steps that solve the last layer of the cube. The Layer-by-layer with daisy algorithm uses only one-seventh of the time-consuming operations that Dedmore algorithm uses, which concludes that it is more suitable for speedcubing. 
+
+
   
 
 
 \end{abstract}
 \clearpage
 \begin{foreignabstract}{swedish}
-  Om man skulle rotera sidorna av en Rubik's kub slumpvis i ett försök att lösa kuben skulle chansen att lyckas under sin livstid vara nästan obefintlig. Denna rapport utforskar två allmänt kända nybörjaralgoritmer för att fysiskt lösa Rubik's kuben, för att finna hur dem skiljer sig åt i tid samt antal operationer för att nå lösningen. Algoritmerna implementerades och kördes på ett stort antal blandade kuber för att samla data. Resultatet visar att Lager-för-lager med daisy algoritmen hade ett lägre genomsnittligt antal förflyttningar jämfört med Dedmore algoritmen. Den största skillnaden i antalet förflyttningar ligger i stegen som löser sista lagret av kuben. Lager-för-lager med daisy algoritmen använder bara en sjundedel av de mest tidskrävande förflyttningarna jämfört med Dedmore algoritmen, slutsatsen av detta är att Lager-för-lager med daisy algoritmen är bättre lämpad för lösning av kuben på tid.  
+  Över åren har ett antal olika algoritmer utvecklats för att steg-för-steg lösa delar av Rubik's kub för att till sist komma fram till den unika lösningen. Denna rapport utforskar två allmänt kända nybörjaralgoritmer för att lösa Rubik's kub, för att finna hur dem skiljer sig åt i tid samt antal operationer för att nå lösningen. Algoritmerna implementerades och kördes på ett stort antal blandade kuber för att samla data. Resultatet visar att Lager-för-lager med daisy algoritmen hade ett lägre genomsnittligt antal förflyttningar jämfört med Dedmore algoritmen. Den största skillnaden i antalet förflyttningar ligger i stegen som löser sista lagret av kuben. Lager-för-lager med daisy algoritmen använder bara en sjundedel av de mest tidskrävande förflyttningarna jämfört med Dedmore algoritmen, slutsatsen av detta är att Lager-för-lager med daisy algoritmen är bättre lämpad för lösning av kuben på tid.  
 \end{foreignabstract}
 
 \clearpage
@@ -40,11 +42,10 @@
 \mainmatter
 \section{Terminology} 
 	\begin{description}
-		\item[Cubie] a miniature cube
-		\item[Scramble] perfoming an amount of random operations on a solved cube to reach a non-solved state.
-		\item[Layer] contains one side of the cube and one row of the four neighbouring sides 
-		\item[Operation] Rotating one layer of the cube
-		\item[Notation] an abbreviation of the operation-name.
+		\item[Cubie] one of the twenty-six small cubes that make up the Rubik's cube.
+		\item[Scramble] perfoming some amount of random operations on a solved cube to reach a non-solved state.
+		\item[Layer] the nine cubies making up a side or the 8 cubies all around the cube either vertically or horizontally starting from a center-positioned cubie (middle layer).
+		\item[Operation] rotating one layer of the cube.
 	\end{description}
 
 \pagestyle{newchap}
@@ -91,8 +92,9 @@ Explanation of how the cube is constructed and the different notations for the o
 The cube consists of 26 cubies with three, two or one visible side depending on the type of cubie. There is one core piece consisting of three axes holding the center pieces together \cite{MadeHow}. 
   The corner and edge pieces (fig \ref{fig_3})  are the cubies that are movable to different edge and corner positions, the center pieces (fig \ref{fig_3}) can only be moved according to the axis.  
 \paragraph{Operations}
-An operation is a movement of a layer on the cube and is communicated by notations in the Rubik's cube community. This thesis uses the notations used by the World Cube Association (WCA) \cite{WCA1} explained below:\\
-Clockwise rotation 90 degrees:\\
+
+An operation is a movement of a layer on the cube and is communicated by notations (abbreviations of operation name) in the Rubik's cube community. This thesis uses the notations used by the World Cube Association (WCA) \cite{WCA1} explained below:\\
+Clockwise 90 degrees:\\
 F - Front face\\
 B - Back face\\
 R - Right face\\
@@ -397,8 +399,7 @@ Assumption: Every second you get to a new state.\\
 There are $4.3*10^{19}$  different states (rounded down) \cite{Faculty}.
 10\% of the different states:\\
 $4.3*10^{19}*0.1=4.3*10^{18}$ \\
-$4.3*10^{18}$ seconds to years = $136.4*10^{9}$ years
-\cite{Wolfram}
+$4.3*10^{18}$ seconds to years = $136.4*10^{9}$ years.
 
 \label{App:AppendixB}
 \chapter{Data}
