@@ -36,12 +36,12 @@
 \contentsline {section}{\numberline {3.2}Scramble}{15}
 \contentsline {section}{\numberline {3.3}Implementation}{15}
 \contentsline {paragraph}{Complexity}{15}
-\contentsline {chapter}{\chapternumberline {4}Results and Analyze}{17}
+\contentsline {chapter}{\chapternumberline {4}Results}{17}
 \contentsline {chapter}{\chapternumberline {5}Discussion}{21}
 \contentsline {section}{\numberline {5.1}Comparison}{21}
 \contentsline {section}{\numberline {5.2}Errors}{22}
 \contentsline {chapter}{\chapternumberline {6}Conclusion}{23}
 \contentsline {chapter}{References}{25}
 \contentsline {chapter}{Bilagor}{26}
-\contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotate faces}{27}
+\contentsline {appendix}{\chapternumberline {A}Calculation of randomly rotated faces}{27}
 \contentsline {appendix}{\chapternumberline {B}Data}{29}

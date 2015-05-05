@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  4 MAY 2015 11:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  5 MAY 2015 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1333,8 +1333,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 295--304
  []
 
 [14 <./figs/cubeorder.jpg>]
-Overfull \hbox (29.83905pt too wide) in paragraph at lines 309--317
-\T1/lmr/m/n/10.95 try.   $[]$ 
+Overfull \hbox (107.79674pt too wide) in paragraph at lines 309--317
+\T1/lmr/m/n/10.95 per-mu-ta-tions to try.   $[]$ 
  []
 
 [15] [16] <figs/graphone.png, id=113, 602.25pt x 372.39125pt>
@@ -1509,7 +1509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--443
 Here is how much of TeX's memory you used:
  10266 strings out of 493308
  146218 string characters out of 6140091
- 267973 words of memory out of 5000000
+ 267975 words of memory out of 5000000
  13511 multiletter control sequences out of 15000+600000
  70999 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1524,7 +1524,7 @@ re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 656943 bytes).
+Output written on rubiks.pdf (35 pages, 656512 bytes).
 PDF statistics:
  206 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

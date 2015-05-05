@@ -306,24 +306,24 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 \section{Implementation}
 	Both algorithms contains several steps and all of them uses the same structure. Starting off by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the algorithm) desired position and then perform operations in an order given by the algorithm to reach the solution state for the step [Algorithm 2].
 	\raggedbottom
-	\paragraph{Complexity} The steps of both algorithms used the same general idea with the same data-structures in the implementation (see [Algorithm 2]). Using the same data-structure simplifies the comparison of the algorithms due to no big differences in implementations. Both algorithms runs in linear time: the loops that break when a step is complete has a constant maximum number of iterations, because each step will focus on a finite part of the cube, resulting in a finite amount of permutations to try.
+	\paragraph{Complexity} The steps of both algorithms used the same general idea with the same data-structures in the implementation (see [Algorithm 2]). Using the same data-structure simplifies the comparison of the algorithms due to no big differences in implementations. Both algorithms run in linear time: the loops that break when a step is complete have a constant maximum number of iterations, because each step will focus on a finite part of the cube in form of a layer, resulting in a finite amount of permutations to try.
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{The general idea of algorithm steps}
 	\KwIn{A cube}
-	\KwOut{A cube that has a subproblem solved}
+	\KwOut{A cube that has a step solved}
 		\If{stepIsDone(cube)}{return cube}
 		\While{not(stepIsDone(cube))}{\If{readyForOperations(cube)}{Perform the operations necessary to complete the step}\Else{\While{not(readyForOperations(cube))}{Operations to get the cube in a state to be able to perform the steps operations}}}
 	\end{algorithm}
 
 	
-\chapter{Results and Analyze}
+\chapter{Results}
 
 In this section the results are displayed as a comparison of the algorithms amount of moves used, statistics for specific operation usage and number of times the algorithm used least amount of moves. The amount of moves in each step of both algorithms are also presented.\\\\ 
 Fig \ref{fig_18} represents the sum of executions that used the same amount of moves, where the x-axis is amount of moves and the y-axis number of runs.
 As shown by the highest pillars for both algorithms, the Lbl with daisy algorithm had a lower average (170) amount of moves than the dedmore algorithm (189). Turning the whole cube in any direction was not counted for as a move.\\\\
 Fig \ref{fig_19} represents a comparison of the number of runs the algorithms used least amount of moves, with the y-axis as number of runs. 
-This shows that over ten thousand scrambled cubes the Lbl with daisy algorithm won 71\% of the time, they got equal amount of moves 1\% of the time and dedmore algorithm had the fewest 28\% of the time.\\\\
+This shows that over ten thousand scrambled cubes the Lbl with daisy algorithm won 71\% of the time, they got equal amount of moves 1\% of the time and dedmore algorithm had the fewest in comparison 28\% of the time.\\\\
 Fig \ref{fig_20} represents the average use of operations for both algorithms over all runs with the x-axis as the average number of times the operations where used. \\The data for both fig \ref{fig_19} and fig \ref{fig_20} can be found in detail in Appendix B.\\\\ 
 Fig \ref{fig_21} and fig \ref{fig_22} represents the amount of moves used in each step for both algorithms. By comparing fig \ref{fig_21} and \ref{fig_22} it is clear that the biggest difference in amount of moves are between the middle layer step and the last steps of the two algorithms.\\\\
 Fig \ref{fig_23} visualizes the average total time to solve the cubes and how much of the time that was spent on time-consuming operations (included in total time). 
@@ -367,9 +367,9 @@ Fig \ref{fig_23} visualizes the average total time to solve the cubes and how mu
 In this section we discuss the results in form of comparisons and reflect on why these results where given. We also discuss any errors that could have had an impact on the final results.
 \section{Comparison}
 As we can see in the results fig \ref{fig_18}, Lbl with daisy algorithm has the lowest amount of moves the majority of the times. Lbl with daisy algorithm also has the lowest minimum and maximum amount of moves with 95 and 253 respectively. The corresponding values for the Dedmore algorithm are 96 and 292 as can be seen in fig \ref{fig_18} and in Appendix B. This shows that Lbl wins in lowest average, best case and worst case and the result of this is shown in fig \ref{fig_19}.\\\\
-The algorithms often assumed the correct cubies to be on a certain side, in reality this simply means rotating the cube to desired position. The implemented versions prioritized execution of operations instead, to get the cube into position, which led to an increase in the amount of total operations. This might explain the frequent uses of a few operations, for example U, Ui and F, shown in fig \ref{fig_20}.\\\\
+The algorithms often assumed the correct cubies to be on a certain side of the cube, in reality this simply means rotating the cube to a desired position. The implemented versions prioritized execution of operations instead, to get the cube into position, which led to an increase in the amount of total operations. This might explain the frequent uses of a few operations, for example U, Ui and F, shown in fig \ref{fig_20}.\\\\
 According to the result graphs fig \ref{fig_21} and fig \ref{fig_22} the part of the algorithms with the biggest differences in amount of moves are the steps solving the middle layer and last layer. But with the middle layer using the same technique in both algorithms the focus is turned to the last layer steps, to find differences affecting the number of moves. The steps in focus are yellow cross (average 6 moves) and yellow corners (average 13 moves) in Lbl with daisy algorithm and bottom corners (average 42 moves) in Dedmore algorithm. The cube has two layers completely solved before these steps are performed. These steps are comparable because they are solving the same layer of the cube, which limits the choice of operation-combinations to use without destroying parts of the first two layer that are completed.\\\\ 
-The reason why the two steps in Lbl with daisy (total average 19 moves) uses less moves than dedmores step are because of the difference in strategy in the steps and a possible error.
+The reason why the two steps in Lbl with daisy (total average 19 moves) uses less moves than dedmores step are because of the difference in strategy in the steps and a possible error described below.
 The step Yellow cross has three possible starting positions, which needs two different operation-combinations or both of them combined, and each operation-combination consists of 6 moves.
 The step Yellow corners has the same structure as yellow cross with three cases. Two of these cases are operation-combinations needed to be able to perform the solving case depending on the permutation of the cube. Each case uses at a minimum 8 moves, the solving case can use 16 moves in the worst scenario.\\\\
 Analyzing Dedmores bottom corner step shows that it works with two corners at the time, positioning them by using two cases of operation-combination for the first pair (11 moves each) and one case if needed for the second pair (11 moves). Now in the finishing part of the step the cube can be matched with one of seven possible states and when matched an operation-combination (10 moves) needs to be performed to solve the step. That operation-combination should (according to the description of the step) be performed at a maximum of three times before the step is finished, which turned out to be incorrect. We have found that it is possible that the finishing part of the step needs more than three performed operation-combinations, making the amount of moves go up over 30 in worst case with a top, for just this part. According to the description of the step the max amount of moves should be 52 and least amount of moves should be 21, making the least amount of moves for Dedmore's bottom corner step higher than the average for Lbl with daisys steps.\\\\   
@@ -393,7 +393,7 @@ This is also supported by the assumption made on the time-differences between ti
 
 \appendix
 \addappheadtotoc
-\chapter{Calculation of randomly rotate faces}\label{appA}
+\chapter{Calculation of randomly rotated faces}\label{appA}
 Assumption: Every second you get to a new state.\\
 There are $4.3*10^{19}$  different states (rounded down) \cite{Faculty}.
 10\% of the different states:\\

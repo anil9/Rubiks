@@ -15,9 +15,6 @@ public class Lbl implements Algorithm{
 	}
 
 	public void runAlg(Cube cube){
-			
-		//for(int i = 0; i<100; i++){
-			//cube.scramble(1000);
 		int i = 0; 
 		int recent_count = 0; 
 		int count_to_add = 0;
@@ -103,18 +100,6 @@ public class Lbl implements Algorithm{
 			recent_count = cube.move_counter;
 			i++;
 
-			/*if(!(cubeDone(cube))){
-				System.out.println("ej korrekt");
-				break;
-			}*/
-
-
-		//}
-			
-		
-		
-		//cube.printWholeCube();
-
 	}
 
 	/*
@@ -169,15 +154,10 @@ public class Lbl implements Algorithm{
 				cube.rightToFront();
 			}else{
 				while(!cube.getSide(1).c2.equals(cube.getSide(1).c5)){
-					//System.out.println("U");
 					cube.Ei();
 					cube.Di();
-					//count_back++;
 				}
-					/*if(rotated.get(cube.getSide(1).c5)!= null && rotated.get(cube.getSide(1).c5)== true){
-						System.out.println("redan roterad");
-					}
-					*/
+					
 					cube.F();
 					cube.F();
 					rotated.put(cube.getSide(1).c5, true);
@@ -187,7 +167,6 @@ public class Lbl implements Algorithm{
 
 		}
 
-		//cube.printWholeCube();
 		return cube;
 	}
 	private Cube moveWhiteEdgeEasy(Cube cube){
@@ -205,38 +184,38 @@ public class Lbl implements Algorithm{
 			}
 			if(cube.getSide(4).c6.equals("white")){
 				cube.F();
-			//	System.out.println("left");
+
 			}else if(cube.getSide(5).c4.equals("white")){
 				cube.Fi();
-			//	System.out.println("right");
+
 			}else if(cube.getSide(3).c2.equals("white")){
 				cube.F();
 				cube.F();
-			//	System.out.println("bot nära");
+
 			}else if(cube.getSide(3).c8.equals("white")){
 				cube.D();
 				cube.D();
 				cube.F();
 				cube.F();
-			//	System.out.println("bot bort");	
+
 			}else if(cube.getSide(3).c4.equals("white")){
 				cube.D();
 				cube.F();
 				cube.F();
-			//	System.out.println("bot left");
+
 			}else if(cube.getSide(3).c6.equals("white")){
 				cube.Di();
 				cube.F();
 				cube.F();
-			//	System.out.println("bot right");
+
 			}else if(cube.getSide(6).c4.equals("white")){
 				cube.E();
 				cube.F();
-			//	System.out.println("back left");
+
 			}else if(cube.getSide(6).c6.equals("white")){
 				cube.Ei();
 				cube.Fi();
-			//	System.out.println("back right");
+
 			} else if(cube.getSide(1).c2.equals("white")){
 				
 				cube.F();
