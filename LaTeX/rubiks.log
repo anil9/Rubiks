@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  5 MAY 2015 09:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  5 MAY 2015 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,40 +1196,40 @@ File: figs/step2.png Graphic file (type png)
  <use figs/step2.png>
 Package pdftex.def Info: figs/step2.png used on input line 134.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
- [6 <./figs/representation.png>] <figs/step32.png, id=62, 300.3722pt x 235.6303
-1pt>
+ [6 <./figs/representation.png>] [7 <./figs/step1.png> <./figs/step2.png>]
+<figs/step32.png, id=68, 300.3722pt x 235.63031pt>
 File: figs/step32.png Graphic file (type png)
-
-<use figs/step32.png>
+ <use figs/step32.png>
 Package pdftex.def Info: figs/step32.png used on input line 157.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
- <figs/step31.png, id=63, 300.3722pt x 235.63031pt>
-File: figs/step31.png Graphic file (type png)
 
-<use figs/step31.png>
+<figs/step31.png, id=69, 300.3722pt x 235.63031pt>
+File: figs/step31.png Graphic file (type png)
+ <use figs/step31.png>
 Package pdftex.def Info: figs/step31.png used on input line 162.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
- <figs/step41.png, id=64, 173.89969pt x 164.86594pt>
-File: figs/step41.png Graphic file (type png)
 
-<use figs/step41.png>
+<figs/step41.png, id=70, 173.89969pt x 164.86594pt>
+File: figs/step41.png Graphic file (type png)
+ <use figs/step41.png>
 Package pdftex.def Info: figs/step41.png used on input line 170.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
- <figs/step42.png, id=65, 173.89969pt x 164.86594pt>
-File: figs/step42.png Graphic file (type png)
 
-<use figs/step42.png>
+<figs/step42.png, id=71, 173.89969pt x 164.86594pt>
+File: figs/step42.png Graphic file (type png)
+ <use figs/step42.png>
 Package pdftex.def Info: figs/step42.png used on input line 173.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
- <figs/step43.png, id=66, 173.89969pt x 164.86594pt>
-File: figs/step43.png Graphic file (type png)
 
-<use figs/step43.png>
+<figs/step43.png, id=72, 173.89969pt x 164.86594pt>
+File: figs/step43.png Graphic file (type png)
+ <use figs/step43.png>
 Package pdftex.def Info: figs/step43.png used on input line 176.
 (pdftex.def)             Requested size: 118.80121pt x 112.62807pt.
- [7 <./figs/step1.png> <./figs/step2.png>] [8 <./figs/step32.png> <./figs/step3
-1.png> <./figs/step41.png> <./figs/step42.png> <./figs/step43.png>] <figs/rubik
-s-frst-corner.jpg, id=78, 300.3722pt x 235.63031pt>
+
+[8 <./figs/step32.png> <./figs/step31.png> <./figs/step41.png> <./figs/step42.p
+ng> <./figs/step43.png>]
+<figs/rubiks-frst-corner.jpg, id=78, 300.3722pt x 235.63031pt>
 File: figs/rubiks-frst-corner.jpg Graphic file (type jpg)
 
 <use figs/rubiks-frst-corner.jpg>
@@ -1288,8 +1288,8 @@ File: figs/last-edge-correct.jpg Graphic file (type jpg)
 Package pdftex.def Info: figs/last-edge-correct.jpg used on input line 229.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
-Underfull \hbox (badness 4132) in paragraph at lines 230--230
-[]\T1/lmr/m/n/10 (c) |One edges cor-rectly
+Underfull \hbox (badness 7649) in paragraph at lines 230--230
+[]\T1/lmr/m/n/10 (c) |One edge cor-rectly
  []
 
 <figs/fish-pattern.jpg, id=87, 300.3722pt x 235.63031pt>
@@ -1448,12 +1448,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 369--377
 [21
 
 ] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 385--388
 
  []
 
@@ -1498,12 +1493,12 @@ lmtt/m/n/10.95 https : / / www .
 ] [28
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 407--444
+Underfull \hbox (badness 10000) in paragraph at lines 406--443
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--444
+Underfull \hbox (badness 10000) in paragraph at lines 406--443
 
  []
 
@@ -1515,7 +1510,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--444
 Here is how much of TeX's memory you used:
  10255 strings out of 494465
  145840 string characters out of 6166361
- 264572 words of memory out of 5000000
+ 264570 words of memory out of 5000000
  13291 multiletter control sequences out of 15000+600000
  70999 words of font info for 52 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
@@ -1530,7 +1525,7 @@ re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 637518 bytes).
+Output written on rubiks.pdf (35 pages, 637690 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

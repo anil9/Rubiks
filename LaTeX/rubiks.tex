@@ -67,7 +67,7 @@
 
 The Rubik’s cube is a 3-D combination puzzle, where each side of the cube is covered with nine squares in six possible colours: white, red, blue, orange, green and yellow. It was invented by the professor of architecture Ernő Rubik as a teaching tool to help his students to understand 3D objects. It was not until he scrambled his new cube and tried to restore it, that he realize his creation was a puzzle. Originally the Rubik's cube was called the Magic Cube and was licensed to be sold by the american toy company Ideal Toy Company in 1980. \cite{Rubiks}.\\\\
 When solving the cube the idea is to start with a scrambled cube, meaning that the cubies are randomly positioned by executing random operations on the cube (fig \ref{fig_1}). The goal is to obtain the unique solution where each side of the cube is covered with only one colour per side (fig \ref{fig_2}). Different algorithms have been developed to solve subproblems one at the time with a series of operations to reach the unique solution. Many algorithms are based on the idea to solve it one layer at the time.\\\\
-If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime, because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to an unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [Appendix A].\\\\
+If you were to randomly rotate the faces in an attempt to solve the cube, there is almost zero chance of achieving the solved state in your lifetime, because of all the possible permutations of the cube. There are $4.3 * 10^{19}$ (or 43 quintillion) \cite{Faculty} different states. Assuming you get to a unique state every second it would take more than 130 billion years to test 10\% of the cubes possible states [Appendix A].\\\\
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 
 \section{Problem}
@@ -81,7 +81,7 @@ The problem was stated as follows:
 \section{Purpose}
 The purpose of testing the algorithms is to find out which uses the least amount of moves and to find out which algorithm suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the algorithm is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
-The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the Algorithms used in this thesis together with explanations of the representation and implementation of the cube. The fourth section will be presenting the results and the fifth section contains a discussion regarding the results. Following is a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and data.  
+The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the Algorithms used in this thesis together with explanations of the representation and implementation of the cube. The fourth section will be presenting the results and the fifth section contains a discussion regarding the results. Following that is a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and data.  
 
 
 \chapter{Background}
@@ -121,7 +121,7 @@ When competing in an official event regulated by the WCA, the competitor has at 
 \paragraph{Fewest moves}
 The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
 \section{Algorithms}
-The physical methods for solving the cube by hand matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of which simulates several moves ahead to find the optimal move \cite{Kociemba}), these algorithms can with little effort be taught to humans. The algorithms are built on many heuristics that guarantees a solution, but the number of moves exceeds the proven minimum amount of 20 \cite{cube20}. With the algorithms as heuristics comes multiple ways to solve each step.  
+The physical methods for solving the cube by hand matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of which simulates several moves ahead to find the optimal move \cite{Kociemba}), these algorithms can with little effort be taught to humans. The algorithms are built on many heuristics that guarantees a solution, but the number of moves exceeds the proven maximum amount to solve any cube in any state (20) \cite{cube20}. With the algorithms as heuristics comes multiple ways to solve each step.  
 \paragraph{Layer-by-layer using daisy algorithm}
 \begin{figure}[b]
 	\centering
@@ -137,7 +137,7 @@ The physical methods for solving the cube by hand matches the mathematical defin
 	\end{subfigure}
 	\caption{}
 \end{figure}
-The layer-by-layer (LBL) algorithms divides the cube into layers and makes it possible to solve the subproblems without breaking any pieces already made. 
+The layer-by-layer (LBL) algorithms divides the cube into layers and makes it possible to solve steps as subproblems without breaking any pieces already made. 
 The daisy algorithm refers to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges over to the opposite side, completing the white cross in the bottom \cite{Shellie}.
 \subsubsection{1. White cross}
 The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}.This is done using daisy's method, flipping the edges one at the time to make sure the edge-pieces on the vertical sides are aligned with the center-pieces on the same sides.
@@ -227,7 +227,7 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 	\end{subfigure}
 	\begin{subfigure}[!b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{figs/last-edge-correct.jpg}
-		\caption{One edges correctly placed}
+		\caption{One edge correctly placed}
 		\label{fig_14}
 	\end{subfigure}
 	\caption{}
@@ -248,10 +248,10 @@ When every edge are correctly positioned, there are 2 possible states left. Each
 \end{figure}
 
 \chapter{Method}
-For this thesis the two methods used were implementation of algorithms and analyzis of the data representation. An implementation was motivated considering that implementations allowed analyzation and collection of data from multiple algorithm runs.
+For this thesis the two methods used were implementation of algorithms and analysis of the data representation. An implementation was motivated considering that implementations allowed analysis and collection of data from multiple algorithm runs.
 Both of the algorithms were both implemented in java and with the same built-in functions and data structures to rule out differences and obtain a realistic comparison.
-The algorithms were run a number of times on different cubes to obtain a good set of data for the comparison. The data was obtained during the runs by gathering information as: number of moves used, statistics of moves used and number of times one algorithm used less moves than the other.  
-For each algorithm the test data was evaluated by use of different operations, number of operations used and if suitable for speedcubing.
+The algorithms were run a number of times on different cubes to obtain a good set of data for the comparison. The data was obtained during the runs by gathering information such as: number of moves used, statistics of which moves used and number of times one algorithm used less moves than the other.  
+For each algorithm the test data was evaluated by use of different operations, number of operations used and time-consuming operations.
 
 
 \section{Cube representation}
@@ -373,7 +373,7 @@ The reason why the two steps in Lbl with daisy (total average 19 moves) uses les
 The step Yellow cross has three possible starting positions, which needs two different operation-combinations or both of them combined, and each operation-combination consists of 6 moves.
 The step Yellow corners has the same structure as yellow cross with three cases. Two of these cases are operation-combinations needed to be able to perform the solving case depending on the permutation of the cube. Each case uses at a minimum 8 moves, the solving case can use 16 moves in the worst scenario.\\\\
 Analyzing Dedmores bottom corner step shows that it works with two corners at the time, positioning them by using two cases of operation-combination for the first pair (11 moves each) and one case if needed for the second pair (11 moves). Now in the finishing part of the step the cube can be matched with one of seven possible states and when matched an operation-combination (10 moves) needs to be performed to solve the step. That operation-combination should (according to the description of the step) be performed at a maximum of three times before the step is finished, which turned out to be incorrect. We have found that it is possible that the finishing part of the step needs more than three performed operation-combinations, making the amount of moves go up over 30 in worst case with a top, for just this part. According to the description of the step the max amount of moves should be 52 and least amount of moves should be 21, making the least amount of moves for Dedmore's bottom corner step higher than the average for Lbl with daisys steps.\\\\   
-The data in fig \ref{fig_20} and Appendix B shows that Dedmore used both E, Ei and M, Mi more than Lbl with daisy. With this results in mind we investigate the graph \ref{fig_23} which shows the amount of time-units used by the time-consuming operations compared to the total time. This should according to the assertions made imply that Dedmore uses more time than Lbl with daisy algorithm because of the time-consuming operations used.   		     
+The data in fig \ref{fig_20} and Appendix B shows that Dedmore used both E, Ei and M, Mi more than Lbl with daisy. With this results in mind we investigate the graph \ref{fig_23} which shows the amount of time-units used by the time-consuming operations compared to the total time. This should, according to the assumptions made, imply that Dedmore uses more time than Lbl with daisy algorithm because of the time-consuming operations used.   		     
 
 
 \section{Errors}
@@ -383,9 +383,8 @@ Converting the algorithms effeciently from description of physical solving of th
 
 \chapter{Conclusion}
 The measurements shows that the Layer-by-layer using daisy algorithm solved the cube with the least amount of moves in more than 70\% of the 10,000 executions made. It also shows that the same algorithm had the lowest moves in minima and maxima on the tested cubes. This concludes that the Layer-by-layer using daisy algorithm is the better choice of algorithm regarding the least amount of moves.\\\\
-
 Time measurements shows that Layer-by-layer using daisy algorithm is more suitable for speedcubing than Dedmore. This conclusion is based on the statistics of operation-usage, showing that Dedmore used these time-consuming operations seven times more frequently than Lbl with daisy algorithm.
-ALso on the assertion made on time-differences between time-consuming operations and normal operation.
+This is also supported by the assumption made on the time-differences between time-consuming and normal operations.
 
 
 \renewcommand{\bibname}{References}
