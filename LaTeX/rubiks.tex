@@ -71,7 +71,7 @@ If you were to randomly rotate the faces in an attempt to solve the cube, there 
 There are two major ways to compete in solving the Rubik’s cube: the least amount of moves and solving the cube as fast as possible (speedcubing).
 
 \section{Problem}
-This thesis will explore two commonly known beginner algorithms for human solving of Rubik’s cubes to find the differences. Both algorithms are based on the idea to solve the cube one layer at the time, which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate the algorithms operation variance and the number of operations to reach a solved state, to find the most move-efficient of them both.\\\\
+This thesis will explore two commonly known beginner algorithms for solving of Rubik’s cubes to find the differences. Both algorithms are based on the idea to solve the cube one layer at the time, which is the easiest way for the human mind to solve this kind of problem \cite{Lar5}. We will evaluate the algorithms operation variance and the number of operations to reach a solved state, to find the most move-efficient of them both.\\\\
 The thesis will not include any empirical study of humans solving the cube with different beginner algorithms, and will instead rely on data gathered from computations.
 The problem was stated as follows:
 \begin{itemize}
@@ -81,7 +81,7 @@ The problem was stated as follows:
 \section{Purpose}
 The purpose of testing the algorithms is to find out which uses the least amount of moves and to find out which algorithm suits speedcubing best by analyzing the usage of different operations. The reason the operations shows if the algorithm is suitable for speedcubing is because some of the operations are more time-consuming than others. The inexperienced user will find this as a guideline as to which algorithm to start his/her journey towards solving the Rubik’s cube.
 \section{Structure}
-The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the Algorithms used in this thesis together with explanations of the representation and implementation of the cube. The fourth section will be presenting the results and the fifth section contains a discussion regarding the results. Following that is a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and data.  
+The sections are devided as follows: The second section will introduce the reader to concepts necessary to understand the algorithms implemented and benchmarked. The third section will explain the Algorithms used in this thesis together with explanations of the representation and implementation of the cube. The fourth section will be presenting the results and the fifth section contains a discussion regarding the results. Following that is a conclusions section that completes the circle of the thesis, answering the problem statements. Lastly the references used to this thesis will be listed followed by appendix containing computations and data.  
 
 
 \chapter{Background}
@@ -122,7 +122,7 @@ When competing in an official event regulated by the WCA, the competitor has at 
 The competitors have 60 minutes without any inspection time and the competitor should also be able to hand in a written solution with the notations used in the correct format \cite{WCA2}.
 \section{Algorithms}
 The physical methods for solving the cube by hand matches the mathematical definition of an algorithm. Unlike many of the “near-optimal solvers” (some of which simulates several moves ahead to find the optimal move \cite{Kociemba}), these algorithms can with little effort be taught to humans. The algorithms are built on many heuristics that guarantees a solution, but the number of moves exceeds the proven maximum amount to solve any cube in any state (20) \cite{cube20}. With the algorithms as heuristics comes multiple ways to solve each step.\\\\
-The algorithms in focus in this thesis is based on solving the cube layer-by-layer. This means that the algorithms divides the cube into layers which makes it possible to solve the layers in steps/subproblems without breaking the layers previously completed.
+The algorithms of focus in this thesis are Layer-by-layer using daisy method and Dedmore method which both are based on solving the cube layer-by-layer. This means that the algorithms divides the cube into layers which makes it possible to solve the layers in steps/subproblems without breaking the layers previously completed.
 \paragraph{Layer-by-layer using daisy algorithm}
 \begin{figure}[b]
 	\centering
@@ -138,7 +138,7 @@ The algorithms in focus in this thesis is based on solving the cube layer-by-lay
 	\end{subfigure}
 	\caption{}
 \end{figure}
-Due to this algorithm has no name, it will from here be referred to as Layer-by-layer with daisy (or Lbl with daisy for short). The daisy-part of the name refers to the algorithm to solve the white cross by first make a cross with white edges and a yellow center and then turn the white edges over to the opposite side, completing the white cross in the bottom. This algorithm focusing on a edge first solution. The steps can be found in more detail at  \cite{Lee-Mao-Harris} and the Daisy method can be found at \cite{Shellie}. 
+Due to this algorithm has no name, it will from here be referred to as Layer-by-layer with daisy (or Lbl with daisy for short). The daisy-part of the name refers to the algorithm to solve the white cross. This by first making a cross with white edges and a yellow center and then turn the white edges over to the opposite side, completing the white cross in the bottom. This algorithm focuses on an edge first solution. The steps can be found in more detail at  \cite{Lee-Mao-Harris} and the Daisy method can be found at \cite{Shellie}. 
 \subsubsection{1. White cross}
 The goal here is to achieve a white cross, so that the white center-piece is aligned with its 4 white edge-pieces in the bottom. For it to be a completed step, the second color of the white edge-pieces must also align with it’s center-piece counterpart as shown in fig \ref{fig_4}.This is done using daisy's method, flipping the edges one at the time to make sure the edge-pieces on the vertical sides are aligned with the center-pieces on the same sides.
 \subsubsection{2. White corners}
