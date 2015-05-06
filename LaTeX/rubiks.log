@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 MAY 2015 15:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.12)  6 MAY 2015 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1420,6 +1420,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--296
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
+Underfull \hbox (badness 10000) in paragraph at lines 301--309
+
+ []
+
 [15 <./figs/cubeorder.jpg>] [16]
 <figs/graphone.png, id=119, 602.25pt x 372.39125pt>
 File: figs/graphone.png Graphic file (type png)

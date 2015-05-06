@@ -298,7 +298,7 @@ The idea of the scrambler is to always start with a solved cube. The scramble is
 \section{Implementation}
 	Both algorithms contains several steps and all of them uses the same structure. Starting off by looking if the goal of the step is already achieved. While the goal is not achieved: put the cube in a (by the algorithm) desired position and then perform operations in an order given by the algorithm to reach the solution state for the step [Algorithm 2].
 	\raggedbottom
-	\paragraph{Complexity} The steps of both algorithms used the same general idea with the same data-structures in the implementation (see [Algorithm 2]). Using the same data-structure simplifies the comparison of the algorithms due to no big differences in implementations. Both algorithms run in linear time: the loops that break when a step is complete have a constant maximum number of iterations, because each step will focus on a finite part of the cube in form of a layer, resulting in a finite amount of permutations to try.\\
+	\paragraph{Complexity} The steps of both algorithms used the same general idea with the same data-structures in the implementation (see [Algorithm 2]). Using the same data-structure simplifies the comparison of the algorithms due to no big differences in implementations. Both algorithms run in linear time: the loops that break when a step is complete have a constant maximum number of iterations, because each step will focus on a finite part of the cube in form of a layer, resulting in a finite amount of permutations to try.\\\\
 	\RestyleAlgo{boxed}
 	\begin{algorithm}[H]
 	\caption{The general idea of algorithm steps}
