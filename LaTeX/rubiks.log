@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  6 MAY 2015 13:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.22)  6 MAY 2015 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1185,16 +1185,20 @@ File: figs/representation.png Graphic file (type png)
 Package pdftex.def Info: figs/representation.png used on input line 113.
 (pdftex.def)             Requested size: 158.39758pt x 124.26146pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
 <figs/step1.png, id=56, 300.3722pt x 235.63031pt>
 File: figs/step1.png Graphic file (type png)
  <use figs/step1.png>
-Package pdftex.def Info: figs/step1.png used on input line 129.
+Package pdftex.def Info: figs/step1.png used on input line 130.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
 
 <figs/step2.png, id=57, 300.3722pt x 235.63031pt>
 File: figs/step2.png Graphic file (type png)
  <use figs/step2.png>
-Package pdftex.def Info: figs/step2.png used on input line 134.
+Package pdftex.def Info: figs/step2.png used on input line 135.
 (pdftex.def)             Requested size: 118.80121pt x 93.19339pt.
  [6 <./figs/representation.png>] [7 <./figs/step1.png> <./figs/step2.png>]
 <figs/step32.png, id=68, 300.3722pt x 235.63031pt>
@@ -1525,7 +1529,7 @@ re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssdc10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rubiks.pdf (35 pages, 637270 bytes).
+Output written on rubiks.pdf (35 pages, 637445 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
