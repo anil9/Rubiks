@@ -10,19 +10,13 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{url}
+\usepackage{pdfpages}
 \selectlanguage{swedish}
-\title{Benchmarking Beginner Algorithms for
-           Rubik's cube}
 
-\author{Andreas Nilsson  anil9@kth.se\\Anton Spång  aspang@kth.se}
-\date{\today}
-
-\blurb{DD143X - Bachelor Thesis\\Supervisor: Michael Schliephake\\Examiner: Örjan Ekeberg}
 \begin{document}
-\frontmatter
+\includepdf[pages=-, scale=1.0]{kth-cover.pdf}
 \pagestyle{empty}
 \removepagenumbers
-\maketitle
 \selectlanguage{english}
 \begin{abstract}
  Over the years different algorithms have been developed to step-by-step solve parts of the Rubik's cube until finally reaching the unique solution. This thesis explores two commonly known beginner algorithms for solving Rubik’s cube to find how they differ in solving speed and amount of moves. The algorithms were implemented and run on a large amount of scrambled cubes to collect data. The results showed that Layer-by-layer with daisy algorithm had a lower average amount of moves than the Dedmore algorithm. The main difference in amount of moves lies in the steps that solve the last layer of the cube. The Layer-by-layer with daisy algorithm uses only one-seventh of the time-consuming operations that Dedmore algorithm uses, which concludes that it is more suitable for speedcubing. 
